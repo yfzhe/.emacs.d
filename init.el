@@ -6,7 +6,7 @@
 (package-initialize) 
 
 (eval-when-compile
-  (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
+  (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
   (require 'use-package))
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -59,10 +59,6 @@
 ;;(counsel-mode 1)
 
 ;; Quick Openning
-(defun open-init-file ()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
 (defun open-dotfile ()
   (interactive)
   (find-file "~/.emacs.d/"))
