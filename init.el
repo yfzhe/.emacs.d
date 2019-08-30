@@ -58,6 +58,16 @@
 
 ;;(counsel-mode 1)
 
+;; recentf
+(use-package recentf
+  :hook (after-init . recentf-mode)
+  :init
+  (setq recentf-max-saved-items 200)
+  (setq recentf-exclude '((expand-file-name package-user-dir)
+			  "bookmarks"
+			  "recentf")))
+
+
 ;; Quick Openning
 (defun open-dotfile ()
   (interactive)
