@@ -19,6 +19,7 @@
 
 ;; Magit
 (global-set-key (kbd "C-x g") 'magit-status)
+;;(global-set-key (kbd "C-x M-g") 'magit-dispatch)
 
 ;; recentf
 (use-package recentf

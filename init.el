@@ -17,6 +17,7 @@
 (require 'init-font)
 
 (require 'init-editing)
+(require 'init-shell)
 (require 'init-util)
 
 (require 'init-racket)
