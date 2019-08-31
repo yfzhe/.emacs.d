@@ -33,11 +33,6 @@
 (global-linum-mode t)
 (column-number-mode t)
 ;;(setq inhibit-splash-screen 1)
-(delete-selection-mode t)
-(blink-cursor-mode -1)
-(show-paren-mode t)
-(setq visible-bell 0)
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Initial Frame Size
 (setq initial-frame-alist

@@ -12,11 +12,11 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
+(require 'init-base)
 (require 'init-custom)
 (require 'init-font)
 
 (require 'init-editing)
-(require 'init-git)
 
 (require 'init-racket)
 (require 'init-frontend)
@@ -31,9 +31,6 @@
 
 (use-package idris-mode
   :mode "\\.idr\\'")
-
-(use-package elm-mode
-  :mode "\\.elm\\'")
 
 (use-package rust-mode
   :mode "\\.rs\\'")
@@ -58,17 +55,19 @@
 
 ;;(counsel-mode 1)
 
-;; recentf
-(use-package recentf
-  :hook (after-init . recentf-mode)
-  :init
-  (setq recentf-max-saved-items 200)
-  (setq recentf-exclude '((expand-file-name package-user-dir)
-			  "bookmarks"
-			  "recentf")))
+;;; ----------------------------------------
+;;; ----------------------------------------
+;;; Dired Mode
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
 
+;; Reuse the only one buffer for dired mode
+(put 'dired-find-alternate-file 'disabled nil)
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
-;; Quick Openning
-(defun open-dotfile ()
-  (interactive)
-  (find-file "~/.emacs.d/"))
+;; Dired mode sorting: show directories first
+(require 'ls-lisp)
+(setq ls-lisp-use-insert-directory-program nil)
+(setq ls-lisp-dirs-first t)
+
