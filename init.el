@@ -17,6 +17,7 @@
 (require 'init-font)
 
 (require 'init-editing)
+(require 'init-util)
 
 (require 'init-racket)
 (require 'init-frontend)

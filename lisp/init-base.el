@@ -29,9 +29,4 @@
 			  "bookmarks"
 			  "recentf")))
 
-;; Quick Openning
-(defun open-dotfile ()
-  (interactive)
-  (find-file "~/.emacs.d/"))
-
 (provide 'init-base)
