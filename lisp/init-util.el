@@ -6,7 +6,6 @@
   (interactive)
   (find-file "~/.emacs.d/"))
 
-
 ;;; Need dictionary to save my poor english
 (use-package youdao-dictionary
   :ensure t

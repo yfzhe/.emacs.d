@@ -7,6 +7,7 @@
 
 (eval-when-compile
   (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+  (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
   (require 'use-package))
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -17,6 +18,7 @@
 (require 'init-font)
 
 (require 'init-editing)
+(require 'init-spell)
 (require 'init-shell)
 (require 'init-util)
 
@@ -57,7 +59,6 @@
 
 ;;(counsel-mode 1)
 
-;;; ----------------------------------------
 ;;; ----------------------------------------
 ;;; Dired Mode
 (setq dired-recursive-deletes 'always)
