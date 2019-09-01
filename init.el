@@ -18,12 +18,14 @@
 (require 'init-font)
 
 (require 'init-editing)
-(require 'init-spell)
 (require 'init-shell)
-(require 'init-util)
 
+;;(require 'init-lsp)
 (require 'init-racket)
 (require 'init-frontend)
+
+(require 'init-spell)
+(require 'init-util)
 
 ;;; Auto installing packages
 ;;(require 'use-package-ensure)
