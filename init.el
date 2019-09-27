@@ -19,6 +19,7 @@
 
 (require 'init-editing)
 (require 'init-shell)
+(require 'init-org)
 
 ;;(require 'init-lsp)
 (require 'init-racket)
@@ -30,6 +31,15 @@
 ;;; Auto installing packages
 ;;(require 'use-package-ensure)
 ;;(setq use-package-always-ensure t)
+
+;;; Flycheck
+(use-package flycheck
+  :init (global-flycheck-mode)
+  :config
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+
+;;; org-mode
+(setq org-agenda-files '("~/Documents/Docs/org/todos"))
 
 ;;; Mode Config
 (use-package haskell-mode
