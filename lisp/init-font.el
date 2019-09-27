@@ -9,6 +9,5 @@
 (use-cjk-char-width-table 'zh_CN)
 
 ;; (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
-;;;----------------------------------------
 
 (provide 'init-font)

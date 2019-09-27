@@ -18,8 +18,10 @@
 (require 'init-font)
 
 (require 'init-editing)
-(require 'init-shell)
+(require 'init-flycheck)
+
 (require 'init-org)
+(require 'init-shell)
 
 ;;(require 'init-lsp)
 (require 'init-racket)
@@ -31,12 +33,6 @@
 ;;; Auto installing packages
 ;;(require 'use-package-ensure)
 ;;(setq use-package-always-ensure t)
-
-;;; Flycheck
-(use-package flycheck
-  :init (global-flycheck-mode)
-  :config
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
 
 ;;; org-mode
 (setq org-agenda-files '("~/Documents/Docs/org/todos"))
