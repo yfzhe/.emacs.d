@@ -7,14 +7,15 @@
   (progn
     (dashboard-setup-startup-hook)
     (setq dashboard-items '((recents . 5)
-			    (bookmarks . 8))
-	  dashboard-startup-banner 'logo
-	  dashboard-banner-logo-title "Welcome to Emacs Dashboard"
-	  dashboard-center-content t
-	  dashboard-page-separator " \n \n"
-	  dashboard-set-heading-icons t)))
-;; dashboard-set-file-icons t
-;; dashboard-set-navigator t)))
+			    (bookmarks . 6)))
+    (setq dashboard-startup-banner 'logo)
+    (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
+    (setq dashboard-center-content t)
+    (setq dashboard-page-separator " \n \n")
+    (setq dashboard-set-heading-icons t)
+    ;; (setq dashboard-set-file-icons t)
+    ;; (setq dashboard-set-navigator t))
+    (setq show-week-agenda t)))
 
 ;;; Modeline
 (use-package doom-modeline
