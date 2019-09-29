@@ -25,7 +25,7 @@
 (require 'init-org)
 (require 'init-shell)
 
-;;(require 'init-lsp)
+(require 'init-lsp)
 (require 'init-racket)
 (require 'init-frontend)
 

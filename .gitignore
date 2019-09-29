@@ -3,7 +3,8 @@
 /auto-save-list
 /transient
 
+/.lsp-session*
 /bookmarks
-/projectile-bookmarks.eld
 /eshell
+/projectile-bookmarks.eld
 /recentf
