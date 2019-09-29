@@ -20,6 +20,7 @@
 (require 'init-editing)
 (require 'init-dired)
 (require 'init-flycheck)
+(require 'init-projectile)
 
 (require 'init-org)
 (require 'init-shell)
@@ -32,11 +33,8 @@
 (require 'init-util)
 
 ;;; Auto installing packages
-;;(require 'use-package-ensure)
-;;(setq use-package-always-ensure t)
-
-;;; org-mode
-(setq org-agenda-files '("~/Documents/Docs/org/todos"))
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
 ;;; Mode Config
 (use-package haskell-mode
@@ -65,6 +63,4 @@
 (setq ivy-use-virtual-buffer t)
 (setq ivy-count-format "(%d/%d) ")
 (setq ivy-height 6)
-
-;;(counsel-mode 1)
 

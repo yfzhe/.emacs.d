@@ -7,7 +7,8 @@
   (progn
     (dashboard-setup-startup-hook)
     (setq dashboard-items '((recents . 5)
-			    (bookmarks . 6)))
+			    (bookmarks . 5)
+			    (projects . 5)))
     (setq dashboard-startup-banner 'logo)
     (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
     (setq dashboard-center-content t)
