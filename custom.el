@@ -8,7 +8,7 @@
  '(ansi-color-names-vector
    ["black" "red3" "green3" "yellow3" "#FFE203" "magenta3" "cyan3" "gray90"])
  '(ansi-term-color-vector
-   [unspecified "#FFFFFF" "#d15120" "#5f9411" "#d2ad00" "#6b82a7" "#a66bab" "#6b82a7" "#505050"])
+   [unspecified "#FFFFFF" "#d15120" "#5f9411" "#d2ad00" "#6b82a7" "#a66bab" "#6b82a7" "#505050"] t)
  '(beacon-color "#ed0547ad8099")
  '(company-quickhelp-color-background "#4F4F4F")
  '(company-quickhelp-color-foreground "#DCDCCC")
@@ -43,7 +43,7 @@
  '(objed-cursor-color "#ff665c")
  '(package-selected-packages
    (quote
-    (tide elm-mode lsp-mode lsp-ui flyspell-correct-ivy flyspell-correct youdao-dictionary exec-path-from-shell julia-mode js2-mode typescript-mode ranger treemacs rust-mode all-the-icons-dired paper-theme cyberpunk-theme plan9-theme zenburn-theme material-theme mustard-theme monokai-theme chyla-theme zeno-theme afternoon-theme doom-themes doom-modeline all-the-icons page-break-lines dashboard idris-mode haskell-mode rainbow-delimiters nyan-mode alchemist elixir-mode markdown-mode magit dr-racket-like-unicode company-pollen sml-mode racer company-erlang auto-complete use-package scribble-mode pollen-mode racket-mode minimal-theme)))
+    (diredfl tide elm-mode lsp-mode lsp-ui flyspell-correct-ivy flyspell-correct youdao-dictionary exec-path-from-shell julia-mode js2-mode typescript-mode ranger treemacs rust-mode all-the-icons-dired paper-theme cyberpunk-theme plan9-theme zenburn-theme material-theme mustard-theme monokai-theme chyla-theme zeno-theme afternoon-theme doom-themes doom-modeline all-the-icons page-break-lines dashboard idris-mode haskell-mode rainbow-delimiters nyan-mode alchemist elixir-mode markdown-mode magit dr-racket-like-unicode company-pollen sml-mode racer company-erlang auto-complete use-package scribble-mode pollen-mode racket-mode minimal-theme)))
  '(pdf-view-midnight-colors (quote ("#888a88" . "#edf5dc")))
  '(pos-tip-background-color "#3a933a933a93")
  '(pos-tip-foreground-color "#9E9E9E")

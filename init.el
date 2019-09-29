@@ -18,6 +18,7 @@
 (require 'init-font)
 
 (require 'init-editing)
+(require 'init-dired)
 (require 'init-flycheck)
 
 (require 'init-org)
@@ -66,19 +67,4 @@
 (setq ivy-height 6)
 
 ;;(counsel-mode 1)
-
-;;; ----------------------------------------
-;;; Dired Mode
-(setq dired-recursive-deletes 'always)
-(setq dired-recursive-copies 'always)
-
-;; Reuse the only one buffer for dired mode
-(put 'dired-find-alternate-file 'disabled nil)
-(with-eval-after-load 'dired
-  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
-
-;; Dired mode sorting: show directories first
-(require 'ls-lisp)
-(setq ls-lisp-use-insert-directory-program nil)
-(setq ls-lisp-dirs-first t)
 
