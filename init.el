@@ -64,3 +64,9 @@
 (setq ivy-count-format "(%d/%d) ")
 (setq ivy-height 6)
 
+;;; ----------------------------------------
+;;; Magit
+(use-package magit
+  :bind (("C-x g" . magit-status)
+	 ("C-x M-g" . magit-dispatch)))
+

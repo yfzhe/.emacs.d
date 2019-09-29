@@ -17,10 +17,6 @@
 ;; DrRacket-like Unicode Input
 (global-set-key (kbd "C-\\") 'dr-racket-like-unicode-char)
 
-;; Magit
-(global-set-key (kbd "C-x g") 'magit-status)
-;;(global-set-key (kbd "C-x M-g") 'magit-dispatch)
-
 ;; recentf
 (use-package recentf
   :hook (after-init . recentf-mode)

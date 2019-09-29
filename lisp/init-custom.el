@@ -4,19 +4,18 @@
 (use-package dashboard
   :ensure t
   :config
-  (progn
-    (dashboard-setup-startup-hook)
-    (setq dashboard-items '((recents . 5)
-			    (bookmarks . 5)
-			    (projects . 5)))
-    (setq dashboard-startup-banner 'logo)
-    (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
-    (setq dashboard-center-content t)
-    (setq dashboard-page-separator " \n \n")
-    (setq dashboard-set-heading-icons t)
-    ;; (setq dashboard-set-file-icons t)
-    ;; (setq dashboard-set-navigator t))
-    (setq show-week-agenda t)))
+  (dashboard-setup-startup-hook)
+  (setq dashboard-items '((recents . 5)
+			  (bookmarks . 5)
+			  (projects . 5)))
+  (setq dashboard-startup-banner 'logo)
+  (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
+  (setq dashboard-center-content t)
+  (setq dashboard-page-separator " \n \n")
+  (setq dashboard-set-heading-icons t)
+  ;; (setq dashboard-set-file-icons t)
+  ;; (setq dashboard-set-navigator t))
+  (setq show-week-agenda t))
 
 ;;; Modeline
 (use-package doom-modeline
