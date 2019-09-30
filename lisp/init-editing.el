@@ -21,7 +21,14 @@
 	(indent-buffer)
 	(message "Indent buffer.")))))
 
-;;(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
-(global-set-key (kbd "C-i") 'indent-region-or-buffer)
+(global-set-key (kbd "C-c i") 'indent-region-or-buffer)
+
+(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
+
+;; use space instead of tab for indentation
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
+(setq-default tab-always-indent 'complete)
 
 (provide 'init-editing)
