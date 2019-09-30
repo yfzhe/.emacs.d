@@ -19,7 +19,8 @@
     git-commit-setup-hook))
 
 (defvar prog-modes-needing-flyspell
-      '())
+  '(js-mode js2-mode rjxs-mode typescript-mode
+    racket-mode))
 
 (dolist (hook text-modes-needing-flyspell)
   (add-hook hook (lambda () (flyspell-mode 1))))
