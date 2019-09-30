@@ -70,3 +70,10 @@
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch)))
 
+;;; ----------------------------------------
+;;; eldoc
+;; (use-package eldoc-box
+;;   :after eldoc
+;;   :hook ((eldoc-mode . eldoc-box-hover-mode)
+;;          (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode)))
+
