@@ -3,11 +3,10 @@
 
 (use-package racket-mode
   :mode "\\.rkt\\'"
-  :init
-  (add-hook 'racket-mode-hook #'rainbow-delimiters-mode)
+  :hook (racket-mode . rainbow-delimiters-mode)
   ;; :requires dr-racket-like-unicode-mode
-  :config
-  (setq racket-program "/Applications/Racket/bin/racket"))
+  )
+
 
 (use-package scribble-mode
   :mode "\\.scrbl\\'")
