@@ -2,6 +2,7 @@
 ;;; Dired Mode
 
 (use-package dired
+  :ensure nil
   :commands (dired-jump)
   :bind ("C-C C-j" . dired-jump)
   :config

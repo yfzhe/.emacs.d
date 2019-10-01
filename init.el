@@ -7,8 +7,20 @@
 
 (eval-when-compile
   (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-  (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
+  (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory)))
+
+;;; use-package
+;;; and auto-install packages
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-and-compile
+  (setq use-package-always-ensure t))
+
+(eval-when-compile
   (require 'use-package))
+
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
@@ -31,10 +43,6 @@
 
 (require 'init-spell)
 (require 'init-util)
-
-;;; Auto installing packages
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
 
 ;;; Mode Config
 (use-package haskell-mode
