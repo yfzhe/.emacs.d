@@ -14,9 +14,6 @@
 ;; Rainbow Delimiters
 ;;(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-;; DrRacket-like Unicode Input
-(global-set-key (kbd "C-\\") 'dr-racket-like-unicode-char)
-
 ;; recentf
 (use-package recentf
   :hook (after-init . recentf-mode)

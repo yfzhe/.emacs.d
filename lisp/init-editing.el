@@ -5,6 +5,10 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; DrRacket-like Unicode Input
+(use-package dr-racket-like-unicode
+  :bind ("C-\\" . dr-racket-like-unicode-char))
+
 ;; Indent
 (defun indent-buffer ()
   (interactive)
