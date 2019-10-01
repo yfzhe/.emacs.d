@@ -3,6 +3,7 @@
 /.elfeed
 /auto-save-list
 /transient
+/url
 
 /.lsp-session*
 /eshell
@@ -10,3 +11,4 @@
 /recentf
 
 /bookmarks
+/elfeed.org
