@@ -40,15 +40,13 @@
 (require 'init-lsp)
 (require 'init-racket)
 (require 'init-frontend)
+(require 'init-haskell)
 
 (require 'init-elfeed)
 (require 'init-spell)
 (require 'init-util)
 
 ;;; Mode Config
-(use-package haskell-mode
-  :mode "\\.hs\\'")
-
 (use-package idris-mode
   :mode "\\.idr\\'")
 
