@@ -1,10 +1,12 @@
 /elpa
 
+/.elfeed
 /auto-save-list
 /transient
 
 /.lsp-session*
-/bookmarks
 /eshell
 /projectile-bookmarks.eld
 /recentf
+
+/bookmarks

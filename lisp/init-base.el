@@ -24,6 +24,7 @@
   (setq recentf-max-saved-items 200)
   (setq recentf-exclude '((expand-file-name package-user-dir)
 			  "bookmarks"
-			  "recentf")))
+			  "recentf"
+              ".elfeed/")))
 
 (provide 'init-base)

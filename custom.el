@@ -43,7 +43,7 @@
  '(objed-cursor-color "#ff665c")
  '(package-selected-packages
    (quote
-    (dired eldoc-box css-eldoc add-node-modules-path rjsx-mode company-lsp projectile counsel json-mode company flycheck diredfl tide elm-mode lsp-mode lsp-ui flyspell-correct-ivy flyspell-correct youdao-dictionary exec-path-from-shell julia-mode js2-mode typescript-mode ranger treemacs rust-mode all-the-icons-dired paper-theme cyberpunk-theme plan9-theme zenburn-theme material-theme mustard-theme monokai-theme chyla-theme zeno-theme afternoon-theme doom-themes doom-modeline all-the-icons page-break-lines dashboard idris-mode haskell-mode rainbow-delimiters nyan-mode alchemist elixir-mode markdown-mode magit dr-racket-like-unicode company-pollen sml-mode racer company-erlang auto-complete use-package scribble-mode pollen-mode racket-mode minimal-theme)))
+    (elfeed dired eldoc-box css-eldoc add-node-modules-path rjsx-mode company-lsp projectile counsel json-mode company flycheck diredfl tide elm-mode lsp-mode lsp-ui flyspell-correct-ivy flyspell-correct youdao-dictionary exec-path-from-shell julia-mode js2-mode typescript-mode ranger treemacs rust-mode all-the-icons-dired paper-theme cyberpunk-theme plan9-theme zenburn-theme material-theme mustard-theme monokai-theme chyla-theme zeno-theme afternoon-theme doom-themes doom-modeline all-the-icons page-break-lines dashboard idris-mode haskell-mode rainbow-delimiters nyan-mode alchemist elixir-mode markdown-mode magit dr-racket-like-unicode company-pollen sml-mode racer company-erlang auto-complete use-package scribble-mode pollen-mode racket-mode minimal-theme)))
  '(pdf-view-midnight-colors (quote ("#888a88" . "#edf5dc")))
  '(pos-tip-background-color "#3a933a933a93")
  '(pos-tip-foreground-color "#9E9E9E")

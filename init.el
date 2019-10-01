@@ -41,6 +41,7 @@
 (require 'init-racket)
 (require 'init-frontend)
 
+(require 'init-elfeed)
 (require 'init-spell)
 (require 'init-util)
 
