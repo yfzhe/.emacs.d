@@ -35,12 +35,11 @@
 ;;(setq inhibit-splash-screen 1)
 
 ;; Initial Frame Size
-(setq initial-frame-alist
-      (append (list
-               '(width . 100)
-               '(height . 36))
-              initial-frame-alist))
-(setq default-frame-alist initial-frame-alist)
+(add-to-list 'default-frame-alist '(width . 100))
+(add-to-list 'default-frame-alist '(height . 36))
+
+;; transparent background
+;; (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
 
 ;; Frame Title
 (setq frame-title-format "%b - Emacs")
