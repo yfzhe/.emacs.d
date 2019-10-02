@@ -65,11 +65,14 @@
 (global-company-mode)
 
 ;;; Ivy
-(ivy-mode 1)
-
-(setq ivy-use-virtual-buffer t)
-(setq ivy-count-format "(%d/%d) ")
-(setq ivy-height 6)
+(use-package ivy
+  :hook (after-init . ivy-mode)
+  :config
+  (setq ivy-use-virtual-buffer t)
+  (setq ivy-count-format "(%d/%d) ")
+  (setq ivy-height 6)
+  :bind (("C-s" . swiper-isearch)
+         ("C-r" . swiper-isearch-backward)))
 
 ;;; ----------------------------------------
 ;;; Magit
