@@ -27,7 +27,6 @@
 
 (require 'init-base)
 (require 'init-custom)
-(require 'init-font)
 
 (require 'init-editing)
 (require 'init-dired)

@@ -1,4 +1,25 @@
-;;; Custom
+;;; init-custom.el
+
+;;; Font
+;; other great monospave fonts: Operator Mono, Input Mono, IBM Plex Mono
+(defvar font-family "Iosevka")
+
+(defvar font-size
+  (pcase system-type
+    ('windows-nt 11)
+    ('darwin 15)))
+
+(defvar font-string (concat font-family " " (number-to-string font-size)))
+(set-face-attribute 'default nil :font font-string)
+
+(dolist (charset '(kana han cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+		    charset
+		    (font-spec :family "Source Han Sans SC")))
+
+(use-cjk-char-width-table 'zh_CN)
+
+;; (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
 
 ;;; Dashboard
 (use-package dashboard
@@ -24,28 +45,11 @@
   (setq doom-modeline-buffer-file-name-style 'file-name
         doom-modeline-enable-word-count t))
 
-;; nyan-mode
-;;(nyan-mode t)
-
-;;; Basic
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(global-linum-mode t)
-(column-number-mode t)
-;;(setq inhibit-splash-screen 1)
-
-;; Initial Frame Size
+;; initial frame size
 (add-to-list 'default-frame-alist '(width . 100))
 (add-to-list 'default-frame-alist '(height . 36))
 
 ;; transparent background
 ;; (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
-
-;; Frame Title
-(setq frame-title-format "%b - Emacs")
-
-;; Time Display
-(display-time-mode 1)
-(setq display-time-24hr-format t)
 
 (provide 'init-custom)

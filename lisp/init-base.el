@@ -11,10 +11,24 @@
 (setq default-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; Rainbow Delimiters
+;;; Some UI settings
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(global-linum-mode t)
+(column-number-mode t)
+;;(setq inhibit-splash-screen 1)
+
+;; frame title
+(setq frame-title-format "%b - Emacs")
+
+;; time display
+(display-time-mode 1)
+(setq display-time-24hr-format t)
+
+;;; Rainbow Delimiters
 ;;(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-;; recentf
+;;; recentf
 (use-package recentf
   :hook (after-init . recentf-mode)
   :init
