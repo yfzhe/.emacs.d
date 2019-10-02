@@ -1,6 +1,17 @@
+;;; init-font.el
 ;;; Font
+
 ;; Avilable fonts:  Operator Mono, Input Mono, IBM Plex Mono
-(set-face-attribute 'default nil :font "Iosevka 15")
+(defvar font-family "Iosevka")
+
+(defvar font-size
+  (pcase system-type
+    ('windows-nt 12)
+    ('darwin 15)))
+
+(defvar font-string (concat font-family " " (number-to-string font-size)))
+(set-face-attribute 'default nil :font font-string)
+
 (dolist (charset '(kana han cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
 		    charset
