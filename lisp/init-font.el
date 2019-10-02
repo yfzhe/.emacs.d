@@ -1,12 +1,12 @@
 ;;; init-font.el
 ;;; Font
 
-;; Avilable fonts:  Operator Mono, Input Mono, IBM Plex Mono
+;; other great monospave fonts: Operator Mono, Input Mono, IBM Plex Mono
 (defvar font-family "Iosevka")
 
 (defvar font-size
   (pcase system-type
-    ('windows-nt 12)
+    ('windows-nt 11)
     ('darwin 15)))
 
 (defvar font-string (concat font-family " " (number-to-string font-size)))

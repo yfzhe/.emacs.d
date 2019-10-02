@@ -20,11 +20,13 @@
     (setq ls-lisp-use-insert-directory-program t)
     (setq dired-listing-switches "-aBlh --group-directories-first"))
 
-  ;; or use `ls-lisp'
-  ;; (use-package ls-lisp
-  ;;   :config
-  ;;   (setq ls-lisp-use-insert-directory-program nil)
-  ;;   (setq ls-lisp-dirs-first t))
+  ;; Windows: use `ls-lisp'
+  (when (eq system-type 'windows-nt)
+    (use-package ls-lisp
+      :ensure nil
+      :config
+      (setq ls-lisp-use-insert-directory-program nil)
+      (setq ls-lisp-dirs-first t)))
 
   ;; colorize dired-mode
   (use-package diredfl
