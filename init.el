@@ -21,9 +21,12 @@
 (eval-when-compile
   (require 'use-package))
 
-
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
+
+;;; exec-path-from-shell-initialize
+(when (memq window-system '(max ns x))
+  (exec-path-from-shell-initialize))
 
 (require 'init-base)
 (require 'init-custom)
@@ -34,7 +37,6 @@
 (require 'init-projectile)
 
 (require 'init-org)
-(require 'init-shell)
 
 (require 'init-lsp)
 (require 'init-racket)

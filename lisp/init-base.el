@@ -34,8 +34,8 @@
   :init
   (setq recentf-max-saved-items 200)
   (setq recentf-exclude '((expand-file-name package-user-dir)
-			  "bookmarks"
-			  "recentf"
-              ".elfeed/")))
+                          "bookmarks"
+                          "recentf"
+                          ".elfeed/")))
 
 (provide 'init-base)
