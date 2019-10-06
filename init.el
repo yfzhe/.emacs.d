@@ -33,10 +33,11 @@
 
 (require 'init-editing)
 (require 'init-dired)
+(require 'init-eshell)
+(require 'init-org)
+
 (require 'init-flycheck)
 (require 'init-projectile)
-
-(require 'init-org)
 
 (require 'init-lsp)
 (require 'init-racket)
