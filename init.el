@@ -25,8 +25,9 @@
 (load custom-file)
 
 ;;; exec-path-from-shell-initialize
-(when (memq window-system '(max ns x))
-  (exec-path-from-shell-initialize))
+(when (memq system-type '(darwin))
+  (use-package exec-path-from-shell
+    :init (exec-path-from-shell-initialize)))
 
 (require 'init-base)
 (require 'init-custom)
@@ -56,7 +57,6 @@
   :mode "\\.rs\\'")
 
 (use-package markdown-mode
-  :ensure t
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
