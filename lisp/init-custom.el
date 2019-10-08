@@ -1,7 +1,7 @@
 ;;; init-custom.el
 
 ;;; Font
-;; other great monospave fonts: Operator Mono, Input Mono, IBM Plex Mono
+;; other great monospace fonts: Operator Mono, Input Mono, IBM Plex Mono
 (defvar font-family "Iosevka")
 
 (defvar font-size
