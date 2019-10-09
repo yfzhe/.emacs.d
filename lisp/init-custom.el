@@ -25,7 +25,8 @@
 (use-package dashboard
   :config
   (dashboard-setup-startup-hook)
-  (setq dashboard-items '((recents . 5)
+  (setq dashboard-items '(;(agenda . 5)
+                          (recents . 5)
                           (bookmarks . 6)))
   (setq dashboard-startup-banner 'logo)
   (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
