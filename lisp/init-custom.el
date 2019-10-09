@@ -23,7 +23,6 @@
 
 ;;; Dashboard
 (use-package dashboard
-  :ensure t
   :config
   (dashboard-setup-startup-hook)
   (setq dashboard-items '((recents . 5)
@@ -39,7 +38,6 @@
 
 ;;; Modeline
 (use-package doom-modeline
-  :ensure t
   :hook (after-init . doom-modeline-mode)
   :config
   (setq doom-modeline-buffer-file-name-style 'file-name

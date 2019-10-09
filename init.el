@@ -35,6 +35,7 @@
 (require 'init-editing)
 (require 'init-dired)
 (require 'init-eshell)
+(require 'init-git)
 (require 'init-org)
 
 (require 'init-flycheck)
@@ -75,12 +76,6 @@
   (setq ivy-height 6)
   :bind (("C-s" . swiper-isearch)
          ("C-r" . swiper-isearch-backward)))
-
-;;; ----------------------------------------
-;;; Magit
-(use-package magit
-  :bind (("C-x g" . magit-status)
-         ("C-x M-g" . magit-dispatch)))
 
 ;;; ----------------------------------------
 ;;; eldoc

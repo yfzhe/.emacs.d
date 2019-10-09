@@ -7,6 +7,7 @@
 
 /.lsp-session*
 /eshell
+/forge-database.sqlite
 /projectile-bookmarks.eld
 /recentf
 
