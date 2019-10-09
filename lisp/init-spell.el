@@ -15,13 +15,12 @@
   (setq ispell-local-dictionary "en_US")
   (setq ispell-local-dictionary-alist
         '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US") nil utf-8)))
-  (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist))
+  (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist)
+  :bind ("C-c c" . flyspell-correct-at-point))
 
-;; for better correcting experience
-(use-package flyspell-correct-ivy
-  :bind (;;:map flyspell-mode
-         ("C-c c" .  flyspell-correct-wrapper))
-  :init
-  (setq flyspell-correct-interface #'flyspell-correct-ivy))
+;; (use-package flyspell-correct-ivy
+;;   :bind (("C-c c" .  flyspell-correct-wrapper))
+;;   :init
+;;   (setq flyspell-correct-interface #'flyspell-correct-ivy))
 
 (provide 'init-spell)
