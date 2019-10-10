@@ -4,6 +4,7 @@
 (setq org-agenda-files '("~/Documents/Docs/org/todos/"))
 
 (setq show-week-agenda-p t)
+(setq org-log-done 'time)
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)
