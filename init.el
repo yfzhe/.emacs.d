@@ -68,9 +68,9 @@
 (global-company-mode)
 
 ;;; Ivy
-(use-package ivy
+(use-package counsel
   :hook (after-init . ivy-mode)
-  :config
+  :init
   (setq ivy-use-virtual-buffer t)
   (setq ivy-count-format "(%d/%d) ")
   (setq ivy-height 6)

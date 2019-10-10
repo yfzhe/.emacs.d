@@ -1,6 +1,7 @@
 ;;; init-git.el
 
 (use-package magit
+  :defer t
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch)
          ("C-c M-g" . magit-file-popup)))
