@@ -34,6 +34,15 @@
 (use-package add-node-modules-path
   :hook (js-mode js2-mode typescript-mode rjsx-mode))
 
+;;; use `eldoc-box' for `tide' displaying signature
+(use-package eldoc-box
+  :after eldoc
+  :hook (((typescript-mode rjsx-mode) . eldoc-box-hover-mode)
+         (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode))
+  :config
+  (set-face-attribute 'eldoc-box-body nil :background "#343645")
+  (setq eldoc-box-max-pixel-width 500))
+
 (use-package elm-mode
   :mode "\\.elm\\'")
 
