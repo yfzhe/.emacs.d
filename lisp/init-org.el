@@ -1,7 +1,9 @@
 ;;; init-org.el
 
-(defvar org-directory '("~/Documents/Docs/org/"))
-(defvar org-agenda-files '("~/Documents/Docs/org/todos/"))
+(setq org-directory '("~/Documents/Docs/org/"))
+(setq org-agenda-files '("~/Documents/Docs/org/todos/"))
+
+(setq show-week-agenda-p t)
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)

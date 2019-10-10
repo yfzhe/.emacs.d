@@ -31,11 +31,9 @@
   (setq dashboard-startup-banner 'logo)
   (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
   (setq dashboard-center-content t)
-  (setq dashboard-page-separator " \n \n")
-  (setq dashboard-set-heading-icons t)
-  ;; (setq dashboard-set-file-icons t)
-  ;; (setq dashboard-set-navigator t))
-  (setq show-week-agenda-p t))
+  (setq dashboard-page-separator "\n\n")
+  (setq dashboard-set-heading-icons t))
+  ;; (setq dashboard-set-file-icons t))
 
 ;;; Modeline
 (use-package doom-modeline
