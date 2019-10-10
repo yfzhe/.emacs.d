@@ -33,9 +33,10 @@
 (require 'init-custom)
 
 (require 'init-editing)
+(require 'init-ivy)
 (require 'init-dired)
-(require 'init-eshell)
 (require 'init-git)
+(require 'init-eshell)
 (require 'init-org)
 
 (require 'init-flycheck)
@@ -66,16 +67,6 @@
 ;;; ----------------------------------------
 ;;; Company mode
 (global-company-mode)
-
-;;; Ivy
-(use-package counsel
-  :hook (after-init . ivy-mode)
-  :init
-  (setq ivy-use-virtual-buffer t)
-  (setq ivy-count-format "(%d/%d) ")
-  (setq ivy-height 6)
-  :bind (("C-s" . swiper-isearch)
-         ("C-r" . swiper-isearch-backward)))
 
 ;;; ----------------------------------------
 ;;; eldoc
