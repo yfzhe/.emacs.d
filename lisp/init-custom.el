@@ -49,4 +49,9 @@
 ;; transparent background
 ;; (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
 
+;; titlebar background
+(when (eq system-type 'darwin)
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist '(ns-appearance . dark)))
+
 (provide 'init-custom)
