@@ -54,4 +54,7 @@
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (add-to-list 'default-frame-alist '(ns-appearance . dark)))
 
+;;; Theme
+(use-package doom-themes)
+
 (provide 'init-custom)
