@@ -3,8 +3,7 @@
 
 (use-package dired
   :ensure nil
-  :commands (dired-jump)
-  :bind ("C-C C-j" . dired-jump)
+  :bind ("C-x C-j" . dired-jump)
   :config
   (setq dired-recursive-deletes 'always)
   (setq dired-recursive-copies 'top)
