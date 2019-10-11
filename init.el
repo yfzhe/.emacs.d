@@ -68,6 +68,12 @@
 ;;; Company mode
 (global-company-mode)
 
+(setq company-tooltip-align-annotations t)
+
+(define-key company-active-map (kbd "<return>") nil)
+(define-key company-active-map (kbd "RET") nil)
+(define-key company-active-map (kbd "<tab>") #'company-complete-selection)
+
 ;;; ----------------------------------------
 ;;; eldoc
 
