@@ -26,7 +26,9 @@
 (setq display-time-24hr-format t)
 
 ;;; Rainbow Delimiters
-;;(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(use-package rainbow-delimiters
+  ;; :hook (prog-mode-hook . rainbow-delimiters-mode)
+  )
 
 ;;; recentf
 (use-package recentf

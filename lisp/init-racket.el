@@ -3,10 +3,12 @@
 
 (use-package racket-mode
   :mode "\\.rkt\\'"
-  :hook (racket-mode . rainbow-delimiters-mode)
-  ;; :requires dr-racket-like-unicode-mode
-  )
-
+  :hook ((racket-mode . rainbow-delimiters-mode))
+  :bind (:map racket-mode-map
+         (")" . racket-insert-closing)
+         ("]" . racket-insert-closing)
+         ("}" . racket-insert-closing)
+         ("C-M-\\" . racket-unicode-input-method-enable)))
 
 (use-package scribble-mode
   :mode "\\.scrbl\\'")

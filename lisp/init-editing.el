@@ -7,7 +7,7 @@
 
 ;; DrRacket-like Unicode Input
 (use-package dr-racket-like-unicode
-  :bind ("C-\\" . dr-racket-like-unicode-char))
+  :bind ("C-M-\\" . dr-racket-like-unicode-char))
 
 ;; Indent
 (defun indent-buffer ()
