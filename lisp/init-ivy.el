@@ -6,7 +6,8 @@
          (ivy-mode . counsel-mode))
   :bind (("C-s" . swiper-isearch)
          ("C-r" . swiper-isearch-backward)
-
+         ("C-c s" . swiper)
+         
          ("C-X C-r" . counsel-recentf))
   :init
   (setq ivy-use-virtual-buffer t)
