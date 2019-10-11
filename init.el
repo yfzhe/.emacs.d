@@ -1,4 +1,4 @@
-;;; Package Initialize
+;;; package initialize
 (require 'package)
 (setq package-archives
       '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
@@ -51,7 +51,7 @@
 (require 'init-spell)
 (require 'init-util)
 
-;;; Mode Config
+;;; mode config
 (use-package idris-mode
   :mode "\\.idr\\'")
 
@@ -65,15 +65,10 @@
          ("\\.markdown\\'" . markdown-mode)))
 
 ;;; ----------------------------------------
-;;; Company mode
+;;; company mode
 (global-company-mode)
 
 (setq company-tooltip-align-annotations t)
 
-(define-key company-active-map (kbd "<return>") nil)
-(define-key company-active-map (kbd "RET") nil)
-(define-key company-active-map (kbd "<tab>") #'company-complete-selection)
-
-;;; ----------------------------------------
-;;; eldoc
+;;(define-key company-active-map (kbd "<return>") nil)
 
