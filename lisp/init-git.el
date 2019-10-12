@@ -1,13 +1,14 @@
 ;;; init-git.el
 
 (use-package magit
-  :defer t
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch)
-         ("C-c M-g" . magit-file-popup)))
-
-(use-package magit-todos
-  :hook (emacs-startup . magit-todos-mode))
+         ("C-c M-g" . magit-file-popup))
+  :config
+  ;; if do not insert `(use-package magit-todos)` here,
+  ;; it would open git-grep html manual on Windows
+  (use-package magit-todos
+    :hook (emacs-startup . magit-todos-mode)))
 
 (use-package git-timemachine)
 
