@@ -56,5 +56,6 @@
 
 ;;; Theme
 (use-package doom-themes)
+  ;; :config (load-theme 'doom-dracula))
 
 (provide 'init-custom)
