@@ -18,9 +18,6 @@
 (column-number-mode t)
 ;;(setq inhibit-splash-screen 1)
 
-;; frame title
-(setq frame-title-format "%b - Emacs")
-
 ;; time display
 (display-time-mode 1)
 (setq display-time-24hr-format t)
@@ -33,6 +30,7 @@
   (setq recentf-exclude '((expand-file-name package-user-dir)
                           "bookmarks"
                           "recentf"
-                          ".elfeed/")))
+                          ".elfeed/"
+                          "elpa/")))
 
 (provide 'init-base)

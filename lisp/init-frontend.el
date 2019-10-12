@@ -37,7 +37,7 @@
   :hook (((typescript-mode rjsx-mode) . eldoc-box-hover-mode)
          (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode))
   :config
-  (set-face-attribute 'eldoc-box-body nil :background "#343645")
+  (set-face-background 'eldoc-box-body "#343645")
   (setq eldoc-box-max-pixel-width 560))
 
 (use-package elm-mode

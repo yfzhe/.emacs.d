@@ -31,7 +31,7 @@
   (setq dashboard-startup-banner 'logo)
   (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
   (setq dashboard-center-content t)
-  (setq dashboard-page-separator "\n\n")
+  (setq dashboard-page-separator " \n \n")
   (setq dashboard-set-heading-icons t))
   ;; (setq dashboard-set-file-icons t))
 
@@ -39,8 +39,12 @@
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)
   :config
-  (setq doom-modeline-buffer-file-name-style 'file-name
-        doom-modeline-enable-word-count t))
+  (setq doom-modeline-buffer-file-name-style 'file-name)
+  (setq doom-modeline-checker-simple-format nil))
+
+;;; frame settings
+;; frame title
+(setq frame-title-format "%b - Emacs")
 
 ;; initial frame size
 (add-to-list 'default-frame-alist '(width . 100))
@@ -54,7 +58,7 @@
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (add-to-list 'default-frame-alist '(ns-appearance . dark)))
 
-;;; Theme
+;;; theme
 (use-package doom-themes)
   ;; :config (load-theme 'doom-dracula))
 
