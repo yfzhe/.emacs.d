@@ -10,7 +10,8 @@
   :defer t
   :if (executable-find "hunspell")
   :hook (((text-mode org-mode markdown-mode git-commit-setup) . flyspell-mode)
-         ((js-mode js2-mode rjxs-mode typescript-mode) . flyspell-prog-mode))
+         ;;((js-mode js2-mode rjxs-mode typescript-mode) . flyspell-prog-mode)
+         )
   :init
   (setq ispell-program-name "hunspell")
   (setq ispell-local-dictionary "en_US")

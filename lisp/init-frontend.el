@@ -17,13 +17,10 @@
   :mode "\\.\\(js\\|jsx\\|tsx\\)\\'")
 
 (use-package tide
-  :after (:all (:any typescript-mode rjsx-mode) (:all company flycheck))
-  :hook ((typescript-mode . tide-setup)
-         (js2-mode . tide-setup)
-         (rjsx-mode . tide-setup))
+  :after (:all (:any typescript-mode rjsx-mode) company flycheck)
+  :hook ((typescript-mode rjsx-mode) . tide-setup)
   :config
   (tide-hl-identifier-mode)
-  (setq company-tooltip-align-annotations t)
   (setq tide-format-options
         (list :indentSize 2
               :tabSize 2
@@ -41,7 +38,7 @@
          (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode))
   :config
   (set-face-attribute 'eldoc-box-body nil :background "#343645")
-  (setq eldoc-box-max-pixel-width 500))
+  (setq eldoc-box-max-pixel-width 560))
 
 (use-package elm-mode
   :mode "\\.elm\\'")
