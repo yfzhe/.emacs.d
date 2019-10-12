@@ -1,13 +1,31 @@
 ;;; init-editing.el
 ;;; Editing
 
-;; Auto save and backup
+;;; auto save and backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-;; DrRacket-like Unicode Input
+;; DrRacket-like unicode input
 (use-package dr-racket-like-unicode
   :bind ("C-M-\\" . dr-racket-like-unicode-char))
+
+;;; rainbow delimiters
+(use-package rainbow-delimiters
+  ;; :hook (prog-mode-hook . rainbow-delimiters-mode)
+  )
+
+;;; highlight current line
+;; (use-package hl-line
+;;   :hook (after-init . global-hl-line-mode))
+
+;;; highlight indentation
+;; (use-package highlight-indent-guides
+;;   :hook (prog-mode . highlight-indent-guides-mode)
+;;   :init
+;;   (setq highlight-indent-guides-method 'character)
+;;   (setq highlight-indent-guides-auto-enabled nil)
+;;   :config
+;;   (set-face-foreground 'highlight-indent-guides-character-face "dimgray"))
 
 ;; Indent
 (defun indent-buffer ()
