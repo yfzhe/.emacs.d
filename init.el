@@ -35,6 +35,7 @@
 (require 'init-editing)
 (require 'init-ivy)
 (require 'init-dired)
+(require 'init-company)
 (require 'init-git)
 (require 'init-eshell)
 (require 'init-org)
@@ -63,12 +64,4 @@
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
-
-;;; ----------------------------------------
-;;; company mode
-(global-company-mode)
-
-(setq company-tooltip-align-annotations t)
-
-;;(define-key company-active-map (kbd "<return>") nil)
 
