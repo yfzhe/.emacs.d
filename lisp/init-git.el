@@ -15,9 +15,15 @@
 ;; (use-package forge
 ;;  :after magit)
 
+;; use `diff-hl' to show git status in dired-mode
+;; (it conflicts with flycheck, so not used in file buffers
+;;  maybe we can use `diff-hl-margin-mode')
+(use-package diff-hl
+  :hook ((dired-mode . diff-hl-dired-mode)
+         (magit-post-refresh . diff-hl-magit-post-refresh)))
+
 ;; TODO: some useful packages about git
 ;; - smerge-mode
-;; - diff-hl (conflict with flycheck)
 ;; - git-messenger
 
 (use-package gitattributes-mode)
