@@ -37,4 +37,4 @@
 (use-package youdao-dictionary
   :bind (("C-c u y" . youdao-dictionary-search-at-point)))
 
-(provide 'init-util)
+(provide 'init-misc)

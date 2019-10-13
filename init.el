@@ -61,7 +61,7 @@
 
 (require 'init-elfeed)
 (require 'init-spell)
-(require 'init-util)
+(require 'init-misc)
 
 ;;; mode config
 (use-package idris-mode
