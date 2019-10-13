@@ -19,7 +19,7 @@
   (let ((msg
          (if (buffer-file-name)
              (yfzhe:shrink-path (buffer-file-name))
-           (concat "Buffer " (buffer-name) " does not open a file!"))))
+           (concat "Buffer \"" (buffer-name) "\" is not openning a file!"))))
     (message msg)))
 
 (global-set-key (kbd "C-c u f") 'echo-file-name)
