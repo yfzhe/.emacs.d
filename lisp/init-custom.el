@@ -1,4 +1,4 @@
-;;; init-custom.el
+;;; init-custom.el  -*- lexical-binding: t -*-
 
 ;;; Font
 ;; other great monospace fonts: Operator Mono, Input Mono, IBM Plex Mono
@@ -9,8 +9,7 @@
     ('windows-nt 11)
     ('darwin 15)))
 
-(defvar font-string (concat font-family " " (number-to-string font-size)))
-(set-face-attribute 'default nil :font font-string)
+(set-face-font 'default (concat font-family " " (number-to-string font-size)))
 
 (dolist (charset '(kana han cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
@@ -23,13 +22,15 @@
 
 ;;; Dashboard
 (use-package dashboard
+  :init (dashboard-setup-startup-hook)
   :config
-  (dashboard-setup-startup-hook)
   (setq dashboard-items '(;(agenda . 5)
-                          (recents . 5)
+                          (recents . 8)
                           (bookmarks . 6)))
-  (setq dashboard-startup-banner 'logo)
-  (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
+  (let ((banner "~/.emacs.d/assets/lisp-logo-alien.png"))
+    (setq dashboard-startup-banner
+          (if (file-exists-p banner) banner 'logo)))
+  (setq dashboard-banner-logo-title "(((Welcome, Paren Hacker!)))")
   (setq dashboard-center-content t)
   (setq dashboard-page-separator " \n \n")
   (setq dashboard-set-heading-icons t))
