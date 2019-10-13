@@ -25,6 +25,11 @@
 (display-time-mode 1)
 (setq display-time-24hr-format t)
 
+;;; link-hint
+(use-package link-hint
+  :bind (("C-c u l" . link-hint-open-link)))
+         ;("C-c u c" . link-hint-copy-link)))
+
 ;;; recentf
 (use-package recentf
   :hook (after-init . recentf-mode)
