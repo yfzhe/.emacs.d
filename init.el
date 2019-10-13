@@ -1,9 +1,20 @@
+;;; init.el  -*- lexical-binding: t -*-
+
+;;; adjust gc threshold for speeding up
+(let ((normal-gc-cons-threshold 8000000)
+      (init-gc-cons-threshold 20000000))
+  (setq gc-cons-threshold init-gc-cons-threshold)
+  (add-hook #'emacs-startup-hook
+            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
+
+(add-hook 'focus-out-hook #'garbage-collect)
+
 ;;; package initialize
 (require 'package)
 (setq package-archives
       '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
-(package-initialize) 
+(package-initialize)
 
 (eval-when-compile
   (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -35,11 +46,11 @@
 (require 'init-editing)
 (require 'init-ivy)
 (require 'init-dired)
+(require 'init-org)
+(require 'init-eshell)
+
 (require 'init-company)
 (require 'init-git)
-(require 'init-eshell)
-(require 'init-org)
-
 (require 'init-flycheck)
 (require 'init-projectile)
 
