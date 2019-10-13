@@ -1,15 +1,19 @@
-;;; init-util.el
+;;; init-util.el   -*- lexical-binding: t -*-
 ;;; Make life easier
 
 (require 'dash)
 
 (defvar shrink-bases
-  `(("~" . ,(expand-file-name "~"))))
+  `(("~" . ,(expand-file-name "~"))
+    ("~/D" . "~/Documents")
+    ("*Dejavu-Code*:" . "~/D/Dejavu/Code/")
+    ("*Org*:" . "~/D/Docs/Org/"))
+  "a list of path shrink-base: (care for the order!)")
 
 (defun yfzhe:shrink-path (full-path)
   (-reduce-from (lambda (path base)
                   (replace-regexp-in-string
-                   (concat "^" (cdr base)) (car base) full-path))
+                   (concat "^" (cdr base)) (car base) path))
                 full-path
                 shrink-bases))
 
@@ -31,7 +35,6 @@
 
 ;; need dictionary to save my poor english
 (use-package youdao-dictionary
-  :ensure t
   :bind (("C-c u y" . youdao-dictionary-search-at-point)))
 
 (provide 'init-util)
