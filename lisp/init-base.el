@@ -18,6 +18,9 @@
 (column-number-mode t)
 ;;(setq inhibit-splash-screen 1)
 
+(setq use-file-dialog nil)
+(setq use-dialog-box nil)
+
 ;; time display
 (display-time-mode 1)
 (setq display-time-24hr-format t)
