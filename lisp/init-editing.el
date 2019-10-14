@@ -36,16 +36,24 @@
   (interactive)
   (save-excursion
     (if (region-active-p)
-	(progn
-	  (indent-region (region-beginning) (region-end))
-	  (message "Indent selected region."))
+        (progn
+          (indent-region (region-beginning) (region-end))
+          (message "Indent selected region."))
       (progn
-	(indent-buffer)
-	(message "Indent buffer.")))))
+        (indent-buffer)
+        (message "Indent buffer.")))))
 
 (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
 
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
+;; better comment-or-uncomment experience
+;; see: https://stackoverflow.com/questions/9688748/emacs-comment-uncomment-current-line
+(defun comment-or-uncomment-region-or-line ()
+  (interactive)
+  (if (region-active-p)
+      (comment-or-uncomment-region (region-beginning) (region-end))
+    (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
+
+(global-set-key (kbd "C-c c") 'comment-or-uncomment-region-or-line)
 
 ;; use space instead of tab for indentation
 (setq-default indent-tabs-mode nil)
