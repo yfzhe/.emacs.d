@@ -13,10 +13,14 @@
   :config
   (setq-default typescript-indent-level 2))
 
+(use-package rjsx-mode
+  :mode "\\.\\(js\\|jsx\\)\\'"
+  :hook (rjsx-mode . tide-setup))
+
 ;; it seems that tsx-tide is not supported in rjsx-mode,
-;; so we have to use web-mode for jsx (and tsx)
+;; so we have to use web-mode for tsx
 (use-package web-mode
-  :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
+  :mode "\\.tsx\\'"
   :hook (web-mode . tide-setup)
   :config
   (setq web-mode-markup-indent-offset 2)
@@ -24,8 +28,8 @@
   (setq web-mode-code-indent-offset 2))
 
 (use-package tide
-  :after (:all (:any typescript-mode web-mode) company flycheck)
-  :hook ((typescript-mode web-mode) . tide-setup)
+  :after (:all (:any typescript-mode rjsx-mode web-mode) company flycheck)
+  :hook ((typescript-mode rjsx-mode web-mode) . tide-setup)
   :config
   (tide-hl-identifier-mode)
   (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)
