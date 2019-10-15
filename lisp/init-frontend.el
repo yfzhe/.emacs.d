@@ -30,6 +30,8 @@
 (use-package tide
   :after (:all (:any typescript-mode rjsx-mode web-mode) company flycheck)
   :hook ((typescript-mode rjsx-mode web-mode) . tide-setup)
+  :bind (:map tide-mode-map
+         ("C-c C-d" . tide-documentation-at-point))
   :config
   (tide-hl-identifier-mode)
   (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)
