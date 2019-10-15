@@ -25,6 +25,7 @@
 ;; TODO: some useful packages about git
 ;; - smerge-mode
 ;; - git-messenger
+;; - git-link
 
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)
