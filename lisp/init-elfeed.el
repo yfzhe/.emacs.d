@@ -5,7 +5,7 @@
   :bind (("C-c r" . elfeed))
   :config
   (setq elfeed-db-directory "~/.emacs.d/.elfeed")
-  (setq-default elfeed-search-filter "@1-week-ago +unread +must"))
+  (setq-default elfeed-search-filter "@1-week-ago +unread"))
 
 (use-package elfeed-org
   :config
