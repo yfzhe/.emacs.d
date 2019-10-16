@@ -60,7 +60,9 @@
   (add-to-list 'default-frame-alist '(ns-appearance . dark)))
 
 ;;; theme
+;; NOTE: some (not bad) themes
+;; - doom-dracula
+;; - twillight-anti-bright-theme
 (use-package doom-themes)
-  ;; :config (load-theme 'doom-dracula))
 
 (provide 'init-custom)
