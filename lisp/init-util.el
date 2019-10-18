@@ -10,7 +10,7 @@
     ("*Org*:" . "~/D/Docs/Org/"))
   "a list of path shrink-base: (care for the order!)")
 
-(defun yfzhe:shrink-path (full-path)
+(defun yfzhe-shrink-path (full-path)
   (-reduce-from (lambda (path base)
                   (replace-regexp-in-string
                    (concat "^" (cdr base)) (car base) path))

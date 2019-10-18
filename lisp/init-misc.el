@@ -9,7 +9,7 @@
   (interactive)
   (let ((msg
          (if (buffer-file-name)
-             (yfzhe:shrink-path (buffer-file-name))
+             (yfzhe-shrink-path (buffer-file-name))
            (concat "Buffer \"" (buffer-name) "\" is not openning a file!"))))
     (message msg)))
 
