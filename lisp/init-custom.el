@@ -27,7 +27,7 @@
   (setq dashboard-items '(;(agenda . 5)
                           (recents . 8)
                           (bookmarks . 6)))
-  (let ((banner "~/.emacs.d/assets/lisp-logo-alien.png"))
+  (let ((banner "~/.emacs.d/assets/left-paren-black-version.png"))
     (setq dashboard-startup-banner
           (if (file-exists-p banner) banner 'logo)))
   (setq dashboard-banner-logo-title "(((Welcome, Paren Hacker!)))")
