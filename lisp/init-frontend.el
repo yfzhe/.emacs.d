@@ -36,6 +36,7 @@
   (tide-hl-identifier-mode)
   (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)
   (flycheck-add-next-checker 'javascript-eslint 'tsx-tide 'append)
+  (flycheck-add-next-checker 'typescript-tide 'javascript-eslint 'append)
   (setq tide-format-options
         (list :indentSize 2
               :tabSize 2
