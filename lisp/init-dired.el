@@ -27,28 +27,26 @@
       (setq ls-lisp-use-insert-directory-program nil)
       (setq ls-lisp-dirs-first t)))
 
-  ;; Reuse the only one buffer for dired mode
+  ;; reuse the only one buffer for dired mode
   ;; (put 'dired-find-alternate-file 'disabled nil)
-  ;; (with-eval-after-load 'dired
-  ;;   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+  ;; (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
   )
 
 (use-package dired-filter
-  ;; TODO: find out why `:bind` is failed here
-  :config
-  (define-key dired-mode-map (kbd "C-c f") 'dired-filter-mode))
+  :after dired
+  :bind (:map dired-mode-map
+         ("C-c f" . dired-filter-mode)))
 
 ;; colorize dired-mode
 (use-package diredfl
   :init (diredfl-global-mode 1))
 
 (use-package wdired
+  :after dired
   :bind (:map dired-mode-map
         ("C-c C-w" . wdired-change-to-wdired-mode)))
 
 ;;; list of some usefu packages to be discovered
-;;; - dired-filter
-;;; - dired-subtree
 ;;; - dired-ranger
 ;;; - dired-collapse
 ;;; - dired-rainbow
