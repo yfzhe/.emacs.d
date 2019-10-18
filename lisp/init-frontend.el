@@ -62,6 +62,10 @@
   (set-face-background 'eldoc-box-body "#343645")
   (setq eldoc-box-max-pixel-width 560))
 
+;; not sure about whether to use it
+(use-package yarn-mode
+  :mode "\\^yarn\\.lock\\'")
+
 (use-package elm-mode
   :mode "\\.elm\\'")
 
