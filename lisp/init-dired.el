@@ -46,7 +46,7 @@
   :bind (:map dired-mode-map
         ("C-c C-w" . wdired-change-to-wdired-mode)))
 
-;;; list of some usefu packages to be discovered
+;;; TODO: list of some useful packages to be discovered
 ;;; - dired-ranger
 ;;; - dired-collapse
 ;;; - dired-rainbow
