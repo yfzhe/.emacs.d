@@ -42,6 +42,8 @@
 
 (require 'init-base)
 (require 'init-custom)
+(when (display-graphic-p)
+  (require 'init-font))
 
 (require 'init-editing)
 (require 'init-ivy)
