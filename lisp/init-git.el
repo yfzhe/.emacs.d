@@ -30,9 +30,9 @@
   (setq git-messenger:use-magit-popup t)
   (setq git-messenger:show-detail t))
 
-;; TODO: some useful packages about git
+;; some useful packages about git
 ;; - smerge-mode
-;; - git-link
+;; - git-link (need configure on self-host git service)
 
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)
