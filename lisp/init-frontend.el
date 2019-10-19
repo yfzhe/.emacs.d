@@ -1,8 +1,11 @@
 ;;; init-frontend.el
 ;;; For such many things in front-end development
 
+(use-package css-mode
+  :init (setq css-indent-offset 2))
+
 (use-package js2-mode
-  ;; :mode "\\.\\(js\\|json\\)\\'"
+  ;; :mode "\\.json\\'"
   :config
   (setq-default js-indent-level 2)
   (setq-default js2-mode-show-parse-errors nil)
