@@ -10,9 +10,7 @@
   :bind ("C-M-\\" . dr-racket-like-unicode-char))
 
 ;;; rainbow delimiters
-(use-package rainbow-delimiters
-  ;; :hook (prog-mode-hook . rainbow-delimiters-mode)
-  )
+(use-package rainbow-delimiters)
 
 ;;; highlight current line
 ;; (use-package hl-line
