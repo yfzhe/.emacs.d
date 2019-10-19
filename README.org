@@ -1,0 +1,19 @@
+#+TITLE: My .emacs.d
+
+Yes, it's a poor man's Emacs configuration.
+
+* Hightlight
+
+- usable configuration on front-end development (react, typescript and eslint)
+- dired-mode works well on both macOS and Windows
+- flyspell for spell checking
+- elfeed as RSS reader
+
+* TODOs
+
+- more packages on git
+- treemacs?
+- more language configurations
+- lsp
+- tabs?
+
