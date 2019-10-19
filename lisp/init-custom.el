@@ -41,7 +41,8 @@
 
 ;;; theme
 ;; NOTE: some (not bad) themes
-;; - doom-dracula
+;; - doom-dracula (from `doom-themes')
+;; - panda-theme
 ;; - twillight-anti-bright-theme
 (use-package doom-themes)
 
