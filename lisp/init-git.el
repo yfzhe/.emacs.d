@@ -22,9 +22,16 @@
   :hook ((dired-mode . diff-hl-dired-mode)
          (magit-post-refresh . diff-hl-magit-post-refresh)))
 
+(use-package git-messenger
+  :bind (("C-c u g" . git-messenger:popup-message)
+         :map git-messenger-map
+         ("m" . git-messenger:copy-message))
+  :init
+  (setq git-messenger:use-magit-popup t)
+  (setq git-messenger:show-detail t))
+
 ;; TODO: some useful packages about git
 ;; - smerge-mode
-;; - git-messenger
 ;; - git-link
 
 (use-package gitattributes-mode)
