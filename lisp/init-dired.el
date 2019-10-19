@@ -46,9 +46,8 @@
   :bind (:map dired-mode-map
         ("C-c C-w" . wdired-change-to-wdired-mode)))
 
-;;; TODO: list of some useful packages to be discovered
-;;; - dired-ranger
-;;; - dired-collapse
-;;; - dired-rainbow
+;; nest single files
+;; (use-package dired-collapse
+;;   :hook (dired-mode . dired-collapse-mode))
 
 (provide 'init-dired)
