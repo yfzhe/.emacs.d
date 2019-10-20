@@ -42,8 +42,14 @@
 ;;; theme
 ;; NOTE: some (not bad) themes
 ;; - doom-dracula (from `doom-themes')
+;; - kaolin-ocean and kaolin-dark (from `kaolin-themes', support terminal)
 ;; - panda-theme
 ;; - twillight-anti-bright-theme
 (use-package doom-themes)
+(use-package kaolin-themes)
+
+(if (display-graphic-p)
+    (load-theme 'doom-dracula)
+  (load-theme 'kaolin-ocean))
 
 (provide 'init-custom)
