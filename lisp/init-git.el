@@ -15,9 +15,6 @@
 
 (use-package git-timemachine)
 
-;; (use-package forge
-;;  :after magit)
-
 ;; use `diff-hl' to show git status in dired-mode
 ;; (it conflicts with flycheck, so not used in file buffers
 ;;  maybe we can use `diff-hl-margin-mode')
@@ -36,6 +33,7 @@
 ;; some useful packages about git
 ;; - smerge-mode
 ;; - git-link (need configure on self-host git service)
+;; - forge
 
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)
