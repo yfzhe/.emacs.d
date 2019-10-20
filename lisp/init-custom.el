@@ -48,8 +48,8 @@
 (use-package doom-themes)
 (use-package kaolin-themes)
 
-(if (display-graphic-p)
-    (load-theme 'doom-dracula)
-  (load-theme 'kaolin-ocean))
+;; (if (display-graphic-p)
+;;     (load-theme 'doom-dracula)
+;;   (load-theme 'kaolin-ocean))
 
 (provide 'init-custom)
