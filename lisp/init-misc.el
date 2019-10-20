@@ -17,8 +17,15 @@
 
 ;; quick open ~/.emacs.d
 (defun open-emacs-d ()
+  "Open ~/.emacs.d"
   (interactive)
   (find-file "~/.emacs.d/"))
+
+;; reload init file
+(defun reload-init-file ()
+  "Reload Emacs configurations"
+  (interactive)
+  (load-file user-init-file))
 
 ;; need dictionary to save my poor english
 (use-package youdao-dictionary
