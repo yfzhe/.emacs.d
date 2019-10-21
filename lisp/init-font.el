@@ -9,7 +9,8 @@
     ('windows-nt 11)
     ('darwin 15)))
 
-(set-frame-font (concat font-family " " (number-to-string font-size)))
+(let ((font-string (concat font-family " " (number-to-string font-size))))
+  (set-face-attribute 'default nil :font font-string))
 
 ;; display emojis
 (when (eq system-type 'darwin)
