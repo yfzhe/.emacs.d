@@ -12,8 +12,7 @@
          ("C-M-\\" . racket-unicode-input-method-enable)))
 
 (use-package scribble-mode
-  :mode "\\.scrbl\\'"
-  :hook (scribble-mode . racket-mode))
+  :mode "\\.scrbl\\'")
 
 (use-package pollen-mode
   :mode "\\.\\(p\\|pp\\|pm\\|pmd\\|poly\\|ptree\\)\\'"
