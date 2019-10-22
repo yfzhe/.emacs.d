@@ -22,6 +22,11 @@
   :hook ((dired-mode . diff-hl-dired-mode)
          (magit-post-refresh . diff-hl-magit-post-refresh)))
 
+;; maybe it's better to not changing the original keymap
+;; (use-package smerge-mode
+;;   :config
+;;   (setq smerge-command-prefix "C-c m"))
+
 (use-package git-messenger
   :bind (("C-c u g" . git-messenger:popup-message)
          :map git-messenger-map
@@ -31,9 +36,7 @@
   (setq git-messenger:show-detail t))
 
 ;; some useful packages about git
-;; - smerge-mode
 ;; - git-link (need configure on self-host git service)
-;; - forge
 
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)
