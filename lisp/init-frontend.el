@@ -20,6 +20,8 @@
 ;; (indentation in web-mode is too weird)
 (use-package rjsx-mode
   :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
+  :bind (:map rjsx-mode-map
+         ("C-c M-r" . rjsx-rename-tag-at-point))
   :hook (rjsx-mode . tide-setup))
 
 (use-package tide
@@ -27,7 +29,10 @@
   :hook (((typescript-mode rjsx-mode) . tide-setup)
          ((typescript-mode rjsx-mode) . tide-hl-identifier-mode))
   :bind (:map tide-mode-map
-         ("C-c C-d" . tide-documentation-at-point))
+         ("C-c C-d" . tide-documentation-at-point)
+         ;; not sure whether this key is good
+         ("C-c C-r" . tide-rename-symbol)
+         ("C-c C-l" . tide-references))
   :config
   ;; TS format settings
   (setq tide-format-options
