@@ -24,12 +24,12 @@
 
 (use-package tide
   :after (:all (:any typescript-mode rjsx-mode) company flycheck)
-  :hook ((typescript-mode rjsx-mode) . tide-setup)
+  :hook (((typescript-mode rjsx-mode) . tide-setup)
+         ((typescript-mode rjsx-mode) . tide-hl-identifier-mode))
   :bind (:map tide-mode-map
          ("C-c C-d" . tide-documentation-at-point))
   :config
-  (tide-hl-identifier-mode)
-  ;; ts format settings
+  ;; TS format settings
   (setq tide-format-options
         (list :indentSize 2
               :tabSize 2
@@ -63,9 +63,8 @@
          (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode))
   :config
   (set-face-background 'eldoc-box-body "#343645")
-  (setq eldoc-box-max-pixel-width 560))
+  (setq eldoc-box-max-pixel-width 600))
 
-;; not sure about whether to use it
 (use-package yarn-mode
   :mode "\\^yarn\\.lock\\'")
 
