@@ -5,6 +5,12 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; use space instead of tab for indentation
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
+(setq-default tab-always-indent 'complete)
+
 ;; DrRacket-like unicode input
 (use-package dr-racket-like-unicode
   :bind ("C-M-\\" . dr-racket-like-unicode-char))
@@ -53,10 +59,8 @@
 
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region-or-line)
 
-;; use space instead of tab for indentation
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-
-(setq-default tab-always-indent 'complete)
+;; highlight todo
+(use-package hl-todo
+  :hook (after-init . global-hl-todo-mode))
 
 (provide 'init-editing)
