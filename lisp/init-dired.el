@@ -50,4 +50,9 @@
 ;; (use-package dired-collapse
 ;;   :hook (dired-mode . dired-collapse-mode))
 
+(use-package dired-git-info
+  :after dired
+  :bind (:map dired-mode-map
+         (")" . dired-git-info-mode)))
+
 (provide 'init-dired)
