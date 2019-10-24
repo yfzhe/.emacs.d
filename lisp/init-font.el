@@ -1,7 +1,8 @@
 ;;; init-font.el  -*- lexical-binding: t -*-
 ;;; Font
 
-;; other great monospace fonts: Operator Mono, Input Mono, IBM Plex Mono
+;; other great monospace fonts:
+;; Operator Mono, Input Mono, IBM Plex Mono, Computer Modern Textwriter
 (defvar font-family "Iosevka")
 
 (defvar font-size

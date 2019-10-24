@@ -35,7 +35,7 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-;;; exec-path-from-shell-initialize
+;;; exec-path-from-shell initialize
 (when (memq system-type '(darwin))
   (use-package exec-path-from-shell
     :init (exec-path-from-shell-initialize)))
