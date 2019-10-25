@@ -20,6 +20,7 @@
   (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist))
 
 (use-package flyspell-correct-ivy
+  :after flyspell
   :bind ("C-c s" .  flyspell-correct-at-point)
   :init
   (setq flyspell-correct-interface #'flyspell-correct-ivy))
