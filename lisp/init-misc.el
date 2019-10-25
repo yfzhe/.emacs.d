@@ -2,8 +2,7 @@
 ;;; Make life easier
 
 ;;; echo file name
-(eval-when-compile
-  (require 'init-util))
+(require 'init-util)
 
 (defun echo-file-name ()
   (interactive)
