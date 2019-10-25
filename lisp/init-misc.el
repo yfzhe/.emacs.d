@@ -30,4 +30,6 @@
 (use-package youdao-dictionary
   :bind (("C-c u y" . youdao-dictionary-search-at-point)))
 
+(use-package countdown)
+
 (provide 'init-misc)
