@@ -25,6 +25,10 @@
 (display-time-mode 1)
 (setq display-time-24hr-format t)
 
+;;; which-key: hints key bindings
+(use-package which-key
+  :hook (after-init . which-key-mode))
+
 ;;; link-hint
 (use-package link-hint
   :bind (("C-c u l" . link-hint-open-link)))
