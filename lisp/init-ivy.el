@@ -18,6 +18,11 @@
   :init
   (setq ivy-use-virtual-buffer t)
   (setq ivy-count-format "(%d/%d) ")
-  (setq ivy-height 6))
+  (setq ivy-height 8))
+
+;;; another way to find files
+;; (use-package ivy-explorer
+;;   :after ivy
+;;   :config (ivy-explorer-mode 1))
 
 (provide 'init-ivy)
