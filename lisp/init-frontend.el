@@ -1,9 +1,15 @@
 ;;; init-frontend.el
 ;;; For such many things in front-end development
 
+;;; CSS
 (use-package css-mode
   :init (setq css-indent-offset 2))
 
+(use-package counsel-css
+  :bind (:map css-mode-map
+         ("C-c s" . counsel-css)))
+
+;;; JS / JSX / TS
 (use-package js2-mode
   ;; :mode "\\.json\\'"
   :config
