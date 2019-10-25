@@ -25,14 +25,10 @@
 (display-time-mode 1)
 (setq display-time-24hr-format t)
 
-;;; which-key: hints key bindings
-(use-package which-key
-  :hook (after-init . which-key-mode))
-
-;;; link-hint
-(use-package link-hint
-  :bind (("C-c u l" . link-hint-open-link)))
-         ;("C-c u c" . link-hint-copy-link)))
+;;; ibuffer
+(use-package ibuffer
+  :ensure nil
+  :bind ("C-x C-b" . ibuffer))
 
 ;;; recentf
 (use-package recentf
@@ -44,5 +40,14 @@
                           "recentf"
                           ".elfeed/"
                           "elpa/")))
+
+;;; which-key: hints key bindings
+(use-package which-key
+  :hook (after-init . which-key-mode))
+
+;;; link-hint
+(use-package link-hint
+  :bind (("C-c u l" . link-hint-open-link)))
+         ;("C-c u c" . link-hint-copy-link)))
 
 (provide 'init-base)

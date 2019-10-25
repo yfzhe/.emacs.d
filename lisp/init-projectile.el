@@ -10,4 +10,8 @@
   (setq projectile-use-git-grep t)
   (setq projectile-completion-system 'ivy))
 
+(use-package ibuffer-projectile
+  :after ibuffer
+  :hook (ibuffer . ibuffer-projectile-set-filter-groups))
+
 (provide 'init-projectile)
