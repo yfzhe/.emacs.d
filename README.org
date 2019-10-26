@@ -2,8 +2,6 @@
 
 Yes, it's a poor man's Emacs configuration.
 
-* Hightlight
-
 - usable configuration on front-end development (react, typescript and eslint)
 - dired-mode works well on both macOS and Windows
 - flyspell for spell checking
@@ -11,9 +9,10 @@ Yes, it's a poor man's Emacs configuration.
 
 * TODOs
 
-- more packages on git
+- more on counsel
 - treemacs?
 - more language configurations
 - lsp
 - tabs?
+- [[https://github.com/joodland/bm][bm]]
 
