@@ -31,5 +31,6 @@
   :bind (("C-c u y" . youdao-dictionary-search-at-point)))
 
 (use-package countdown)
+(use-package lorem-ipsum)
 
 (provide 'init-misc)
