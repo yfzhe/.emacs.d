@@ -47,14 +47,15 @@
 
 (require 'init-editing)
 (require 'init-ivy)
-(require 'init-dired)
-(require 'init-org)
-(require 'init-eshell)
 
 (require 'init-company)
 (require 'init-git)
 (require 'init-flycheck)
 (require 'init-projectile)
+
+(require 'init-dired)
+(require 'init-eshell)
+(require 'init-org)
 
 (require 'init-lsp)
 (require 'init-racket)

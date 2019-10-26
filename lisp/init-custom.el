@@ -7,8 +7,8 @@
   (setq dashboard-items '(;(agenda . 5)
                           (recents . 8)
                           (bookmarks . 6)))
-  (let ((banner "~/.emacs.d/assets/left-paren-black-version.png"))
-    (setq dashboard-startup-banner
+  (setq dashboard-startup-banner
+        (let ((banner "~/.emacs.d/assets/left-paren-black-version.png"))
           (if (file-exists-p banner) banner 'logo)))
   (setq dashboard-banner-logo-title "(((Welcome, Paren Hacker!)))")
   (setq dashboard-center-content t)

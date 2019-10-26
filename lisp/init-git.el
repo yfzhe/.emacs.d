@@ -20,7 +20,9 @@
 ;;  maybe we can use `diff-hl-margin-mode')
 (use-package diff-hl
   :hook ((dired-mode . diff-hl-dired-mode)
-         (magit-post-refresh . diff-hl-magit-post-refresh)))
+         (magit-post-refresh . diff-hl-magit-post-refresh))
+  :config
+  (diff-hl-flydiff-mode t))
 
 ;; maybe it's better to not changing the original keymap
 ;; (use-package smerge-mode

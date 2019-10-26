@@ -1,7 +1,7 @@
 ;;; init-editing.el
 ;;; Editing
 
-;;; auto save and backup
+;; auto save and backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
@@ -11,11 +11,14 @@
 
 (setq-default tab-always-indent 'complete)
 
+;; automatically reload files was modified elsewhere
+(global-auto-revert-mode t)
+
 ;; DrRacket-like unicode input
 (use-package dr-racket-like-unicode
   :bind ("C-M-\\" . dr-racket-like-unicode-char))
 
-;;; rainbow delimiters
+;; rainbow delimiters
 (use-package rainbow-delimiters)
 
 ;;; highlight current line
