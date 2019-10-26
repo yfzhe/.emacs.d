@@ -13,8 +13,20 @@
   (setq dashboard-banner-logo-title "(((Welcome, Paren Hacker!)))")
   (setq dashboard-center-content t)
   (setq dashboard-page-separator " \n \n")
-  (setq dashboard-set-heading-icons t))
-  ;; (setq dashboard-set-file-icons t))
+  (setq dashboard-set-heading-icons t)
+  ;; (setq dashboard-set-file-icons t)
+
+  (setq dashboard-set-navigator t)
+  (setq dashboard-navigator-buttons
+        `(((nil
+            "Restore" "Restore last session"
+            (lambda (&rest _) (restore-last-session))))))
+
+  (defun restore-last-session ()
+    (interactive)
+    (when (bound-and-true-p persp-mode)
+      (message "Restoring last session...")
+      (persp-load-state-from-file))))
 
 ;;; Modeline
 (use-package doom-modeline
