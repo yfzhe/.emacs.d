@@ -6,7 +6,7 @@
   :hook (after-init . persp-mode)
   :init
   (setq persp-keymap-prefix (kbd "C-c x"))
-  (setq persp-nil-name "default")
+  (setq persp-nil-name "whatever")
   (setq persp-set-last-persp-for-new-frames nil)
   (setq persp-auto-resume-time 0) ; don't auto-resume
   (setq persp-common-buffer-filter-functions

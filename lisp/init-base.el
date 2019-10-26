@@ -27,7 +27,6 @@
 
 ;;; ibuffer
 (use-package ibuffer
-  :ensure nil
   :bind ("C-x C-b" . ibuffer))
 
 ;;; recentf
