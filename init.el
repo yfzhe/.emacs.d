@@ -85,6 +85,9 @@
   (setq j-conjunction-face font-lock-keyword-face)
   (setq j-other-face font-lock-constant-face))
 
+(use-package yaml-mode
+  :mode "\\.\\(yaml\\|yml\\)\\'")
+
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)

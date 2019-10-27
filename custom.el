@@ -43,7 +43,7 @@
  '(objed-cursor-color "#ff665c")
  '(package-selected-packages
    (quote
-    (persp-mode-projectile-brigde persp-mode-projectile-bridge lorem-ipsum persp-mode countdown counsel-css ibuffer-projectile which-key j-mode rust-mode idris-mode youdao-dictionary flyspell-correct-ivy elfeed-org elfeed dante haskell-mode elm-mode yarn-mode eldoc-box add-node-modules-path tide rjsx-mode typescript-mode js2-mode pollen-mode scribble-mode racket-mode company-lsp lsp-ui lsp-mode projectile flycheck gitignore-mode gitconfig-mode gitattributes-mode git-messenger diff-hl git-timemachine magit-todos magit eshell-prompt-extras esh-autosuggest dired-git-info diredfl dired-filter counsel hl-todo rainbow-delimiters dr-racket-like-unicode kaolin-themes doom-themes doom-modeline dashboard link-hint exec-path-from-shell use-package)))
+    (yaml-mode persp-mode-projectile-brigde persp-mode-projectile-bridge lorem-ipsum persp-mode countdown counsel-css ibuffer-projectile which-key j-mode rust-mode idris-mode youdao-dictionary flyspell-correct-ivy elfeed-org elfeed dante haskell-mode elm-mode yarn-mode eldoc-box add-node-modules-path tide rjsx-mode typescript-mode js2-mode pollen-mode scribble-mode racket-mode company-lsp lsp-ui lsp-mode projectile flycheck gitignore-mode gitconfig-mode gitattributes-mode git-messenger diff-hl git-timemachine magit-todos magit eshell-prompt-extras esh-autosuggest dired-git-info diredfl dired-filter counsel hl-todo rainbow-delimiters dr-racket-like-unicode kaolin-themes doom-themes doom-modeline dashboard link-hint exec-path-from-shell use-package)))
  '(pdf-view-midnight-colors (quote ("#888a88" . "#edf5dc")))
  '(pos-tip-background-color "#3a933a933a93")
  '(pos-tip-foreground-color "#9E9E9E")
