@@ -66,4 +66,7 @@
 (use-package hl-todo
   :hook (after-init . global-hl-todo-mode))
 
+;; show "whitespace"
+(global-set-key (kbd "C-c u w") 'whitespace-mode)
+
 (provide 'init-editing)
