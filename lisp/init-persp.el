@@ -25,7 +25,9 @@
   ;;   (add-to-list 'ivy-ignore-buffers
   ;;                #'(lambda (b)
   ;;                    (when persp-mode
-  ;;                      (not (persp-contain-buffer-p b (get-current-persp)))))))
+  ;;                      (let ((persp (get-current-persp)))
+  ;;                        (or persp
+  ;;                            (not (persp-contain-buffer-p b persp))))))))
 
   ;; (here was something that) integerate with ibuffer
   ;; see: https://gist.github.com/Bad-ptr/1aca1ec54c3bdb2ee80996eb2b68ad2d
