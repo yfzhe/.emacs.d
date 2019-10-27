@@ -7,7 +7,7 @@
 
 (use-package counsel-css
   :bind (:map css-mode-map
-         ("C-c s" . counsel-css)))
+         ("C-c C-s" . counsel-css)))
 
 ;;; JS / JSX / TS
 (use-package js2-mode
