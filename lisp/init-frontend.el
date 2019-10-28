@@ -54,18 +54,21 @@
 
   ;; the flycheck-er `tsx-tide` does not support `rjsx-mode',
   ;; so we have to make our one.
-  (flycheck-define-generic-checker 'tsx-tide-for-rjsx-mode
+  (flycheck-define-generic-checker 'tsx-tide/rjsx-mode
     "A JSX syntax checker using tsserver, for `rjsx-mode'"
     :start #'tide-flycheck-start
     :verify #'tide-flycheck-verify
     :modes '(rjsx-mode)
     :predicate #'tide-flycheck-predicate)
-  (add-to-list 'flycheck-checkers 'tsx-tide-for-rjsx-mode t)
-  (flycheck-add-next-checker 'javascript-eslint 'tsx-tide-for-rjsx-mode 'append))
+  (add-to-list 'flycheck-checkers 'tsx-tide/rjsx-mode t)
+  (flycheck-add-next-checker 'javascript-eslint 'tsx-tide/rjsx-mode 'append))
 
 ;; add node_modules into PATH, necessary for using eslint, etc.
 (use-package add-node-modules-path
   :hook (js-mode js2-mode typescript-mode rjsx-mode))
+
+;; prettier
+(use-package prettier-js)
 
 ;;; use `eldoc-box' for `tide' displaying signature
 (use-package eldoc-box
