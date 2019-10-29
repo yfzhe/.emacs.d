@@ -15,7 +15,9 @@
             "Ignore temp buffers."
             (let ((name (buffer-name buffer)))
               (and (not (string-equal "*scratch*" name))
-                   (string-prefix-p "*" name))))))
+                   (or (string-prefix-p " " name)
+                       (string-prefix-p "*" name)
+                       (string-prefix-p "magit" name)))))))
 
   :config
   (add-to-list 'recentf-exclude persp-save-dir)

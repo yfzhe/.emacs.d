@@ -2,18 +2,18 @@
 
 Yes, it's a poor man's Emacs configuration.
 
-- usable configuration on front-end development (react, typescript and eslint)
+- usable configuration on front-end development (react, typescript; eslint, prettier)
 - dired-mode works well on both macOS and Windows
+- great git experience (thanks, magit, you're the best git interface in the world!)
 - flyspell for spell checking
 - elfeed as RSS reader
 
 * TODOs
 
+- more language configurations
+- lsp
 - more on counsel
 - treemacs?
 - use persp-mode better
-- more language configurations
-- lsp
-- tabs?
 - [[https://github.com/joodland/bm][bm]]
 
