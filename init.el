@@ -57,6 +57,7 @@
 (require 'init-dired)
 (require 'init-eshell)
 (require 'init-org)
+(require 'init-treemacs)
 
 (require 'init-lsp)
 (require 'init-racket)
