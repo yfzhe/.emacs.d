@@ -38,7 +38,8 @@
                           "bookmarks"
                           "recentf"
                           ".elfeed/"
-                          "elpa/")))
+                          "elpa/"
+                          ".cache/")))
 
 ;;; which-key: hints key bindings
 (use-package which-key

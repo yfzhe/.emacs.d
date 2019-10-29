@@ -10,10 +10,10 @@ Yes, it's a poor man's Emacs configuration.
 
 * TODOs
 
+- no-littering
 - more language configurations
 - lsp
 - more on counsel
-- treemacs?
 - use persp-mode better
 - [[https://github.com/joodland/bm][bm]]
 
