@@ -47,7 +47,8 @@
 
 (require 'init-editing)
 (require 'init-ivy)
-(require 'init-persp)
+(require 'init-desktop)
+;; (require 'init-persp)
 
 (require 'init-company)
 (require 'init-git)

@@ -24,9 +24,13 @@
 
   (defun restore-last-session ()
     (interactive)
-    (when (bound-and-true-p persp-mode)
+    (cond
+     ((bound-and-true-p persp-mode)
       (message "Restoring last session...")
-      (persp-load-state-from-file))))
+      (persp-load-state-from-file))
+     (desktop-save-mode
+      (message "Restoring last desktop session...")
+      (desktop-read)))))
 
 ;;; Modeline
 (use-package doom-modeline
