@@ -22,7 +22,7 @@
   :config
   (setq-default typescript-indent-level 2))
 
-;; use rjsx-mode for jsx
+;; use `rjsx-mode' for jsx
 ;; (indentation in web-mode is too weird)
 (use-package rjsx-mode
   :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
@@ -37,6 +37,7 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2))
 
+;; `tide' for ts language server
 (use-package tide
   :after (:all (:any typescript-mode rjsx-mode web-mode) company flycheck)
   :hook (((typescript-mode rjsx-mode web-mode) . tide-setup)
@@ -75,7 +76,11 @@
   :hook (js-mode js2-mode typescript-mode rjsx-mode web-mode))
 
 ;; prettier
-(use-package prettier-js)
+(use-package prettier-js
+  :bind (:map rjsx-mode-map
+         ("C-c C-p" . prettier-js)
+         :map typescript-mode-map
+         ("C-c C-p" . prettier-js)))
 
 ;;; use `eldoc-box' for `tide' displaying signature
 (use-package eldoc-box
