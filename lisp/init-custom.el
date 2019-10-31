@@ -68,4 +68,10 @@
 ;;     (load-theme 'doom-dracula)
 ;;   (load-theme 'kaolin-ocean))
 
+;;; highlight cursor (disabled)
+(use-package beacon
+  :disabled t
+  :init (setq beacon-color "#99d4e8")
+  :hook (after-init . beacon-mode))
+
 (provide 'init-custom)
