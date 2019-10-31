@@ -28,7 +28,7 @@
      ((bound-and-true-p persp-mode)
       (message "Restoring last session...")
       (persp-load-state-from-file))
-     (desktop-save-mode
+     (t ;desktop-save-mode
       (message "Restoring last desktop session...")
       (desktop-read)))))
 

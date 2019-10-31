@@ -6,12 +6,20 @@
 ;;; - https://www.emacswiki.org/emacs/desktop
 
 (use-package desktop
+  :hook (kill-emacs . session-save)
   :config
-  (desktop-save-mode 1)
+  (defun session-save ()
+    "A customized version of `desktop-save'"
+    (interactive)
+    (if (file-exists-p (expand-file-name desktop-base-file-name desktop-dirname))
+        (when (yes-or-no-p "Exists a previous saved desktop session, overwrite it?")
+          (desktop-save desktop-dirname))
+      (desktop-save desktop-dirname)))
 
   (setq desktop-restore-frames nil) ; disable restoring frames when initing
-  (setq desktop-path
-        (list (expand-file-name "desktop" user-emacs-directory)))
-  (setq desktop-buffers-not-to-save "\\(magit\\)"))
+  (let ((dir (expand-file-name "desktop" user-emacs-directory)))
+    (setq desktop-dirname dir)
+    (setq desktop-path (list dir)))
+  (setq desktop-buffers-not-to-save "\\(magit\\|tide\\)"))
 
 (provide 'init-desktop)
