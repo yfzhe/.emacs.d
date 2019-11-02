@@ -12,7 +12,8 @@
          ("C-M-\\" . racket-unicode-input-method-enable)))
 
 (use-package scribble-mode
-  :mode "\\.scrbl\\'")
+  :mode "\\.scrbl\\'"
+  :hook ((scribble-mode . rainbow-delimiters-mode)))
 
 (use-package pollen-mode
   :mode "\\.\\(p\\|pp\\|pm\\|pmd\\|poly\\|ptree\\)\\'"
