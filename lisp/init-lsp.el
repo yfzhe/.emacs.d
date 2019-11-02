@@ -1,15 +1,25 @@
 ;;; init-lsp.el
 
 (use-package lsp-mode
-  :hook ((elm-mode . lsp))
-  :commands lsp
+  :hook ((elm-mode . lsp-deferred))
+  :bind (:map lsp-mode-map
+         ("C-c C-d" . lsp-describe-thing-at-point))
   :init
   (setq lsp-auto-guess-root t)
   (setq lsp-prefer-flymake nil)
-  (setq lsp-enable-indentation t))
+  (setq lsp-enable-indentation t)
+  ;; now, yasnippet is not used, so we have to toggle off the next
+  (setq lsp-enable-snippet nil))
 
 (use-package lsp-ui
-  :commands lsp-ui-mode)
+  :commands lsp-ui-mode
+  :init
+  (setq lsp-ui-doc-use-webkit nil)
+  (setq lsp-ui-doc-delay 0.5)
+  (setq lsp-ui-doc-max-width 50)
+  ;; move signature info from eldoc to lsp-ui-doc
+  (setq lsp-ui-doc-include-signature t)
+  (setq lsp-eldoc-enable-hover nil))
 
 (use-package company-lsp
   :commands company-lsp)

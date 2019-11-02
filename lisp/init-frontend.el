@@ -3,6 +3,7 @@
 
 ;;; CSS
 (use-package css-mode
+  :hook (css-mode . lsp-deferred)
   :init (setq css-indent-offset 2))
 
 (use-package counsel-css
