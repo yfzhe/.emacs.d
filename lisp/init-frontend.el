@@ -1,6 +1,7 @@
 ;;; init-frontend.el
 ;;; For such many things in front-end development
 
+;;; --------------------------------------------------
 ;;; CSS
 (use-package css-mode
   :hook (css-mode . lsp-deferred)
@@ -10,6 +11,7 @@
   :bind (:map css-mode-map
          ("C-c C-s" . counsel-css)))
 
+;;; --------------------------------------------------
 ;;; JS / JSX / TS
 (use-package js2-mode
   ;; :mode "\\.json\\'"
@@ -38,16 +40,16 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2))
 
-;; `tide' for ts language server
+;;; --------------------------------------------------
+;;; TS Language Server
 (use-package tide
   :after (:all (:any typescript-mode rjsx-mode web-mode) company flycheck)
   :hook (((typescript-mode rjsx-mode web-mode) . tide-setup)
          ((typescript-mode rjsx-mode web-mode) . tide-hl-identifier-mode))
   :bind (:map tide-mode-map
          ("C-c C-d" . tide-documentation-at-point)
-         ;; not sure whether this key is good
-         ("C-c C-r" . tide-rename-symbol)
-         ("C-c C-l" . tide-references))
+         ("C-c C-l" . tide-references)
+         ("C-c C-r" . tide-rename-symbol))
   :config
   ;; TS format settings
   (setq tide-format-options
@@ -72,6 +74,17 @@
   (add-to-list 'flycheck-checkers 'tsx-tide/rjsx-mode t)
   (flycheck-add-next-checker 'javascript-eslint 'tsx-tide/rjsx-mode 'append))
 
+;;; use `eldoc-box' for `tide' signature displaying
+(use-package eldoc-box
+  :after eldoc
+  :hook (((typescript-mode rjsx-mode web-mode) . eldoc-box-hover-mode)
+         (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode))
+  :config
+  (set-face-background 'eldoc-box-body "#343645")
+  (setq eldoc-box-max-pixel-width 600))
+
+;;; --------------------------------------------------
+;;; Utility for front-end development
 ;; add node_modules into PATH, necessary for using eslint, etc.
 (use-package add-node-modules-path
   :hook (js-mode js2-mode typescript-mode rjsx-mode web-mode))
@@ -83,18 +96,12 @@
          :map typescript-mode-map
          ("C-c C-p" . prettier-js)))
 
-;;; use `eldoc-box' for `tide' displaying signature
-(use-package eldoc-box
-  :after eldoc
-  :hook (((typescript-mode rjsx-mode web-mode) . eldoc-box-hover-mode)
-         (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode))
-  :config
-  (set-face-background 'eldoc-box-body "#343645")
-  (setq eldoc-box-max-pixel-width 600))
-
+;; yarn.lock
 (use-package yarn-mode
   :mode "\\^yarn\\.lock\\'")
 
+;;; --------------------------------------------------
+;;; Elm
 (use-package elm-mode
   :mode "\\.elm\\'")
 
