@@ -96,3 +96,8 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+(use-package restclient)
+(use-package company-restclient
+  :config
+  (add-to-list 'company-backends 'company-restclient))
+
