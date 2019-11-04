@@ -14,6 +14,20 @@
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
 
+;; undo-tree: undo and redo
+(use-package undo-tree
+  :defines recentf-exclude
+  :hook (after-init . global-undo-tree-mode)
+  :init
+  (setq undo-tree-visualizer-diff t)
+  (setq undo-tree-enable-undo-in-region nil)
+  (setq undo-tree-auto-save-history nil)
+  (setq undo-tree-history-directory-alist
+        `(("." . ,(locate-user-emacs-file "undo-tree-hist/"))))
+  :config
+  (dolist (dir undo-tree-history-directory-alist)
+    (push (expand-file-name (cdr dir)) recentf-exclude)))
+
 ;; DrRacket-like unicode input
 (use-package dr-racket-like-unicode
   :bind ("C-M-\\" . dr-racket-like-unicode-char))
@@ -33,6 +47,13 @@
 ;;   (setq highlight-indent-guides-auto-enabled nil)
 ;;   :config
 ;;   (set-face-foreground 'highlight-indent-guides-character-face "dimgray"))
+
+;; highlight todo
+(use-package hl-todo
+  :hook (after-init . global-hl-todo-mode))
+
+;; show "whitespace"
+(global-set-key (kbd "C-c u w") 'whitespace-mode)
 
 ;; Indent
 (defun indent-buffer ()
@@ -61,12 +82,5 @@
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
 
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region-or-line)
-
-;; highlight todo
-(use-package hl-todo
-  :hook (after-init . global-hl-todo-mode))
-
-;; show "whitespace"
-(global-set-key (kbd "C-c u w") 'whitespace-mode)
 
 (provide 'init-editing)
