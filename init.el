@@ -65,6 +65,7 @@
 (require 'init-frontend)
 (require 'init-haskell)
 
+(require 'init-doc)
 (require 'init-elfeed)
 (require 'init-spell)
 (require 'init-misc)
@@ -89,12 +90,6 @@
 
 (use-package yaml-mode
   :mode "\\.\\(yaml\\|yml\\)\\'")
-
-(use-package markdown-mode
-  :commands (markdown-mode gfm-mode)
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode)))
 
 (use-package restclient)
 (use-package company-restclient
