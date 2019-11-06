@@ -91,7 +91,9 @@
 (use-package yaml-mode
   :mode "\\.\\(yaml\\|yml\\)\\'")
 
-(use-package restclient)
+(use-package restclient
+  :mode "^request\\'")
+
 (use-package company-restclient
   :config
   (add-to-list 'company-backends 'company-restclient))
