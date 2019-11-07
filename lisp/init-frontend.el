@@ -48,6 +48,7 @@
          ((typescript-mode rjsx-mode web-mode) . tide-hl-identifier-mode))
   :bind (:map tide-mode-map
          ("C-c C-d" . tide-documentation-at-point)
+         ("C-c C-f" . tide-fix)
          ("C-c C-l" . tide-references)
          ("C-c C-r" . tide-rename-symbol))
   :config
