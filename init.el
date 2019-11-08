@@ -63,6 +63,7 @@
 (require 'init-lsp)
 (require 'init-racket)
 (require 'init-frontend)
+(require 'init-apl-j)
 (require 'init-haskell)
 
 (require 'init-doc)
@@ -76,17 +77,6 @@
 
 (use-package rust-mode
   :mode "\\.rs\\'")
-
-(use-package j-mode
-  :bind (:map j-mode-map
-         ("C-c C-z" . j-console))
-  :config
-  (setq j-console-cmd "jconsole")
-  ;; FIXME: these faces need better customization
-  (setq j-verb-face font-lock-function-name-face)
-  (setq j-adverb-face font-lock-builtin-face)
-  (setq j-conjunction-face font-lock-keyword-face)
-  (setq j-other-face font-lock-constant-face))
 
 (use-package yaml-mode
   :mode "\\.\\(yaml\\|yml\\)\\'")
