@@ -35,11 +35,12 @@
 ;; rainbow delimiters
 (use-package rainbow-delimiters)
 
-;;; highlight current line
-;; (use-package hl-line
-;;   :hook (after-init . global-hl-line-mode))
+;;; lots of highlight
+;; highlight current line
+(use-package hl-line
+  :hook (after-init . global-hl-line-mode))
 
-;;; highlight indentation
+;; highlight indentation
 ;; (use-package highlight-indent-guides
 ;;   :hook (prog-mode . highlight-indent-guides-mode)
 ;;   :init
@@ -51,6 +52,11 @@
 ;; highlight todo
 (use-package hl-todo
   :hook (after-init . global-hl-todo-mode))
+
+;; highlight fill-column
+;; (use-package fill-column-indicator
+;;   :hook ((text-mode . fci-mode)
+;;          (prog-mode . fci-mode)))
 
 (use-package goto-line-preview
   :bind ([remap goto-line] . goto-line-preview))
