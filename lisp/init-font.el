@@ -11,7 +11,7 @@
     ('darwin 15)))
 
 (let ((font-string (concat font-family " " (number-to-string font-size))))
-  (set-face-attribute 'default nil :font font-string))
+  (set-face-attribute 'default nil :font font-string :weight 'semi-light))
 
 ;; display emojis
 (when (eq system-type 'darwin)
