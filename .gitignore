@@ -1,3 +1,9 @@
+/lisp/init-secret.el
+
+/assets
+/bookmarks
+/elfeed.org
+
 /elpa
 
 /.cache
@@ -13,7 +19,3 @@
 /forge-database.sqlite
 /projectile-bookmarks.eld
 /recentf
-
-/assets
-/bookmarks
-/elfeed.org

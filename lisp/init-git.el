@@ -13,8 +13,6 @@
 (use-package magit-todos
   :hook (emacs-startup . magit-todos-mode))
 
-(use-package git-timemachine)
-
 ;; use `diff-hl' to show git status in dired-mode
 ;; (it conflicts with flycheck, so not used in file buffers
 ;;  maybe we can use `diff-hl-margin-mode')
@@ -24,21 +22,21 @@
   :config
   (diff-hl-flydiff-mode t))
 
-;; maybe it's better to not changing the original keymap
-;; (use-package smerge-mode
-;;   :config
-;;   (setq smerge-command-prefix "C-c m"))
+;; don't forget `smerge-mode' for resolve conflicts!
+;; (use-package smerge-mode)
+
+(use-package git-timemachine)
 
 (use-package git-messenger
-  :bind (("C-c u g" . git-messenger:popup-message)
+  :bind (("C-c g m" . git-messenger:popup-message)
          :map git-messenger-map
          ("m" . git-messenger:copy-message))
   :init
   (setq git-messenger:use-magit-popup t)
   (setq git-messenger:show-detail t))
 
-;; some useful packages about git
-;; - git-link (need configure on self-host git service)
+(use-package git-link
+  :bind ("C-c g l" . git-link))
 
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)

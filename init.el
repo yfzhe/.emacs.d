@@ -70,6 +70,7 @@
 (require 'init-elfeed)
 (require 'init-spell)
 (require 'init-misc)
+(require 'init-secret nil t)
 
 ;;; mode config
 (use-package idris-mode
