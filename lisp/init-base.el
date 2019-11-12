@@ -27,7 +27,9 @@
 
 ;;; ibuffer
 (use-package ibuffer
-  :bind ("C-x C-b" . ibuffer))
+  :bind ("C-x C-b" . ibuffer)
+  :config
+  (setq ibuffer-show-empty-filter-groups nil))
 
 ;;; recentf
 (use-package recentf
