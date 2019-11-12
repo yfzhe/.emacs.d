@@ -41,7 +41,7 @@
     :init (exec-path-from-shell-initialize)))
 
 (require 'init-base)
-(require 'init-custom)
+(require 'init-ui)
 (when (display-graphic-p)
   (require 'init-font))
 

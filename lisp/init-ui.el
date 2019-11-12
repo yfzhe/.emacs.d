@@ -1,4 +1,4 @@
-;;; init-custom.el  -*- lexical-binding: t -*-
+;;; init-ui.el  -*- lexical-binding: t -*-
 
 ;;; Dashboard
 (use-package dashboard
@@ -28,7 +28,7 @@
      ((bound-and-true-p persp-mode)
       (message "Restoring last session...")
       (persp-load-state-from-file))
-     (t ;desktop-save-mode
+     (desktop-save-mode
       (message "Restoring last desktop session...")
       (desktop-read)))))
 
@@ -74,4 +74,4 @@
   :init (setq beacon-color "#99d4e8")
   :hook (after-init . beacon-mode))
 
-(provide 'init-custom)
+(provide 'init-ui)
