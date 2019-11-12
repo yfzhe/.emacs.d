@@ -10,6 +10,11 @@
     ('windows-nt 11)
     ('darwin 15)))
 
+(defvar font-cjk-family
+  (pcase system-type
+    ('windows-nt "思源黑体") ;; what's the hell!
+    ('darwin "Source Han Sans SC")))
+
 (let ((font-string (concat font-family " " (number-to-string font-size))))
   (set-face-attribute 'default nil :font font-string :weight 'semi-light))
 
@@ -21,7 +26,7 @@
 (dolist (charset '(kana han cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
-                    (font-spec :family "Source Han Sans SC")))
+                    (font-spec :family font-cjk-family)))
 
 (use-cjk-char-width-table 'zh_CN)
 
