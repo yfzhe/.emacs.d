@@ -7,4 +7,24 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+;;; use `deft' for notes
+(defvar my-deft-directory
+  (pcase system-type
+    ('windows-nt "C:/Dropbox/notes")
+    ('darwin "~/Documents/Docs/notes")))
+
+(use-package deft
+  :config
+  (setq deft-extensions '("txt" "md" "org" "tex"))
+  (setq deft-default-extension "md")
+  (setq deft-directory my-deft-directory)
+  (setq deft-recursive t)
+
+  (setq deft-use-filename-as-title nil)
+  (setq deft-use-filter-string-for-filename t)
+  (setq deft-file-naming-rules
+        '((noslash . "-")
+          (nospace . "-")
+          (case-fn . downcase))))
+
 (provide 'init-doc)
