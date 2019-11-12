@@ -9,23 +9,22 @@
   (setq dired-recursive-copies 'top)
 
   ;; sorting directories first
-  ;; macOS: use GNU ls as `gls' from `coreutils' if available.
+  ;; use GNU ls as `gls' from `coreutils' if available.
   ;; https://emacs.stackexchange.com/questions/29096/how-to-sort-directories-first-in-dired
-  (when (eq system-type 'darwin)
-    (let ((gls (executable-find "gls")))
-      (when gls 
-	(setq insert-directory-program gls)))
+  (let ((gls (executable-find "gls")))
+    (if gls
+        (progn
+          (setq insert-directory-program gls)
 
-    (setq ls-lisp-use-insert-directory-program t)
-    (setq dired-listing-switches "-aBlh --group-directories-first"))
-
-  ;; Windows: use `ls-lisp'
-  (when (eq system-type 'windows-nt)
-    (use-package ls-lisp
-      :ensure nil
-      :config
-      (setq ls-lisp-use-insert-directory-program nil)
-      (setq ls-lisp-dirs-first t)))
+          (setq ls-lisp-use-insert-directory-program t)
+          (setq dired-listing-switches "-aBlh --group-directories-first"))
+      ;; another way: use `ls-lisp'
+      (progn
+        (use-package ls-lisp
+          :ensure nil
+          :config
+          (setq ls-lisp-use-insert-directory-program nil)
+          (setq ls-lisp-dirs-first t)))))
 
   ;; reuse the only one buffer for dired mode
   ;; (put 'dired-find-alternate-file 'disabled nil)

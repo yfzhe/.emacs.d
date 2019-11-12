@@ -3,10 +3,15 @@
 Yes, it's a poor man's Emacs configuration.
 
 - usable configuration on front-end development (react, typescript; eslint, prettier)
-- dired-mode works well on both macOS and Windows
-- great git experience (thanks, magit, you're the best git interface in the world!)
+- dired-mode works well
+- great git experience (thanks, magit, the best git interface in the world!)
 - flyspell for spell checking
 - elfeed as RSS reader
+
+* Requirements
+
+- coreutils for better dired experience
+- hunspell for flyspell
 
 * TODOs
 

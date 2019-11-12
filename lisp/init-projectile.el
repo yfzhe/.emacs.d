@@ -6,6 +6,7 @@
          ("C-c p" . 'projectile-command-map))
   :init
   (setq projectile-mode-line-prefix "")
+  (setq projectile-indexing-method 'alien)
   (setq projectile-sort-order 'recentf)
   (setq projectile-use-git-grep t)
   (setq projectile-completion-system 'ivy))
