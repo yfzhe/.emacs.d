@@ -20,4 +20,8 @@
 
 (setq org-return-follows-link t)
 
+;; enable markdown backend
+(use-package ox-md
+  :ensure nil)
+
 (provide 'init-org)
