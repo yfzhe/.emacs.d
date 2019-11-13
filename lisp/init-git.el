@@ -25,7 +25,8 @@
 ;; don't forget `smerge-mode' for resolve conflicts!
 ;; (use-package smerge-mode)
 
-(use-package git-timemachine)
+(use-package git-timemachine
+  :bind ("C-c g t" . git-timemachine))
 
 (use-package git-messenger
   :bind (("C-c g m" . git-messenger:popup-message)
