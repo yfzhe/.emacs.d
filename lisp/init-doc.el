@@ -16,7 +16,7 @@
 (use-package deft
   :config
   (setq deft-extensions '("txt" "md" "org" "tex"))
-  (setq deft-default-extension "md")
+  (setq deft-default-extension "org")
   (setq deft-directory my-deft-directory)
   (setq deft-recursive t)
 
@@ -25,6 +25,8 @@
   (setq deft-file-naming-rules
         '((noslash . "-")
           (nospace . "-")
-          (case-fn . downcase))))
+          (case-fn . downcase)))
+
+  (setq deft-auto-save-interval 30))
 
 (provide 'init-doc)
