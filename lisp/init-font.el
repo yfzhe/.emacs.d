@@ -2,8 +2,9 @@
 ;;; Font
 
 ;; other great monospace fonts:
-;; Operator Mono, Input Mono, IBM Plex Mono, Computer Modern Textwriter
-(defvar font-family "Iosevka")
+;; SF Mono, IBM Plex Mono, Input Mono
+;; Iosevka, Operator Mono, Computer Modern Textwriter
+(defvar font-family "SF Mono")
 
 (defvar font-size
   (pcase system-type

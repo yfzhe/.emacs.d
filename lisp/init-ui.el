@@ -44,8 +44,8 @@
 (setq frame-title-format "%b - Emacs")
 
 ;; initial frame size
-(add-to-list 'default-frame-alist '(width . 100))
 (add-to-list 'default-frame-alist '(height . 36))
+(add-to-list 'default-frame-alist '(width . 80))
 
 ;; transparent background
 ;; (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
