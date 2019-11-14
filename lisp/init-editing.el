@@ -38,6 +38,9 @@
 ;; show "whitespace"
 (global-set-key (kbd "C-c u w") 'whitespace-mode)
 
+;; auto fill-column
+(global-set-key (kbd "C-c u q") 'auto-fill-mode)
+
 ;;; lots of highlight
 ;; highlight current line
 (use-package hl-line

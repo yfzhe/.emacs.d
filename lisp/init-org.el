@@ -20,6 +20,9 @@
 
 (setq org-return-follows-link t)
 
+;; use auto-fill-mode when edit org files
+(add-hook 'org-mode-hook #'auto-fill-mode)
+
 ;; enable markdown backend
 (use-package ox-md
   :ensure nil)
