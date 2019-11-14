@@ -23,7 +23,7 @@
   (setq deft-use-filename-as-title nil)
   (setq deft-use-filter-string-for-filename t)
   (setq deft-file-naming-rules
-        '((noslash . "-")
+        '(;(noslash . "-") ;; don't replace slash, so we can make notes in sub-dir easier
           (nospace . "-")
           (case-fn . downcase)))
 
