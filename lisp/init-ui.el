@@ -48,7 +48,7 @@
 (add-to-list 'default-frame-alist '(width . 80))
 
 ;; transparent background
-;; (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
+;; (add-to-list 'default-frame-alist '(alpha . (95 . 0)))
 
 ;; titlebar background
 (when (eq system-type 'darwin)

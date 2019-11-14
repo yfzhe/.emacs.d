@@ -1,7 +1,7 @@
 ;;; init-editing.el
-;;; Editing
+;;; It is for editing to use Emacs, isn't it?
 
-;; auto save and backup
+;; disable auto-save and backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
@@ -14,7 +14,7 @@
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
 
-;; undo-tree: undo and redo
+;; undo-tree: better undo and redo
 (use-package undo-tree
   :defines recentf-exclude
   :hook (after-init . global-undo-tree-mode)
@@ -34,6 +34,9 @@
 
 ;; rainbow delimiters
 (use-package rainbow-delimiters)
+
+;; show "whitespace"
+(global-set-key (kbd "C-c u w") 'whitespace-mode)
 
 ;;; lots of highlight
 ;; highlight current line
@@ -61,10 +64,7 @@
 (use-package goto-line-preview
   :bind ([remap goto-line] . goto-line-preview))
 
-;; show "whitespace"
-(global-set-key (kbd "C-c u w") 'whitespace-mode)
-
-;; Indent
+;; indent
 (defun indent-buffer ()
   (interactive)
   (indent-region (point-min) (point-max)))
@@ -82,7 +82,7 @@
 
 (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
 
-;; better comment-or-uncomment experience
+;; better comment-or-uncomment
 ;; see: https://stackoverflow.com/questions/9688748/emacs-comment-uncomment-current-line
 (defun comment-or-uncomment-region-or-line ()
   (interactive)
