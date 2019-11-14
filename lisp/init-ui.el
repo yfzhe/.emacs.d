@@ -4,8 +4,7 @@
 (use-package dashboard
   :init (dashboard-setup-startup-hook)
   :config
-  (setq dashboard-items '(;(agenda . 5)
-                          (recents . 8)
+  (setq dashboard-items '((recents . 8)
                           (bookmarks . 6)))
   (setq dashboard-startup-banner
         (let ((banner "~/.emacs.d/assets/left-paren-black-version.png"))
@@ -33,6 +32,10 @@
       (desktop-read)))))
 
 ;;; Modeline
+(setq display-time-24hr-format t)
+(setq display-time-default-load-average nil)
+(display-time-mode 1)
+
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)
   :config
@@ -44,8 +47,8 @@
 (setq frame-title-format "%b - Emacs")
 
 ;; initial frame size
+(add-to-list 'default-frame-alist '(width . 90))
 (add-to-list 'default-frame-alist '(height . 36))
-(add-to-list 'default-frame-alist '(width . 80))
 
 ;; transparent background
 ;; (add-to-list 'default-frame-alist '(alpha . (95 . 0)))
@@ -62,11 +65,10 @@
 ;; - panda-theme
 ;; - twillight-anti-bright-theme
 (use-package doom-themes)
-(use-package kaolin-themes)
+(use-package kaolin-themes) ;; better in terminal
 
-;; (if (display-graphic-p)
-;;     (load-theme 'doom-dracula)
-;;   (load-theme 'kaolin-ocean))
+(unless (display-graphic-p)
+  (load-theme 'kaolin-ocean))
 
 ;;; highlight cursor (disabled)
 (use-package beacon

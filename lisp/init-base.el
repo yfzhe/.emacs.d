@@ -21,10 +21,6 @@
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
 
-;; time display
-(display-time-mode 1)
-(setq display-time-24hr-format t)
-
 ;;; ibuffer
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer)
