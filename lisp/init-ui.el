@@ -58,6 +58,9 @@
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (add-to-list 'default-frame-alist '(ns-appearance . dark)))
 
+;; when frames are maximized, please spilt windows horizontally
+(setq split-width-threshold 120)
+
 ;;; theme
 ;; NOTE: some (not bad) themes
 ;; - doom-dracula (from `doom-themes')
