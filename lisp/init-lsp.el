@@ -8,8 +8,7 @@
   (setq lsp-auto-guess-root t)
   (setq lsp-prefer-flymake nil)
   (setq lsp-enable-indentation t)
-  ;; now, yasnippet is not used, so we have to toggle off the next
-  (setq lsp-enable-snippet nil))
+  (setq lsp-enable-snippet t))
 
 (use-package lsp-ui
   :commands lsp-ui-mode

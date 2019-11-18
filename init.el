@@ -54,6 +54,7 @@
 (require 'init-git)
 (require 'init-flycheck)
 (require 'init-projectile)
+(require 'init-yasnippet)
 
 (require 'init-dired)
 (require 'init-eshell)
