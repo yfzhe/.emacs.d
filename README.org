@@ -2,7 +2,7 @@
 
 Yes, it's a poor man's Emacs configuration.
 
-- usable configuration on front-end development (react, typescript; eslint, prettier)
+- usable front-end develop experience (react, typescript; eslint, prettier)
 - dired-mode works well
 - great git experience (thanks, magit, the best git interface in the world!)
 - flyspell for spell checking
@@ -17,8 +17,6 @@ Yes, it's a poor man's Emacs configuration.
 
 - no-littering
 - more language configurations
-- lsp
-- more on counsel
-- use persp-mode better
+- more yas-snippets
 - [[https://github.com/joodland/bm][bm]]
 
