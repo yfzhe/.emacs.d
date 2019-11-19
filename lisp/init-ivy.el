@@ -23,6 +23,13 @@
          :map isearch-mode-map
          ("M-s" . swiper-isearch-toggle)))
 
+;;; better interface for ivy
+(use-package ivy-rich
+  :hook ((ivy-mode . ivy-rich-mode)))
+
+;; (use-package all-the-icons-ivy
+;;   :hook (ivy-mode . all-the-icons-ivy-setup))
+
 ;;; another way to find files
 ;; (use-package ivy-explorer
 ;;   :after ivy
