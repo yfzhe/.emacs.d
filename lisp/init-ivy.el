@@ -10,7 +10,8 @@
 
 (use-package counsel
   :hook (after-init . counsel-mode)
-  :bind (("C-X C-r" . counsel-recentf)))
+  :bind (("C-x C-r" . counsel-recentf)
+         ("C-c u g" . counsel-git-grep)))
 
 (use-package swiper
   :bind (("C-s" . swiper-isearch)

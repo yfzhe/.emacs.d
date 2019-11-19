@@ -41,6 +41,9 @@
 ;; auto fill-column
 (global-set-key (kbd "C-c u q") 'auto-fill-mode)
 
+;; even as lispers, we have to meet the camelCase words!
+(global-set-key (kbd "C-c u s") 'subword-mode)
+
 ;;; lots of highlight
 ;; highlight current line
 (use-package hl-line
