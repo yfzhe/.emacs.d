@@ -7,8 +7,8 @@
 (setq visible-bell 0)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Default encoing use utf-8
-(prefer-coding-system 'utf-8)
+;; Default encoing use utf-8, and goodbey to CRLF
+(prefer-coding-system 'utf-8-unix)
 
 ;;; Some UI settings
 (tool-bar-mode -1)

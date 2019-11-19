@@ -14,9 +14,6 @@
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
 
-;; goodbay, CRLF
-(setq-default buffer-file-coding-system 'utf-8-unix)
-
 ;; undo-tree: better undo and redo
 (use-package undo-tree
   :defines recentf-exclude
