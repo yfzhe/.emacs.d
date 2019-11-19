@@ -14,10 +14,10 @@
 ;; (use-package company-box
 ;;   :hook (company-mode . company-box-mode))
 
-(use-package company-emoji
-  :after company
-  :config
-  (setq company-emoji-insert-unicode nil)
-  (add-to-list 'company-backends 'company-emoji))
+;; (use-package company-emoji
+;;   :after company
+;;   :config
+;;   (setq company-emoji-insert-unicode nil)
+;;   (add-to-list 'company-backends 'company-emoji))
 
 (provide 'init-company)
