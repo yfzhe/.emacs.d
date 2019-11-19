@@ -21,6 +21,12 @@
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
 
+;;; better `default-directory' after starting
+(setq default-directory
+      (pcase system-type
+        ('windows-nt "C:/")
+        ('darwin "~/Documents")))
+
 ;;; ibuffer
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer)
