@@ -52,6 +52,8 @@
          ("C-c C-l" . tide-references)
          ("C-c C-r" . tide-rename-symbol))
   :config
+  ;; make tide ignore case when completing
+  (setq tide-completion-ignore-case t)
   ;; TS format settings
   (setq tide-format-options
         (list :indentSize 2

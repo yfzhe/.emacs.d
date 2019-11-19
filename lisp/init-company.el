@@ -1,5 +1,7 @@
 ;;; init-company.el
-;;; Company Mode
+;;; Completaion and company-mode
+
+(setq completion-ignore-case t)
 
 (use-package company
   :diminish company-mode
