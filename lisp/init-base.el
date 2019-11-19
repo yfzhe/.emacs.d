@@ -8,7 +8,6 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Default encoing use utf-8
-(setq default-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
 ;;; Some UI settings

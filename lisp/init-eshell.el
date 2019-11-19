@@ -1,6 +1,7 @@
 ;;; init-eshell.el
 
 (use-package esh-autosuggest
+  :defines (ivy-display-functions-alist)
   :hook ((eshell-mode . esh-autosuggest-mode)
          (eshell-mode . setup-eshell-ivy-completion))
   :preface
@@ -13,7 +14,7 @@
 
 (use-package eshell-prompt-extras
   :after esh-opt
-  :defines eshell-highlight-prompt
+  :defines (eshell-highlight-prompt eshell-prompt-function)
   :commands (epe-theme-lambda)
   :init
   (setq eshell-highlight-prompt nil)
