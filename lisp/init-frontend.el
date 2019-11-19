@@ -80,11 +80,15 @@
 ;;; use `eldoc-box' for `tide' signature displaying
 (use-package eldoc-box
   :after eldoc
-  :hook (((typescript-mode rjsx-mode web-mode) . eldoc-box-hover-mode)
+  :hook ((tide-mode . eldoc-box-hover-mode)
          (eldoc-box-hover-mode . eldoc-box-hover-at-point-mode))
   :config
   (set-face-background 'eldoc-box-body "#343645")
-  (setq eldoc-box-max-pixel-width 600))
+  (setq eldoc-box-max-pixel-width
+        (let ((*box-width-base* 600))
+          (pcase system-type
+            ('windows-nt (* 2 *box-width-base*))
+            ('darwin *box-width-base*)))))
 
 ;;; --------------------------------------------------
 ;;; Utility for front-end development
