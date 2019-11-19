@@ -61,6 +61,7 @@
 (require 'init-org)
 (require 'init-treemacs)
 
+(require 'init-prog)
 (require 'init-lsp)
 (require 'init-racket)
 (require 'init-frontend)
@@ -71,21 +72,3 @@
 (require 'init-elfeed)
 (require 'init-spell)
 (require 'init-misc)
-
-;;; mode config
-(use-package idris-mode
-  :mode "\\.idr\\'")
-
-(use-package rust-mode
-  :mode "\\.rs\\'")
-
-(use-package yaml-mode
-  :mode "\\.\\(yaml\\|yml\\)\\'")
-
-(use-package restclient
-  :mode "^request\\'")
-
-(use-package company-restclient
-  :config
-  (add-to-list 'company-backends 'company-restclient))
-
