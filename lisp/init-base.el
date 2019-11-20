@@ -24,7 +24,7 @@
 (setq default-directory
       (pcase system-type
         ('windows-nt "C:/")
-        ('darwin "~/Documents")))
+        ('darwin "~/Documents/")))
 
 ;;; ibuffer
 (use-package ibuffer
