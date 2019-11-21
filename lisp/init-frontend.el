@@ -96,9 +96,4 @@
 (use-package yarn-mode
   :mode "\\^yarn\\.lock\\'")
 
-;;; --------------------------------------------------
-;;; Elm
-(use-package elm-mode
-  :mode "\\.elm\\'")
-
 (provide 'init-frontend)

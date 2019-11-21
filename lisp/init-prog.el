@@ -15,6 +15,9 @@
 
 ;;; --------------------------------------------------
 ;;; mode config
+(use-package elm-mode
+  :mode "\\.elm\\'")
+
 (use-package idris-mode
   :mode "\\.idr\\'")
 
