@@ -7,10 +7,10 @@
 ;; - https://github.com/redguardtoo/emacs.d/blob/master/lisp/init-spelling.el
 
 (use-package flyspell
-  :defer t
   :if (executable-find "hunspell")
-  :hook (((text-mode org-mode markdown-mode git-commit-setup) . flyspell-mode)
-         ;;((js-mode js2-mode rjxs-mode typescript-mode) . flyspell-prog-mode)
+  :hook (((markdown-mode git-commit-setup) . flyspell-mode)
+         ;(text-mode . flyspell-mode)
+         ;((js-mode js2-mode rjxs-mode typescript-mode) . flyspell-prog-mode)
          )
   :init
   (setq ispell-program-name "hunspell")
