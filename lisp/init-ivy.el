@@ -23,6 +23,8 @@
          :map isearch-mode-map
          ("M-s" . swiper-isearch-toggle)))
 
+(use-package ivy-hydra)
+
 ;;; better interface for ivy
 (use-package ivy-rich
   :hook ((ivy-mode . ivy-rich-mode)))
