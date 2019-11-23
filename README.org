@@ -10,9 +10,11 @@ Yes, it's a poor man's Emacs configuration.
 
 * Requirements
 
-- coreutils for better dired experience
-- hunspell for flyspell
-
+- ~coreutils~ for better dired experience
+- ~hunspell~ for flyspell
+- LSPs
+  + ~tsserver~ (from TypeScript, used in Tide)
+  + ~vscode-css-languageserver-bin~ (for CSS)
 * TODOs
 
 - no-littering
