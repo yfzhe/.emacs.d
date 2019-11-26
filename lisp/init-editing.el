@@ -14,6 +14,10 @@
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
 
+;; jump to any character
+(use-package avy
+  :bind ("M-g a" . avy-goto-char-2))
+
 ;; undo-tree: better undo and redo
 (use-package undo-tree
   :defines recentf-exclude
