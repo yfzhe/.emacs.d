@@ -15,6 +15,8 @@ Yes, it's a poor man's Emacs configuration.
 - LSPs
   + ~tsserver~ (from TypeScript, used in Tide)
   + ~vscode-css-languageserver-bin~ (for CSS)
+  + ~[[https://github.com/rust-lang/rls][rls]]~ (for Rust)
+
 * TODOs
 
 - no-littering

@@ -21,9 +21,6 @@
 (use-package idris-mode
   :mode "\\.idr\\'")
 
-(use-package rust-mode
-  :mode "\\.rs\\'")
-
 (use-package yaml-mode
   :mode "\\.\\(yaml\\|yml\\)\\'")
 

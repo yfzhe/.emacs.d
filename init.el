@@ -65,6 +65,7 @@
 (require 'init-lsp)
 (require 'init-racket)
 (require 'init-frontend)
+(require 'init-rust)
 (require 'init-apl-j)
 (require 'init-haskell)
 
