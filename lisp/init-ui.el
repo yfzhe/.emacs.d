@@ -7,7 +7,8 @@
   (setq dashboard-items '((recents . 8)
                           (bookmarks . 6)))
   (setq dashboard-startup-banner
-        (let ((banner "~/.emacs.d/assets/left-paren-black-version.png"))
+        (let ((banner (expand-file-name "assets/left-paren-black-version.png"
+                                        user-emacs-directory)))
           (if (file-exists-p banner) banner 'logo)))
   (setq dashboard-banner-logo-title "(((Welcome, Paren Hacker!)))")
   (setq dashboard-center-content t)
@@ -29,7 +30,10 @@
       (persp-load-state-from-file))
      (desktop-save-mode
       (message "Restoring last desktop session...")
-      (desktop-read)))))
+      (desktop-read))))
+
+  :bind (:map dashboard-mode-map
+         ("R" . restore-last-session)))
 
 ;;; Modeline
 (setq display-time-24hr-format t)
