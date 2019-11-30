@@ -5,8 +5,13 @@
 ;;; - https://orgmode.org/worg/org-tutorials/index.html (a list of tutorials)
 ;;; - https://orgmode.org/worg/org-configs/org-customization-guide.html
 
+(defvar my-org-agenda-files
+  (pcase system-type
+    ('windows-nt "C:/Dropbox/todos/")
+    ('darwin "~/Documents/Docs/org/todos/")))
+
 (setq org-directory '("~/Documents/Docs/org/"))
-(setq org-agenda-files '("~/Documents/Docs/org/todos/"))
+(setq org-agenda-files (list my-org-agenda-files))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)

@@ -11,7 +11,7 @@
 ;;; use `deft' for notes
 (defvar my-deft-directory
   (pcase system-type
-    ('windows-nt "C:/Dropbox/Notes")
+    ('windows-nt "C:/Dropbox/notes")
     ('darwin "~/Documents/Docs/notes")))
 
 (use-package deft
