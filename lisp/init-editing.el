@@ -42,6 +42,9 @@
 ;; show "whitespace"
 (global-set-key (kbd "C-c u w") 'whitespace-mode)
 
+;; clean whitespace before saving files
+(add-hook 'before-save-hook #'whitespace-cleanup)
+
 ;; auto fill-column
 (global-set-key (kbd "C-c u q") 'auto-fill-mode)
 
