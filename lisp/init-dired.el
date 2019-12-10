@@ -45,6 +45,12 @@
   :bind (:map dired-mode-map
         ("C-c C-w" . wdired-change-to-wdired-mode)))
 
+(use-package dired-subtree
+  :after dired
+  :bind (:map dired-mode-map
+         ("<tab>" . dired-subtree-toggle)
+         ("<backtab>" . dired-subtree-cycle)))
+
 ;; nest single files
 ;; (use-package dired-collapse
 ;;   :hook (dired-mode . dired-collapse-mode))
