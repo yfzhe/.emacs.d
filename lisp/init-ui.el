@@ -70,7 +70,7 @@
 ;; - doom-dracula (from `doom-themes')
 ;; - kaolin-ocean and kaolin-dark (from `kaolin-themes', support terminal)
 ;; - panda-theme
-;; - twillight-anti-bright-theme
+;; - twillight-bright-theme & twillight-anti-bright-theme
 (use-package doom-themes)
 (use-package kaolin-themes) ;; better in terminal
 
