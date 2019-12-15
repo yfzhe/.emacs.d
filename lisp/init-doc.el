@@ -5,8 +5,7 @@
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :hook (markdown-mode . auto-fill-mode))
+         ("\\.markdown\\'" . markdown-mode)))
 
 ;;; use `deft' for notes
 (defvar my-deft-directory
