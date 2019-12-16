@@ -29,8 +29,10 @@
 
   (setq org-return-follows-link t))
 
-;; enable markdown backend
-(use-package ox-md
-  :ensure nil)
+(use-package ox-pandoc
+  :if (executable-find "pandoc"))
+
+;; `ox-md''s export is not "modern"
+(use-package ox-gfm)
 
 (provide 'init-org)
