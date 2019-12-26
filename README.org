@@ -16,6 +16,7 @@ Yes, it's a poor man's Emacs configuration.
   + ~tsserver~ (from TypeScript, used in Tide)
   + ~vscode-css-languageserver-bin~ (for CSS)
   + ~[[https://github.com/rust-lang/rls][rls]]~ (for Rust)
+  + ~[[https://github.com/elm-tooling/elm-language-server][elm-language-server]]~, and ~elm-format~
 
 * TODOs
 
@@ -23,4 +24,3 @@ Yes, it's a poor man's Emacs configuration.
 - more language configurations
 - more yas-snippets
 - [[https://github.com/joodland/bm][bm]]
-
