@@ -1,7 +1,8 @@
 ;;; init-company.el
 ;;; Completaion and company-mode
 
-(setq completion-ignore-case t)
+;; no, please keep the origin case
+;; (setq completion-ignore-case t)
 
 (use-package company
   :diminish company-mode
