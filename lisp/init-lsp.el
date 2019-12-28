@@ -1,7 +1,6 @@
 ;;; init-lsp.el
 
 (use-package lsp-mode
-  :hook ((elm-mode . lsp-deferred))
   :bind (:map lsp-mode-map
          ("C-c C-d" . lsp-describe-thing-at-point))
   :init

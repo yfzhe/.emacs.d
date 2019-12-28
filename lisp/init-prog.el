@@ -16,6 +16,7 @@
 ;;; --------------------------------------------------
 ;;; mode config
 (use-package elm-mode
+  :hook ((elm-mode . lsp-deferred))
   :mode "\\.elm\\'")
 
 (use-package idris-mode
