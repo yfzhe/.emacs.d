@@ -52,8 +52,8 @@
          ("<backtab>" . dired-subtree-cycle)))
 
 ;; nest single files
-;; (use-package dired-collapse
-;;   :hook (dired-mode . dired-collapse-mode))
+(use-package dired-collapse
+  :hook (dired-mode . dired-collapse-mode))
 
 (use-package dired-git-info
   :after dired
