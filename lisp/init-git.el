@@ -5,9 +5,6 @@
          ("C-x M-g" . magit-dispatch)
          ("C-c M-g" . magit-file-popup)))
 
-;; `magit-todos' would open git-grep html manual on Windows, which is annoying.
-;; It is a known bug, see https://github.com/alphapapa/magit-todos/issues/43
-;; Before the issue get fixed, shoule we not use this package on Windows?
 (use-package magit-todos
   :hook (emacs-startup . magit-todos-mode))
 
