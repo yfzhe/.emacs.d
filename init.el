@@ -50,6 +50,8 @@
 (require 'init-desktop)
 ;; (require 'init-persp)
 
+(require 'init-dashboard)
+
 (require 'init-company)
 (require 'init-git)
 (require 'init-flycheck)
