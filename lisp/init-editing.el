@@ -14,6 +14,18 @@
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
 
+;; paren, bracket, brace, I can't leave them
+;; even when not writing LISP
+(use-package smartparens
+  :config (require 'smartparens-config)
+  :hook (prog-mode . smartparens-mode))
+
+;; one day, give paredit a try
+(use-package paredit)
+
+;; rainbow delimiters
+(use-package rainbow-delimiters)
+
 ;; jump to any character
 (use-package avy
   :bind ("M-g a" . avy-goto-char-2))
@@ -35,9 +47,6 @@
 ;; DrRacket-like unicode input
 (use-package dr-racket-like-unicode
   :bind ("C-M-\\" . dr-racket-like-unicode-char))
-
-;; rainbow delimiters
-(use-package rainbow-delimiters)
 
 ;; show "whitespace"
 (global-set-key (kbd "C-c u w") 'whitespace-mode)
