@@ -36,9 +36,9 @@
 (load custom-file)
 
 ;;; exec-path-from-shell initialize
-(when (memq system-type '(darwin))
-  (use-package exec-path-from-shell
-    :init (exec-path-from-shell-initialize)))
+(use-package exec-path-from-shell
+  :if (memq system-type '(darwin))
+  :init (exec-path-from-shell-initialize))
 
 (require 'init-base)
 (require 'init-ui)
