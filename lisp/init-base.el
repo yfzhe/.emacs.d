@@ -53,4 +53,12 @@
   :bind (("C-c u l" . link-hint-open-link)))
          ;("C-c u c" . link-hint-copy-link)))
 
+;;; better package-list
+(use-package paradox
+  :init
+  (setq paradox-execute-asynchronously t)
+  (setq paradox-display-star-count nil)
+  :config
+  (paradox-enable))
+
 (provide 'init-base)
