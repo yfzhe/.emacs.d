@@ -14,6 +14,10 @@
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
 
+;; formating is always an important thing
+(use-package editorconfig
+  :config (editorconfig-mode 1))
+
 ;; paren, bracket, brace, I can't leave them
 ;; even when not writing LISP
 (use-package smartparens
