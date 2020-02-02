@@ -36,9 +36,17 @@
       (treemacs-git-mode 'simple)))
 
   ;; use sans-serif font to make treemacs look "modern"
-  (set-face-font 'treemacs-root-face font-sans-family)
-  (set-face-font 'treemacs-directory-face font-sans-family)
-  (set-face-font 'treemacs-file-face font-sans-family))
+  (dolist (face '(treemacs-root-face
+                  treemacs-directory-face
+                  treemacs-file-face
+                  treemacs-git-modified-face
+                  treemacs-git-renamed-face
+                  treemacs-git-ignored-face
+                  treemacs-git-untracked-face
+                  treemacs-git-added-face
+                  treemacs-git-conflict-face
+                  treemacs-tags-face))
+    (set-face-font face font-sans-family)))
 
 (use-package treemacs-magit
   :after (magit treemacs)
