@@ -1,7 +1,7 @@
 ;;; init-treemacs.el
 ;;; Use Treemacs for file explorer
 
-(require 'doom-themes)
+(require 'init-font)
 
 (use-package treemacs
   :commands (treemacs-follow-mode
@@ -34,10 +34,29 @@
         (treemacs-git-mode 'deferred)
       (treemacs-git-mode 'simple)))
 
-  ;; use `doom-themes-treemacs-config' to get a modern ui of
-  ;; treemacs, including sans-serif font and `all-the-icons'
+  (setq treemacs-no-png-images t) ; they are ugly
+
+  ;; use sans serif font to make treemacs look modern
+  (dolist (face '(treemacs-root-face
+                  treemacs-directory-face
+                  treemacs-file-face
+                  treemacs-git-modified-face
+                  treemacs-git-renamed-face
+                  treemacs-git-ignored-face
+                  treemacs-git-untracked-face
+                  treemacs-git-added-face
+                  treemacs-git-conflict-face
+                  treemacs-tags-face))
+    (set-face-font face font-sans-family))
+
+  ;; `doom-themes' has a `doom-themes-treemacs-config' function,
+  ;; it does more things. But icons from `all-the-icons' have the
+  ;; unbearable size problem, make it look like disaster. So I
+  ;; have to write my inferior version of such things.
+  ;; But still thanks for all the standard icons!
   ;; (setq doom-themes-treemacs-theme "doom-colors")
-  (doom-themes-treemacs-config))
+  ;; (doom-themes-treemacs-config)
+  )
 
 (use-package treemacs-magit
   :after (magit treemacs)
