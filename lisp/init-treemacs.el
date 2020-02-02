@@ -1,6 +1,8 @@
 ;;; init-treemacs.el
 ;;; Use Treemacs for file explorer
 
+(require 'init-font)
+
 (use-package treemacs
   :commands (treemacs-follow-mode
              treemacs-filewatch-mode
@@ -31,7 +33,12 @@
   (when (executable-find "git")
     (if (executable-find "python3")
         (treemacs-git-mode 'deferred)
-      (treemacs-git-mode 'simple))))
+      (treemacs-git-mode 'simple)))
+
+  ;; use sans-serif font to make treemacs look "modern"
+  (set-face-font 'treemacs-root-face font-sans-family)
+  (set-face-font 'treemacs-directory-face font-sans-family)
+  (set-face-font 'treemacs-file-face font-sans-family))
 
 (use-package treemacs-magit
   :after (magit treemacs)

@@ -4,18 +4,19 @@
 
 ;;; Fonts
 (when (display-graphic-p)
+  ;; set default font
   (let ((font-string (concat font-family " " (number-to-string font-size))))
     (set-face-attribute 'default nil :font font-string :weight 'semi-light))
-
-  ;; display emojis
-  (when font-emoji-family
-    (set-fontset-font t 'unicode font-emoji-family nil 'prepend))
 
   ;; chinese font
   (dolist (charset '(kana han cjk-misc bopomofo))
     (set-fontset-font t charset font-cjk-family))
 
-  (use-cjk-char-width-table 'zh_CN))
+  (use-cjk-char-width-table 'zh_CN)
+
+  ;; display emojis
+  (when font-emoji-family
+    (set-fontset-font t 'unicode font-emoji-family nil 'prepend)))
 
 ;;; Modeline
 (setq display-time-24hr-format t)
