@@ -30,9 +30,9 @@ and an optional `:default' clause."
     ("~/D" . "~/Documents")
     ("*Dejavu-Code*:" . "~/D/Dejavu/Code/")
     ("*Org*:" . "~/D/Docs/Org/"))
-  "a list of path shrink-base: (care for the order!)")
+  "A list of path shrink-base (care for the order!)")
 
-(defun yfzhe-shrink-path (full-path)
+(defun my-shrink-path (full-path)
   (-reduce-from (lambda (path base)
                   (replace-regexp-in-string
                    (concat "^" (cdr base)) (car base) path))
