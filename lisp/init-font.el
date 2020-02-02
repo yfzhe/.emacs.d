@@ -19,20 +19,8 @@
 (defvar font-cjk-family font-sans-family)
 
 (defvar/os font-emoji-family
+  :windows "Segoe UI Emoji"
   :macos "Apple Color Emoji"
   :default nil)
-
-(let ((font-string (concat font-family " " (number-to-string font-size))))
-  (set-face-attribute 'default nil :font font-string :weight 'semi-light))
-
-;; display emojis
-(when font-emoji-family
-  (set-fontset-font t 'unicode font-emoji-family nil 'prepend))
-
-;; chinese font
-(dolist (charset '(kana han cjk-misc bopomofo))
-  (set-fontset-font t charset font-cjk-family))
-
-(use-cjk-char-width-table 'zh_CN)
 
 (provide 'init-font)
