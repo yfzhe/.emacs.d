@@ -4,7 +4,7 @@
 (use-package ivy
   :hook (after-init . ivy-mode)
   :init
-  (setq ivy-use-virtual-buffer t)
+  ;; (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
   (setq ivy-height 8))
 
@@ -29,8 +29,8 @@
 (use-package ivy-rich
   :hook ((ivy-mode . ivy-rich-mode)))
 
-;; (use-package all-the-icons-ivy
-;;   :hook (ivy-mode . all-the-icons-ivy-setup))
+;; (use-package all-the-icons-ivy-rich
+;;   :init (all-the-icons-ivy-rich-mode 1))
 
 ;;; another way to find files
 ;; (use-package ivy-explorer
