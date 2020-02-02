@@ -13,10 +13,13 @@
 (defvar font-family "SF Mono")
 
 (defvar/os font-sans-family
+  :windows "Arial"
+  :macos "Helvetica Neue")
+;; NOTE: macOS's default sans font is "PingFang SC", actually
+
+(defvar/os font-cjk-family
   :windows "思源黑体" ; what's the hell!
   :default "Source Han Sans SC")
-
-(defvar font-cjk-family font-sans-family)
 
 (defvar/os font-emoji-family
   :windows "Segoe UI Emoji"
