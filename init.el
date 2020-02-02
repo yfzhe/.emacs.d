@@ -41,25 +41,24 @@
   :init (exec-path-from-shell-initialize))
 
 (require 'init-base)
+(require 'init-editing)
 (require 'init-ui)
 
-(require 'init-editing)
 (require 'init-ivy)
 (require 'init-desktop)
 ;; (require 'init-persp)
 
-(require 'init-dashboard)
-
 (require 'init-company)
+(require 'init-dired)
 (require 'init-git)
 (require 'init-flycheck)
 (require 'init-projectile)
-(require 'init-yasnippet)
 
-(require 'init-dired)
+(require 'init-dashboard)
 (require 'init-eshell)
 (require 'init-org)
 (require 'init-treemacs)
+(require 'init-yasnippet)
 
 (require 'init-prog)
 (require 'init-lsp)
