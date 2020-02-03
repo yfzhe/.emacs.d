@@ -22,7 +22,8 @@
   (setq treemacs-follow-after-init t)
   (setq treemacs-silent-filewatch t)
   (setq treemacs-silent-refresh t)
-  (setq treemacs-width 35)
+  (setq treemacs-width 30)
+  (setq treemacs-indentation 1)
   (setq treemacs-display-in-side-window t)
 
   (treemacs-follow-mode t)

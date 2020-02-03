@@ -46,7 +46,7 @@
   (add-to-list 'default-frame-alist '(ns-appearance . dark)))
 
 ;; when frames are maximized, please spilt windows horizontally
-(setq split-width-threshold 120)
+(setq split-width-threshold 100)
 
 ;;; theme
 ;; NOTE: some (not bad) themes
