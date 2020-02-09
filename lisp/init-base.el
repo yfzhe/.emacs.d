@@ -13,9 +13,12 @@
 ;;; Some UI settings
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(global-linum-mode t)
 (column-number-mode t)
 ;;(setq inhibit-splash-screen 1)
+
+;; display-line-numbers-mode
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
 
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
