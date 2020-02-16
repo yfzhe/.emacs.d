@@ -29,8 +29,9 @@
 (use-package ivy-rich
   :hook ((ivy-mode . ivy-rich-mode)))
 
-;; (use-package all-the-icons-ivy-rich
-;;   :init (all-the-icons-ivy-rich-mode 1))
+;;; prettier ivy-rich
+(use-package all-the-icons-ivy-rich
+  :init (all-the-icons-ivy-rich-mode 1))
 
 ;;; another way to find files
 ;; (use-package ivy-explorer

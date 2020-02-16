@@ -35,6 +35,9 @@
   :config
   (setq ibuffer-show-empty-filter-groups nil))
 
+(use-package all-the-icons-ibuffer
+  :init (all-the-icons-ibuffer-mode 1))
+
 ;;; recentf
 (use-package recentf
   :hook (after-init . recentf-mode)
