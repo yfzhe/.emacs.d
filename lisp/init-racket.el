@@ -10,7 +10,10 @@
          (")" . racket-insert-closing)
          ("]" . racket-insert-closing)
          ("}" . racket-insert-closing)
-         ("C-M-\\" . racket-unicode-input-method-enable)))
+         ("C-M-\\" . racket-unicode-input-method-enable))
+  :config
+  ;; don't show the pos-tip
+  (delete #'racket-show-pos-tip racket-show-functions))
 
 (use-package scribble-mode
   :mode "\\.scrbl\\'"
