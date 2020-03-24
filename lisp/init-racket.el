@@ -3,7 +3,8 @@
 
 (use-package racket-mode
   :mode "\\.rkt\\'"
-  :hook ((racket-mode . rainbow-delimiters-mode))
+  :hook ((racket-mode . racket-xp-mode)
+         (racket-mode . rainbow-delimiters-mode))
   :bind (:map racket-mode-map
          ("C-c C-s" . racket-check-syntax-mode)
          (")" . racket-insert-closing)
