@@ -69,6 +69,5 @@
 (require 'init-haskell)
 
 (require 'init-doc)
-(require 'init-elfeed)
 (require 'init-spell)
 (require 'init-misc)
