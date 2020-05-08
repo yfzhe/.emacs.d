@@ -4,6 +4,7 @@
 (use-package racket-mode
   :mode "\\.rkt\\'"
   :hook ((racket-mode . racket-xp-mode)
+         (racket-mode . paredit-mode)
          (racket-mode . rainbow-delimiters-mode))
   :bind (:map racket-mode-map
          ("C-c C-s" . racket-check-syntax-mode)
