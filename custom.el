@@ -16,7 +16,7 @@
  '(custom-enabled-themes (quote (doom-dracula)))
  '(custom-safe-themes
    (quote
-    ("1526aeed166165811eefd9a6f9176061ec3d121ba39500af2048073bea80911e" default)))
+    ("53993d7dc1db7619da530eb121aaae11c57eaf2a2d6476df4652e6f0bd1df740" "1526aeed166165811eefd9a6f9176061ec3d121ba39500af2048073bea80911e" default)))
  '(evil-emacs-state-cursor (quote ("#E57373" hbar)))
  '(evil-insert-state-cursor (quote ("#E57373" bar)))
  '(evil-normal-state-cursor (quote ("#FFEE58" box)))
