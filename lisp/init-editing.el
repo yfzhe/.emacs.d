@@ -117,5 +117,6 @@
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
 
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region-or-line)
 
 (provide 'init-editing)
