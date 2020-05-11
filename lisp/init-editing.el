@@ -108,15 +108,7 @@
 
 (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
 
-;; better comment-or-uncomment
-;; see: https://stackoverflow.com/questions/9688748/emacs-comment-uncomment-current-line
-(defun comment-or-uncomment-region-or-line ()
-  (interactive)
-  (if (region-active-p)
-      (comment-or-uncomment-region (region-beginning) (region-end))
-    (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
-
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-;") 'comment-line)
+(global-set-key (kbd "C-c c") 'comment-line)
 
 (provide 'init-editing)
