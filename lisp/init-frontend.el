@@ -2,6 +2,31 @@
 ;;; For such many things in front-end development
 
 ;;; --------------------------------------------------
+;;; Some functions
+(defun eslint-disable-error/flycheck ()
+  "Disable eslint checking error(s) at position, by inserting
+a \"// eslint-disable-next-line\" into the above line."
+  (interactive)
+  (let* ((pos (point))
+         (errors (flycheck-overlay-errors-at pos)))
+    (when errors
+      (let* ((rules
+              (cl-loop for err in errors
+                       if (equal (flycheck-error-checker err)
+                                 'javascript-eslint)
+                       collect (format "%s"
+                                       (flycheck-error-id err))))
+             (msg (concat "eslint-disable-next-line  "
+                          (string-join rules ", "))))
+        (save-excursion
+          (beginning-of-line)
+          (insert msg)
+          (comment-region (line-beginning-position)
+                          (line-end-position))
+          (insert "\n")
+          (flycheck-buffer))))))
+
+;;; --------------------------------------------------
 ;;; CSS
 (use-package css-mode
   :hook (css-mode . lsp-deferred)
@@ -30,7 +55,8 @@
 (use-package rjsx-mode
   :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
   :bind (:map rjsx-mode-map
-         ("C-c M-r" . rjsx-rename-tag-at-point))
+         ("C-c M-r" . rjsx-rename-tag-at-point)
+         ("C-c d" . eslint-disable-error/flycheck))
   :hook (rjsx-mode . tide-setup))
 
 (use-package web-mode
@@ -52,7 +78,8 @@
          ("C-c C-d" . tide-documentation-at-point)
          ("C-c C-f" . tide-fix)
          ("C-c C-l" . tide-references)
-         ("C-c C-r" . tide-rename-symbol))
+         ("C-c C-r" . tide-rename-symbol)
+         ("C-c d" . eslint-disable-error/flycheck))
   :config
   ;; make tide ignore case when completing
   (setq tide-completion-ignore-case t)
