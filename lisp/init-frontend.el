@@ -3,27 +3,34 @@
 
 ;;; --------------------------------------------------
 ;;; Some functions
+
+(require 'dash)
+
 (defun eslint-disable-error/flycheck ()
   "Disable eslint checking error(s) at position, by inserting
 a \"// eslint-disable-next-line\" into the above line."
   (interactive)
   (let* ((pos (point))
-         (errors (flycheck-overlay-errors-at pos)))
-    (when errors
+         (errors
+          (-filter (lambda (err)
+                     (equal (flycheck-error-checker err)
+                            'javascript-eslint))
+                   (flycheck-overlay-errors-at pos))))
+    (if (null errors)
+        (message "Eslint complains nothing here!")
       (let* ((rules
-              (cl-loop for err in errors
-                       if (equal (flycheck-error-checker err)
-                                 'javascript-eslint)
-                       collect (format "%s"
-                                       (flycheck-error-id err))))
+              (-map (lambda (err)
+                      (format "%s" (flycheck-error-id err)))
+                    errors))
              (msg (concat "eslint-disable-next-line  "
-                          (string-join rules ", "))))
+                          (string-join rules ", ")
+                          "\n")))
         (save-excursion
           (beginning-of-line)
           (insert msg)
-          (comment-region (line-beginning-position)
-                          (line-end-position))
-          (insert "\n")
+          (forward-line -1)
+          (comment-line 1)
+          (indent-region (region-beginning) (region-end))
           (flycheck-buffer))))))
 
 ;;; --------------------------------------------------
