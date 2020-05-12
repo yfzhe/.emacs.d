@@ -16,18 +16,18 @@
 (column-number-mode t)
 ;;(setq inhibit-splash-screen 1)
 
-;; display-line-numbers-mode
-(add-hook 'prog-mode-hook #'display-line-numbers-mode)
-(add-hook 'text-mode-hook #'display-line-numbers-mode)
-
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
+
+;;; line numbers
+(dolist (mode '(prog-mode-hook text-mode-hook))
+  (add-hook mode #'display-line-numbers-mode))
 
 ;;; better `default-directory' after starting
 (setq default-directory
       (pcase system-type
         ('windows-nt "C:/")
-        ('darwin "~/Documents/")))
+        ('darwin "~/Code/")))
 
 ;;; ibuffer
 (use-package ibuffer
