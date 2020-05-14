@@ -22,7 +22,7 @@
   (setq treemacs-follow-after-init t)
   (setq treemacs-silent-filewatch t)
   (setq treemacs-silent-refresh t)
-  (setq treemacs-width 30)
+  (setq treemacs-width 25)
   (setq treemacs-indentation 1)
   (setq treemacs-display-in-side-window t)
 
@@ -50,11 +50,12 @@
                   treemacs-tags-face))
     (set-face-font face font-sans-family))
 
-  ;; `doom-themes' has a `doom-themes-treemacs-config' function,
-  ;; it does more things. But icons from `all-the-icons' have the
-  ;; unbearable size problem, make it look like disaster. So I
-  ;; have to write my inferior version of such things.
+  ;; `doom-themes' has a `doom-themes-treemacs-config' function, it
+  ;; does more things. But icons from `all-the-icons' have unbearable
+  ;; size problem, make it look like a disaster. So I have to write
+  ;; a poor man version of such things.
   ;; But still thanks for all the standard icons!
+  ;;
   ;; (setq doom-themes-treemacs-theme "doom-colors")
   ;; (doom-themes-treemacs-config)
   )
