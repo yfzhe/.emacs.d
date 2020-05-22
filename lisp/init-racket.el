@@ -5,9 +5,8 @@
   :mode "\\.rkt\\'"
   :hook ((racket-mode . racket-xp-mode)
          (racket-mode . paredit-mode)
-         (racket-mode . rainbow-delimiters-mode))
+         ((racket-mode racket-repl-mode) . rainbow-delimiters-mode))
   :bind (:map racket-mode-map
-         ("C-c C-s" . racket-check-syntax-mode)
          (")" . racket-insert-closing)
          ("]" . racket-insert-closing)
          ("}" . racket-insert-closing)

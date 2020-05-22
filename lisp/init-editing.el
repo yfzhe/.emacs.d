@@ -24,8 +24,8 @@
   :config (require 'smartparens-config)
   :hook (prog-mode . smartparens-mode))
 
-;; one day, give paredit a try
-(use-package paredit)
+(use-package paredit
+  :hook (emacs-lisp-mode . paredit-mode))
 
 ;; rainbow delimiters
 (use-package rainbow-delimiters)
