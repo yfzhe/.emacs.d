@@ -12,8 +12,8 @@
          ("}" . racket-insert-closing)
          ("C-M-\\" . racket-unicode-input-method-enable))
   :config
-  ;; don't show the pos-tip
-  (delete #'racket-show-pos-tip racket-show-functions))
+  ;; don't show the pos-tip, either the pseudo tip
+  (setq racket-show-functions '(racket-show-echo-area)))
 
 (use-package scribble-mode
   :mode "\\.scrbl\\'"
