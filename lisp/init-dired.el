@@ -41,9 +41,7 @@
   :init (diredfl-global-mode 1))
 
 (use-package wdired
-  :after dired
-  :bind (:map dired-mode-map
-        ("C-c C-w" . wdired-change-to-wdired-mode)))
+  :after dired)
 
 (use-package dired-subtree
   :after dired
