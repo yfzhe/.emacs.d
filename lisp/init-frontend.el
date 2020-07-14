@@ -46,7 +46,6 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; --------------------------------------------------
 ;;; JS / JSX / TS
 (use-package js2-mode
-  ;; :mode "\\.json\\'"
   :config
   (setq-default js-indent-level 2)
   (setq-default js2-mode-show-parse-errors nil)

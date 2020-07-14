@@ -25,6 +25,11 @@
 (use-package yaml-mode
   :mode "\\.\\(yaml\\|yml\\)\\'")
 
+;; although json is not a programming language,
+;; we trivally need tools to read these terrible words
+(use-package json-mode
+  :mode "\\.json'")
+
 ;;; restclient: a "repl" for http requests
 (use-package restclient
   :mode "^request\\'")
