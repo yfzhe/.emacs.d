@@ -59,6 +59,7 @@
 (add-hook 'before-save-hook #'whitespace-cleanup)
 
 ;; auto fill-column
+(setq-default fill-column 80)
 (global-set-key (kbd "C-c u q") 'auto-fill-mode)
 
 ;; even as lispers, we have to meet the camelCase words!
