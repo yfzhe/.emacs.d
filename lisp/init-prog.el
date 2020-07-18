@@ -32,7 +32,7 @@
 
 ;;; restclient: a "repl" for http requests
 (use-package restclient
-  :mode "^request\\'")
+  :mode ("request\\'" . restclient-mode))
 
 (use-package company-restclient
   :config
