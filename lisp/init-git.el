@@ -9,11 +9,10 @@
   :hook (emacs-startup . magit-todos-mode))
 
 ;; use `diff-hl' to show git status in dired-mode
-;; (it conflicts with flycheck, so not used in file buffers
-;;  maybe we can use `diff-hl-margin-mode')
+;; (it conflicts with flycheck, maybe should use `diff-hl-margin-mode')
 (use-package diff-hl
-  :hook ((dired-mode . diff-hl-dired-mode)
-         (magit-post-refresh . diff-hl-magit-post-refresh))
+  :hook ((after-init . global-diff-hl-mode)
+         (dired-mode . diff-hl-dired-mode))
   :config
   (diff-hl-flydiff-mode t))
 
