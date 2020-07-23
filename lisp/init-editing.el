@@ -118,5 +118,6 @@
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
 
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region-or-line)
+;; if you are still missing `comment-line', using "C-x C-;"
 
 (provide 'init-editing)
