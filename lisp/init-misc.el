@@ -5,6 +5,7 @@
 (require 'init-util)
 
 (defun echo-file-name ()
+  "show current buffer-file-name"
   (interactive)
   (let ((msg
          (if (buffer-file-name)
@@ -13,6 +14,14 @@
     (message msg)))
 
 (global-set-key (kbd "C-c u f") 'echo-file-name)
+
+;;; quickly grep filename as component
+(defun grep-filename-as-component ()
+  "`projectile-grep' occurence of current filename as a component"
+  (interactive)
+  (let ((filename (file-name-base (buffer-file-name))))
+    (projectile-grep
+     (concat "<" filename "\\b"))))
 
 ;; quick open ~/.emacs.d
 (defun open-emacs-d ()
