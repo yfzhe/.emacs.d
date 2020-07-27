@@ -58,7 +58,7 @@
 (require 'init-eshell)
 (require 'init-org)
 (require 'init-treemacs)
-(require 'init-yasnippet)
+;; (require 'init-yasnippet)
 
 (require 'init-prog)
 (require 'init-lsp)
