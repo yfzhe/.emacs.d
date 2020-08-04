@@ -23,6 +23,10 @@ and an optional `:default' clause."
   "Define variable based on `system-type', see `value/os'."
   `(defvar ,id (value/os ,@rhs)))
 
+(defmacro defconst/os (id &rest rhs)
+  "Define constant based on `system-type', see `value/os'."
+  `(defconst ,id (value/os ,@rhs)))
+
 ;;; ----------------------------------------
 ;;; shrink-path
 (defvar shrink-bases
