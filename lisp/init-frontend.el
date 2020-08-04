@@ -33,6 +33,14 @@ a \"// eslint-disable-next-line\" into the above line."
           (indent-region (region-beginning) (region-end))
           (flycheck-buffer))))))
 
+;;; quickly grep filename as component
+(defun grep-filename-as-component ()
+  "`projectile-grep' occurence of current filename as a component"
+  (interactive)
+  (let ((filename (file-name-base (buffer-file-name))))
+    (projectile-grep
+     (concat "<" filename "\\b"))))
+
 ;;; --------------------------------------------------
 ;;; CSS
 (use-package css-mode
@@ -97,20 +105,10 @@ a \"// eslint-disable-next-line\" into the above line."
               :placeOpenBraceOnNewLineForFunctions nil))
 
   ;; use both typescript typechecker and eslint as flycheck-checker
+  (flycheck-add-mode 'tsx-tide 'rjsx-mode)
   (flycheck-add-next-checker 'typescript-tide 'javascript-eslint 'append)
   (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)
-  (flycheck-add-next-checker 'javascript-eslint 'tsx-tide 'append)
-
-  ;; the flycheck-er `tsx-tide` does not support `rjsx-mode',
-  ;; so we have to make our one.
-  (flycheck-define-generic-checker 'tsx-tide/rjsx-mode
-    "A JSX syntax checker using tsserver, for `rjsx-mode'"
-    :start #'tide-flycheck-start
-    :verify #'tide-flycheck-verify
-    :modes '(rjsx-mode)
-    :predicate #'tide-flycheck-predicate)
-  (add-to-list 'flycheck-checkers 'tsx-tide/rjsx-mode t)
-  (flycheck-add-next-checker 'javascript-eslint 'tsx-tide/rjsx-mode 'append))
+  (flycheck-add-next-checker 'javascript-eslint 'tsx-tide 'append))
 
 ;;; --------------------------------------------------
 ;;; Utility for front-end development
