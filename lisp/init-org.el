@@ -7,21 +7,26 @@
 
 (require 'init-util)
 
-(defvar/os my-org-directory
-  :macos "~/Documents/Docs/org/")
+(defconst/os my-org-directory
+  :macos "~/Documents/Docs/org")
 
-(defvar/os my-org-agenda-files
-  :windows "C:/Dropbox/todos/"
-  :macos "~/Documents/Docs/org/todos/")
+(defconst/os my-org-agenda-files
+  :windows "C:/Dropbox/todos"
+  :default (concat my-org-directory "/todos"))
+
+(defconst my-org-default-notes-file
+  (concat my-org-agenda-files "/todos.org"))
 
 (use-package org
   :ensure nil
   :bind (("C-c a" . org-agenda)
-         ("C-c l" . org-store-link))
+         ("C-c c" . org-capture))
   :hook (; use auto-fill-mode when edit org files
          (org-mode . auto-fill-mode))
   :config
   (setq org-directory (list my-org-directory))
+
+  ;; org-agenda
   (setq org-agenda-files (list my-org-agenda-files))
 
   (setq org-todo-keywords
@@ -31,6 +36,13 @@
   (setq show-week-agenda-p t)
   ;;(setq org-agenda-skip-scheduled-if-done t)
   ;;(setq org-agenda-skip-deadline-if-done t)
+
+  ;; org-capture
+  (setq org-default-notes-file my-org-default-notes-file)
+
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file "")
+           "* TODO %?  %^g\n\n Added at: %U\n")))
 
   (setq org-return-follows-link t))
 
