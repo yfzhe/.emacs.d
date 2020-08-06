@@ -42,7 +42,7 @@
 
   (setq org-capture-templates
         '(("t" "Todo" entry (file "")
-           "* TODO %?  %^g\n\n Added at: %U\n")))
+           "* TODO %?\n\nAdded at %U.")))
 
   (setq org-return-follows-link t))
 
