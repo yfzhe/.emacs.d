@@ -17,7 +17,8 @@
 ;;; mode config
 (use-package elm-mode
   :hook ((elm-mode . lsp-deferred))
-  :mode "\\.elm\\'")
+  :mode "\\.elm\\'"
+  :custom (elm-indent-offset 2))
 
 (use-package idris-mode
   :mode "\\.idr\\'")
