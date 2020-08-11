@@ -53,28 +53,25 @@ a \"// eslint-disable-next-line\" into the above line."
 
 ;;; --------------------------------------------------
 ;;; JS / JSX / TS
-(use-package js2-mode
-  :config
-  (setq-default js-indent-level 2)
-  (setq-default js2-mode-show-parse-errors nil)
-  (setq-default js2-mode-show-strict-warnings nil))
+(use-package js-mode
+  :ensure nil
+  :mode "\\.\\(js\\|jsx\\|tsx\\)\\'")
 
 (use-package typescript-mode
   :mode "\\.ts\\'"
   :config
   (setq-default typescript-indent-level 2))
 
-;; use `rjsx-mode' for jsx
-;; (indentation in web-mode is too weird)
-(use-package rjsx-mode
-  :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
-  :bind (:map rjsx-mode-map
-         ("C-c M-r" . rjsx-rename-tag-at-point)
-         ("C-c d" . eslint-disable-error/flycheck))
-  :hook (rjsx-mode . tide-setup))
+;; some "backup" modes:
+(use-package js2-mode
+  :config
+  (setq-default js-indent-level 2)
+  (setq-default js2-mode-show-parse-errors nil)
+  (setq-default js2-mode-show-strict-warnings nil))
+
+(use-package rjsx-mode)
 
 (use-package web-mode
-  :hook (web-mode . tide-setup)
   :config
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
@@ -83,8 +80,8 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; --------------------------------------------------
 ;;; TS Language Server
 (use-package tide
-  :after (:all (:any typescript-mode rjsx-mode web-mode) company flycheck)
-  :hook (((typescript-mode rjsx-mode web-mode) . tide-setup)
+  :after (:all (:any js-mode typescript-mode) company flycheck)
+  :hook (((js-mode typescript-mode) . tide-setup)
          (tide-mode . tide-hl-identifier-mode)
          ;; use `eldoc-box' to get "modern-editor"-like document experience
          (tide-mode . eldoc-box-hover-mode))
