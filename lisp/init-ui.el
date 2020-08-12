@@ -11,7 +11,6 @@
   ;; chinese font
   (dolist (charset '(kana han cjk-misc bopomofo))
     (set-fontset-font t charset font-cjk-family))
-
   (use-cjk-char-width-table 'zh_CN)
 
   ;; display emojis
@@ -33,17 +32,9 @@
 ;; frame title
 (setq frame-title-format "%b - Emacs")
 
-;; initial frame size
-(add-to-list 'default-frame-alist '(width . 90))
-(add-to-list 'default-frame-alist '(height . 36))
-
-;; transparent background
-;; (add-to-list 'default-frame-alist '(alpha . (95 . 0)))
-
-;; titlebar background
-(when (eq system-type 'darwin)
-  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-  (add-to-list 'default-frame-alist '(ns-appearance . dark)))
+(setq use-file-dialog nil)
+(setq use-dialog-box nil)
+;; (setq inhibit-splash-screen 1)
 
 ;; when frames are maximized, please spilt windows horizontally
 (setq split-width-threshold 100)

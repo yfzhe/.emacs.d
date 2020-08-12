@@ -10,14 +10,7 @@
 ;; Default encoing use utf-8, and goodbey to CRLF
 (prefer-coding-system 'utf-8-unix)
 
-;;; Some UI settings
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
 (column-number-mode t)
-;;(setq inhibit-splash-screen 1)
-
-(setq use-file-dialog nil)
-(setq use-dialog-box nil)
 
 ;;; line numbers
 (dolist (mode '(prog-mode-hook text-mode-hook))
