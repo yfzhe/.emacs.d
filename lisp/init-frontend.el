@@ -80,7 +80,6 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; --------------------------------------------------
 ;;; TS Language Server
 (use-package tide
-  :after (:all (:any js-mode typescript-mode) company flycheck)
   :hook (((js-mode typescript-mode) . tide-setup)
          (tide-mode . tide-hl-identifier-mode)
          ;; use `eldoc-box' to get "modern-editor"-like document experience
