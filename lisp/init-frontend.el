@@ -101,6 +101,7 @@ a \"// eslint-disable-next-line\" into the above line."
               :placeOpenBraceOnNewLineForFunctions nil))
 
   ;; use both typescript typechecker and eslint as flycheck-checker
+  (flycheck-add-mode 'tsx-tide 'js-mode)
   (flycheck-add-mode 'tsx-tide 'rjsx-mode)
   (flycheck-add-next-checker 'typescript-tide 'javascript-eslint 'append)
   (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)
