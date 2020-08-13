@@ -8,9 +8,9 @@
 
 (use-package flyspell
   :if (executable-find "hunspell")
-  :hook (((markdown-mode git-commit-setup) . flyspell-mode)
-         ;(text-mode . flyspell-mode)
-         ;((js-mode js2-mode rjxs-mode typescript-mode) . flyspell-prog-mode)
+  :hook ((git-commit-setup . flyspell-mode)
+         ;; (text-mode . flyspell-mode)
+         ;; (prog-mode . flyspell-prog-mode)
          )
   :init
   (setq ispell-program-name "hunspell")

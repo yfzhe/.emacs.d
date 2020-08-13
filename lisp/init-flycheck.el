@@ -2,7 +2,7 @@
 ;;; Config on flycheck
 
 (use-package flycheck
-  :hook (after-init . global-flycheck-mode)
+  :hook (prog-mode . flycheck-mode)
   :config
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
 
