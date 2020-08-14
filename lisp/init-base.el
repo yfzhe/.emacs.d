@@ -13,8 +13,7 @@
 (column-number-mode t)
 
 ;;; line numbers
-(dolist (mode '(prog-mode-hook text-mode-hook))
-  (add-hook mode #'display-line-numbers-mode))
+(global-display-line-numbers-mode t)
 
 ;;; better `default-directory' after starting
 (setq default-directory
