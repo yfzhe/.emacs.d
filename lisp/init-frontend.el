@@ -104,8 +104,8 @@ a \"// eslint-disable-next-line\" into the above line."
   (flycheck-add-mode 'tsx-tide 'js-mode)
   (flycheck-add-mode 'tsx-tide 'rjsx-mode)
   (flycheck-add-next-checker 'typescript-tide 'javascript-eslint 'append)
-  (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)
-  (flycheck-add-next-checker 'javascript-eslint 'tsx-tide 'append))
+  (flycheck-add-next-checker 'tsx-tide 'javascript-eslint 'append)
+  (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append))
 
 ;;; --------------------------------------------------
 ;;; Utility for front-end development
