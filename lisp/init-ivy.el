@@ -11,11 +11,12 @@
 
   ;; enable fuzzy matching
   ;; https://oremacs.com/2016/01/06/ivy-flx/
-  ;; with `ivy-hydra', use "C-o M" to toggle
-  (setq ivy-re-builders-alist
-        '((swiper-isearch . ivy--regex-plus)
-          (swiper . ivy--regex-plus)
-          (t . ivy--regex-fuzzy))))
+  ;; or, use `ivy-hydra' "C-o M" to toggle
+  ;; (setq ivy-re-builders-alist
+  ;;       '((swiper-isearch . ivy--regex-plus)
+  ;;         (swiper . ivy--regex-plus)
+  ;;         (t . ivy--regex-fuzzy)))
+  )
 
 (use-package counsel
   :hook (after-init . counsel-mode)
