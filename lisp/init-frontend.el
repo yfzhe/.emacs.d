@@ -115,7 +115,8 @@ a \"// eslint-disable-next-line\" into the above line."
 
 ;; prettier
 (use-package prettier-js
-  :bind (:map rjsx-mode-map
+  :after (:any js-mode typescript-mode)
+  :bind (:map js-mode-map
          ("C-c C-p" . prettier-js)
          :map typescript-mode-map
          ("C-c C-p" . prettier-js)))
