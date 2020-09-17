@@ -34,8 +34,14 @@
   (setq org-log-done 'time)
 
   (setq show-week-agenda-p t)
-  ;;(setq org-agenda-skip-scheduled-if-done t)
-  ;;(setq org-agenda-skip-deadline-if-done t)
+  ;; (setq org-agenda-skip-scheduled-if-done t)
+  ;; (setq org-agenda-skip-deadline-if-done t)
+
+  (setq org-agenda-custom-commands
+        '(("r" "Weekly review"
+           ((agenda "" ((org-agenda-span 7)))
+            (todo "WORKING")
+            (todo "TODO")))))
 
   ;; org-capture
   (setq org-default-notes-file my-org-default-notes-file)
