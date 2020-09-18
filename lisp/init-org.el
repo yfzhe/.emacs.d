@@ -58,4 +58,6 @@
 ;; `ox-md''s export is not "modern"
 (use-package ox-gfm)
 
+(use-package org-present)
+
 (provide 'init-org)

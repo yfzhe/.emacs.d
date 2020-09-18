@@ -15,7 +15,7 @@
  '(compilation-message-face 'default)
  '(custom-enabled-themes '(doom-dracula))
  '(custom-safe-themes
-   '("57bd93e7dc5fbb5d8d27697185b753f8563fe0db5db245592bab55a8680fdd8c" "6a0d7f41968908e25b2f56fa7b4d188e3fc9a158c39ef680b349dccffc42d1c8" "912cac216b96560654f4f15a3a4d8ba47d9c604cbc3b04801e465fb67a0234f0" "53993d7dc1db7619da530eb121aaae11c57eaf2a2d6476df4652e6f0bd1df740" "1526aeed166165811eefd9a6f9176061ec3d121ba39500af2048073bea80911e" default))
+   '("e6ff132edb1bfa0645e2ba032c44ce94a3bd3c15e3929cdf6c049802cf059a2a" "57bd93e7dc5fbb5d8d27697185b753f8563fe0db5db245592bab55a8680fdd8c" "6a0d7f41968908e25b2f56fa7b4d188e3fc9a158c39ef680b349dccffc42d1c8" "912cac216b96560654f4f15a3a4d8ba47d9c604cbc3b04801e465fb67a0234f0" "53993d7dc1db7619da530eb121aaae11c57eaf2a2d6476df4652e6f0bd1df740" "1526aeed166165811eefd9a6f9176061ec3d121ba39500af2048073bea80911e" default))
  '(evil-emacs-state-cursor '("#E57373" hbar))
  '(evil-insert-state-cursor '("#E57373" bar))
  '(evil-normal-state-cursor '("#FFEE58" box))
@@ -39,7 +39,7 @@
    '("#183691" "#888a88" "#539100" "#888a88" "#0086b3" "#183691" "#539100" "#888a88"))
  '(objed-cursor-color "#ff665c")
  '(package-selected-packages
-   '(js-mode json-mode lsp-python-ms all-the-icons-ibuffer all-the-icons-ivy-rich lorem-ipsum countdown youdao-dictionary flyspell-correct-ivy elfeed-org elfeed deft dante haskell-mode j-mode cargo flycheck-rust rust-mode yarn-mode prettier-js add-node-modules-path tide web-mode rjsx-mode typescript-mode js2-mode counsel-css pollen-mode scribble-mode racket-mode company-lsp lsp-ui lsp-mode company-restclient restclient yaml-mode idris-mode elm-mode eldoc-box treemacs-projectile treemacs-magit ox-gfm ox-pandoc eshell-prompt-extras esh-autosuggest dired-git-info dired-subtree diredfl dired-filter yasnippet-snippets ivy-yasnippet yasnippet ibuffer-projectile projectile flycheck gitignore-mode gitconfig-mode gitattributes-mode git-link git-messenger git-timemachine diff-hl magit-todos magit company dashboard eyebrowse ivy-rich ivy-hydra counsel ivy goto-line-preview hl-todo dr-racket-like-unicode undo-tree rainbow-delimiters paredit smartparens editorconfig kaolin-themes doom-themes doom-modeline paradox link-hint which-key exec-path-from-shell use-package))
+   '(org-present js-mode json-mode lsp-python-ms all-the-icons-ibuffer all-the-icons-ivy-rich lorem-ipsum countdown youdao-dictionary flyspell-correct-ivy elfeed-org elfeed deft dante haskell-mode j-mode cargo flycheck-rust rust-mode yarn-mode prettier-js add-node-modules-path tide web-mode rjsx-mode typescript-mode js2-mode counsel-css pollen-mode scribble-mode racket-mode company-lsp lsp-ui lsp-mode company-restclient restclient yaml-mode idris-mode elm-mode eldoc-box treemacs-projectile treemacs-magit ox-gfm ox-pandoc eshell-prompt-extras esh-autosuggest dired-git-info dired-subtree diredfl dired-filter yasnippet-snippets ivy-yasnippet yasnippet ibuffer-projectile projectile flycheck gitignore-mode gitconfig-mode gitattributes-mode git-link git-messenger git-timemachine diff-hl magit-todos magit company dashboard eyebrowse ivy-rich ivy-hydra counsel ivy goto-line-preview hl-todo dr-racket-like-unicode undo-tree rainbow-delimiters paredit smartparens editorconfig kaolin-themes doom-themes doom-modeline paradox link-hint which-key exec-path-from-shell use-package))
  '(pdf-view-midnight-colors '("#888a88" . "#edf5dc"))
  '(pos-tip-background-color "#3a933a933a93")
  '(pos-tip-foreground-color "#9E9E9E")
