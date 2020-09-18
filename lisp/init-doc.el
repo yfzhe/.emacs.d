@@ -1,16 +1,17 @@
 ;;; init-doc.el
 ;;; Docs, words, but no knowledge
 
+(require 'init-util)
+
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.\\(md\\|mkd\\|markdown\\)\\'" . markdown-mode)))
 
 ;;; use `deft' for notes
-(defvar my-deft-directory
-  (pcase system-type
-    ('windows-nt "C:/Dropbox/notes")
-    ('darwin "~/Documents/Docs/notes")))
+(defconst/os my-deft-directory
+  :windows "C:/Dropbox/notes"
+  :macos "~/Documents/Docs/notes")
 
 (use-package deft
   :config
