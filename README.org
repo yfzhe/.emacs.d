@@ -6,21 +6,14 @@ Yes, it's a poor man's Emacs configuration.
 - dired-mode works well
 - great git experience (thanks, magit, the best git interface in the world!)
 - flyspell for spell checking
-- elfeed as RSS reader
+- +elfeed as RSS reader+
 
 * Requirements
 
-- ~coreutils~ for better dired experience
-- ~hunspell~ for flyspell
-- LSPs
-  + ~tsserver~ (from TypeScript, used in Tide)
-  + ~vscode-css-languageserver-bin~ (for CSS)
-  + ~[[https://github.com/rust-lang/rls][rls]]~ (for Rust)
-  + ~[[https://github.com/elm-tooling/elm-language-server][elm-language-server]]~, and ~elm-format~
-
-* TODOs
-
-- no-littering
-- more language configurations
-- more yas-snippets
-- [[https://github.com/joodland/bm][bm]]
+  - ~coreutils~ for better dired experience
+  - ~hunspell~ for flyspell
+  - LSPs
+    + ~tsserver~ (from TypeScript, used in Tide)
+    + ~vscode-css-languageserver-bin~ (for CSS)
+    + ~[[https://github.com/rust-lang/rls][rls]]~ (for Rust)
+    + ~[[https://github.com/elm-tooling/elm-language-server][elm-language-server]]~, and ~elm-format~
