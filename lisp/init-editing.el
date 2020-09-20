@@ -16,7 +16,7 @@
 
 ;; formating is always an important thing
 (use-package editorconfig
-  :config (editorconfig-mode 1))
+  :hook (after-init . editorconfig-mode))
 
 ;; paren, bracket, brace, I can't leave them
 ;; even when not writing LISP
