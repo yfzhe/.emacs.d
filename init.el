@@ -1,12 +1,7 @@
 ;;; init.el  -*- lexical-binding: t -*-
 
-;;; adjust gc threshold for speeding up
-(let ((normal-gc-cons-threshold (* 32 1024 1024))
-      (init-gc-cons-threshold (* 128 1024 1024)))
-  (setq gc-cons-threshold init-gc-cons-threshold)
-  (add-hook #'emacs-startup-hook
-            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
-
+;;; adjust gc threshold
+(setq gc-cons-threshold (* 64 1024 1024))
 (add-hook 'focus-out-hook #'garbage-collect)
 
 ;;; package initialize
