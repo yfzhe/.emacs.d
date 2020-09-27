@@ -4,18 +4,13 @@
 ;;; - https://orgmode.org  (of course!)
 ;;; - https://orgmode.org/worg/org-tutorials/index.html (a list of tutorials)
 ;;; - https://orgmode.org/worg/org-configs/org-customization-guide.html
+;;; - https://www.labri.fr/perso/nrougier/GTD/index.html (GTD with org-mode)
 
 (require 'init-util)
 
-(defconst/os my-org-directory
-  :macos "~/Documents/Docs/org")
-
-(defconst/os my-org-agenda-files
+(defconst/os my-org-todos-directory
   :windows "C:/Dropbox/todos"
-  :default (concat my-org-directory "/todos"))
-
-(defconst my-org-default-notes-file
-  (concat my-org-agenda-files "/todos.org"))
+  :macos "~/Documents/Docs/org/todos")
 
 (use-package org
   :ensure nil
@@ -23,34 +18,36 @@
          ("C-c c" . org-capture))
   :hook ((org-mode . auto-fill-mode))
   :config
-  (setq org-directory (list my-org-directory))
+  ;; pathes
+  (setq org-directory my-org-todos-directory)
+  (setq org-agenda-files (list my-org-todos-directory))
+  (setq org-default-notes-file "todos.org")
 
   ;; basic settings
   (setq org-todo-keywords
-        '((sequence "TODO" "DOING" "|" "DONE" "CANCEL")))
+        '((sequence "TODO" "NEXT" "DOING" "|" "DONE" "CANCEL")))
   (setq org-log-done 'time)
 
   (setq org-return-follows-link t)
 
   ;; org-capture
-  (setq org-default-notes-file my-org-default-notes-file)
-
   (setq org-capture-templates
-        '(("t" "Todo" entry (file "")
-           "* TODO %?\n\nAdded at %U.")))
+        '(("t" "Todo" entry (file "todos.org")
+           "* TODO %?\nAdded on %U.")))
 
   ;; org-agenda
-  (setq org-agenda-files (list my-org-agenda-files))
+  (setq org-agenda-span 1)
 
-  (setq show-week-agenda-p t)
   ;; (setq org-agenda-skip-scheduled-if-done t)
   ;; (setq org-agenda-skip-deadline-if-done t)
 
   (setq org-agenda-custom-commands
-        '(("r" "Weekly review"
-           ((agenda "" ((org-agenda-span 7)))
-            (todo "WORKING")
-            (todo "TODO"))))))
+        '(("w" "Weekly agenda"
+               ((agenda "" ((org-agenda-span 7)))))
+          ("r" "Review"
+               ((agenda "" ((org-agenda-span 7)))
+                (todo "DOING")
+                (todo "TODO"))))))
 
 (use-package ox-pandoc
   :if (executable-find "pandoc"))
