@@ -6,7 +6,8 @@
   :config
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
 
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (setq flycheck-check-syntax-automatically '(save mode-enabled idle-change))
+  (setq flycheck-idle-change-delay 3)
 
   (setq flycheck-indication-mode 'left-fringe)
   (when (fboundp 'define-fringe-bitmap)
