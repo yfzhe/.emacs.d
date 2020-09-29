@@ -32,7 +32,7 @@
 
   ;; org-capture
   (setq org-capture-templates
-        '(("t" "Todo" entry (file "todos.org")
+        '(("t" "Todo" entry (file "")
            "* TODO %?\nAdded on %U.")))
 
   ;; org-agenda
