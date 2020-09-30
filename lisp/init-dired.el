@@ -26,19 +26,27 @@
           (setq ls-lisp-use-insert-directory-program nil)
           (setq ls-lisp-dirs-first t)))))
 
-  ;; reuse the only one buffer for dired mode
+  ;; another way to reuse dired-mode buffer
   ;; (put 'dired-find-alternate-file 'disabled nil)
   ;; (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
   )
 
+;; reuse the only one buffer for dired mode
+(use-package dired-single
+  :after dired
+  :bind (:map dired-mode-map
+         ([remap dired-find-file] . dired-single-buffer)
+         ([remap dired-mouse-find-file] . dired-single-buffer-mouse)
+         ([remap dired-up-directory] . dired-single-up-directory)))
+
 (use-package dired-filter
   :after dired
   :bind (:map dired-mode-map
-         ("C-c f" . dired-filter-mode)))
+         ("/" . dired-filter-mode)))
 
 ;; colorize dired-mode
 (use-package diredfl
-  :init (diredfl-global-mode 1))
+  :hook ((dired-mode . diredfl-mode)))
 
 (use-package wdired
   :after dired)
