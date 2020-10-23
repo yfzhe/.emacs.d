@@ -80,10 +80,15 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; --------------------------------------------------
 ;;; TS Language Server
 (use-package tide
-  :hook (((js-mode typescript-mode) . tide-setup)
-         (tide-mode . tide-hl-identifier-mode)
-         ;; use `eldoc-box' to get "modern-editor"-like document experience
-         (tide-mode . eldoc-box-hover-mode))
+  :defines (restclient-same-buffer-response-name)
+  :init
+  (defun my-tide-setup ()
+    (unless (equal (buffer-name) restclient-same-buffer-response-name)
+      (tide-setup)
+      (tide-hl-identifier-mode 1)
+      ;; use `eldoc-box' to get "modern-editor"-like experience
+      (eldoc-box-hover-mode 1)))
+  :hook (((js-mode typescript-mode) . my-tide-setup))
   :bind (:map tide-mode-map
          ("C-c C-d" . tide-documentation-at-point)
          ("C-c C-f" . tide-fix)
