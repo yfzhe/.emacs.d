@@ -10,7 +10,10 @@
          (")" . racket-insert-closing)
          ("]" . racket-insert-closing)
          ("}" . racket-insert-closing)
-         ("C-M-\\" . racket-unicode-input-method-enable))
+         ("C-M-\\" . racket-unicode-input-method-enable)
+         :map paredit-mode-map
+         ("M-[" . paredit-wrap-square)
+         ("M-{" . paredit-wrap-curly))
   :config
   ;; don't show the pos-tip, either the pseudo tip
   (setq racket-show-functions '(racket-show-echo-area)))
