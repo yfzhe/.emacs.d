@@ -36,7 +36,7 @@
            "* TODO %?\nAdded on %U.")))
 
   ;; org-agenda
-  (setq org-agenda-span 1)
+  (setq org-agenda-span 7)
 
   ;; (setq org-agenda-skip-scheduled-if-done t)
   ;; (setq org-agenda-skip-deadline-if-done t)
