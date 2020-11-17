@@ -62,6 +62,10 @@
 (setq-default fill-column 80)
 (global-set-key (kbd "C-c u q") 'auto-fill-mode)
 
+;; highlight fill-column
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+(add-hook 'text-mode-hook #'display-fill-column-indicator-mode)
+
 ;; even as lispers, we have to meet the camelCase words!
 (global-set-key (kbd "C-c u s") 'subword-mode)
 
@@ -82,11 +86,6 @@
 ;; highlight todo
 (use-package hl-todo
   :hook (after-init . global-hl-todo-mode))
-
-;; highlight fill-column
-;; (use-package fill-column-indicator
-;;   :hook ((text-mode . fci-mode)
-;;          (prog-mode . fci-mode)))
 
 (use-package goto-line-preview
   :bind ([remap goto-line] . goto-line-preview))
