@@ -1,34 +1,24 @@
 ;;; init-base.el
 
 ;;; Basic settings
-(delete-selection-mode t)
 (blink-cursor-mode -1)
-(show-paren-mode t)
 (setq visible-bell 0)
 (defalias 'yes-or-no-p 'y-or-n-p)
+(delete-selection-mode t)
+(show-paren-mode t)
 
 ;; Default encoing use utf-8, and goodbey to CRLF
 (prefer-coding-system 'utf-8-unix)
 
-(column-number-mode t)
-
-;;; line numbers
+;;; line & column numbers
 (global-display-line-numbers-mode t)
+(column-number-mode t)
 
 ;;; better `default-directory' after starting
 (setq default-directory
       (pcase system-type
         ('windows-nt "C:/")
         ('darwin "~/Code/")))
-
-;;; ibuffer
-(use-package ibuffer
-  :bind ("C-x C-b" . ibuffer)
-  :config
-  (setq ibuffer-show-empty-filter-groups nil))
-
-(use-package all-the-icons-ibuffer
-  :init (all-the-icons-ibuffer-mode 1))
 
 ;;; recentf
 (use-package recentf
@@ -41,6 +31,20 @@
                           ".elfeed/"
                           "elpa/"
                           ".cache/")))
+
+;;; exec-path-from-shell initialize
+(use-package exec-path-from-shell
+  :if (memq system-type '(darwin))
+  :init (exec-path-from-shell-initialize))
+
+;;; ibuffer
+(use-package ibuffer
+  :bind ("C-x C-b" . ibuffer)
+  :config
+  (setq ibuffer-show-empty-filter-groups nil))
+
+(use-package all-the-icons-ibuffer
+  :init (all-the-icons-ibuffer-mode 1))
 
 ;;; which-key: hints key bindings
 (use-package which-key

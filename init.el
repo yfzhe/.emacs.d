@@ -1,8 +1,14 @@
 ;;; init.el  -*- lexical-binding: t -*-
 
 ;;; adjust gc threshold
-(setq gc-cons-threshold (* 64 1024 1024))
-(add-hook 'focus-out-hook #'garbage-collect)
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (setq gc-cons-threshold (* 64 1024 1024))
+
+            (add-function :after after-focus-change-function
+              (lambda ()
+                (unless (frame-focus-state)
+                  (garbage-collect))))))
 
 ;;; package initialize
 (require 'package)
@@ -15,8 +21,7 @@
   (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
   (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory)))
 
-;;; use-package
-;;; and auto-install packages
+;;; setup use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -27,13 +32,9 @@
 (eval-when-compile
   (require 'use-package))
 
+;;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
-
-;;; exec-path-from-shell initialize
-(use-package exec-path-from-shell
-  :if (memq system-type '(darwin))
-  :init (exec-path-from-shell-initialize))
 
 (require 'init-base)
 (require 'init-editing)
