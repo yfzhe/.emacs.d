@@ -14,7 +14,7 @@
  '(compilation-message-face 'default)
  '(custom-enabled-themes '(doom-dracula))
  '(custom-safe-themes
-   '("6a0d7f41968908e25b2f56fa7b4d188e3fc9a158c39ef680b349dccffc42d1c8" "e6ff132edb1bfa0645e2ba032c44ce94a3bd3c15e3929cdf6c049802cf059a2a"))
+   '("a4395e069de3314001de4e139d6a3b1a83dcf9c3fdc68ee7b13eef6c2cba4ae3" "6a0d7f41968908e25b2f56fa7b4d188e3fc9a158c39ef680b349dccffc42d1c8" "e6ff132edb1bfa0645e2ba032c44ce94a3bd3c15e3929cdf6c049802cf059a2a"))
  '(highlight-changes-colors '("#FD5FF0" "#AE81FF"))
  '(highlight-indent-guides-auto-enabled nil)
  '(highlight-symbol-colors
@@ -32,7 +32,7 @@
    '("#183691" "#888a88" "#539100" "#888a88" "#0086b3" "#183691" "#539100" "#888a88"))
  '(objed-cursor-color "#ff665c")
  '(package-selected-packages
-   '(lorem-ipsum countdown youdao-dictionary flyspell-correct-ivy deft dante haskell-mode j-mode cargo flycheck-rust rust-mode yarn-mode prettier-js add-node-modules-path tide web-mode rjsx-mode js2-mode typescript-mode counsel-css pollen-mode scribble-mode racket-mode lsp-python-ms company-lsp lsp-ui lsp-mode company-restclient restclient json-mode yaml-mode idris-mode elm-mode eldoc-box treemacs-projectile treemacs-magit treemacs org-present ox-gfm ox-pandoc eshell-prompt-extras esh-autosuggest dashboard ibuffer-projectile projectile flycheck gitignore-mode gitconfig-mode gitattributes-mode git-link git-messenger git-timemachine diff-hl magit-todos magit dired-git-info dired-subtree diredfl dired-filter dired-single company eyebrowse all-the-icons-ivy-rich ivy-rich ivy-hydra flx counsel ivy kaolin-themes doom-themes doom-modeline goto-line-preview hl-todo dr-racket-like-unicode undo-tree rainbow-delimiters paredit smartparens editorconfig paradox link-hint which-key all-the-icons-ibuffer exec-path-from-shell use-package))
+   '(csproj-mode csharp-mode lorem-ipsum countdown youdao-dictionary flyspell-correct-ivy deft dante haskell-mode j-mode cargo flycheck-rust rust-mode yarn-mode prettier-js add-node-modules-path tide web-mode rjsx-mode js2-mode typescript-mode counsel-css pollen-mode scribble-mode racket-mode lsp-python-ms company-lsp lsp-ui lsp-mode company-restclient restclient json-mode yaml-mode idris-mode elm-mode eldoc-box treemacs-projectile treemacs-magit treemacs org-present ox-gfm ox-pandoc eshell-prompt-extras esh-autosuggest dashboard ibuffer-projectile projectile flycheck gitignore-mode gitconfig-mode gitattributes-mode git-link git-messenger git-timemachine diff-hl magit-todos magit dired-git-info dired-subtree diredfl dired-filter dired-single company eyebrowse all-the-icons-ivy-rich ivy-rich ivy-hydra flx counsel ivy kaolin-themes doom-themes doom-modeline goto-line-preview hl-todo dr-racket-like-unicode undo-tree rainbow-delimiters paredit smartparens editorconfig paradox link-hint which-key all-the-icons-ibuffer exec-path-from-shell use-package))
  '(pos-tip-background-color "#3a933a933a93")
  '(pos-tip-foreground-color "#9E9E9E")
  '(red "#ffffff")

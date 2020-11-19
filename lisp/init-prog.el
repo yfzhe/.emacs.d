@@ -23,6 +23,18 @@
 (use-package idris-mode
   :mode "\\.idr\\'")
 
+(use-package csharp-mode
+  :mode "\\.cs\\'"
+  :hook ((csharp-mode . lsp-deferred))
+  :config
+  (setq lsp-csharp-server-path "/usr/local/bin/omnisharp"))
+
+(use-package csproj-mode)
+
+;; if not using lsp, use `omnisharp-emacs' instead
+;; (use-package omnisharp
+;;   :hook ((csharp-mode . omnisharp-mode)))
+
 (use-package yaml-mode
   :mode "\\.\\(yaml\\|yml\\)\\'")
 

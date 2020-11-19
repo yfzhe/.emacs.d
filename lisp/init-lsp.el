@@ -3,11 +3,14 @@
 (use-package lsp-mode
   :bind (:map lsp-mode-map
          ("C-c C-d" . lsp-describe-thing-at-point))
+  :hook ((lsp-mode . lsp-enable-which-key-integration))
   :init
   (setq lsp-auto-guess-root t)
   (setq lsp-prefer-flymake nil)
   (setq lsp-enable-indentation t)
-  (setq lsp-enable-snippet t))
+  (setq lsp-enable-snippet t)
+
+  (setq lsp-keymap-prefix "C-c l"))
 
 (use-package lsp-ui
   :commands lsp-ui-mode
