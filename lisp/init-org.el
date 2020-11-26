@@ -22,6 +22,10 @@
   (setq org-directory my-org-todos-directory)
   (setq org-agenda-files (list my-org-todos-directory))
   (setq org-default-notes-file "todos.org")
+  (let ((archive-file
+         (expand-file-name "../archive/todos.org"
+                           my-org-todos-directory)))
+    (setq org-archive-location (concat archive-file "::")))
 
   ;; basic settings
   (setq org-todo-keywords
