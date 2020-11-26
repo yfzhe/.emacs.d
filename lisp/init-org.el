@@ -42,12 +42,12 @@
   ;; (setq org-agenda-skip-deadline-if-done t)
 
   (setq org-agenda-custom-commands
-        '(("w" "Weekly agenda"
-               ((agenda "" ((org-agenda-span 7)))))
-          ("r" "Review"
-               ((agenda "" ((org-agenda-span 7)))
-                (todo "DOING")
-                (todo "TODO"))))))
+        '(("a" "Today Agenda"
+           ((todo "NEXT")
+            (agenda "" ((org-agenda-span 1)))
+            (todo "DOING")))
+          ("w" "Weekly agenda"
+           ((agenda "" ((org-agenda-span 7))))))))
 
 (use-package ox-pandoc
   :if (executable-find "pandoc"))
