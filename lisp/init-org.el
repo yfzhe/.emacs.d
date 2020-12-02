@@ -8,9 +8,13 @@
 
 (require 'init-util)
 
-(defconst/os my-org-todos-directory
-  :windows "C:/Dropbox/todos"
-  :macos "~/Documents/Docs/org/todos")
+(defconst/os my-org-directory
+  :windows "C:/Dropbox"
+  :macos "~/Documents/Docs/org")
+
+(defun my-org-file (path)
+  "build file-path based on `my-org-directory'"
+  (expand-file-name path my-org-directory))
 
 (use-package org
   :ensure nil
@@ -19,12 +23,10 @@
   :hook ((org-mode . auto-fill-mode))
   :config
   ;; pathes
-  (setq org-directory my-org-todos-directory)
-  (setq org-agenda-files (list my-org-todos-directory))
-  (setq org-default-notes-file "todos.org")
-  (let ((archive-file
-         (expand-file-name "../archive/todos.org"
-                           my-org-todos-directory)))
+  (setq org-directory my-org-directory)
+  (setq org-agenda-files (list (my-org-file "todos")))
+  (setq org-default-notes-file (my-org-file "./todos/inbox.org"))
+  (let ((archive-file (my-org-file "./archive/todos.org")))
     (setq org-archive-location (concat archive-file "::")))
 
   ;; basic settings
@@ -50,6 +52,8 @@
            ((todo "NEXT")
             (agenda "" ((org-agenda-span 1)))
             (todo "DOING")))
+          ("i" "Inbox"
+           ((tags "inbox")))
           ("w" "Weekly agenda"
            ((agenda "" ((org-agenda-span 7))))))))
 
