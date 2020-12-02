@@ -41,6 +41,13 @@
         '(("t" "Todo" entry (file "")
            "* TODO %?\nAdded on %U.")))
 
+  ;; org-refile
+  (setq org-refile-targets
+        '((org-agenda-files :todo . "TODO")))
+
+  (setq org-refile-use-outline-path 'file)
+  (setq org-outline-path-complete-in-steps nil)
+
   ;; org-agenda
   (setq org-agenda-span 7)
 
