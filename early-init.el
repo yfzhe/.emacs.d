@@ -1,7 +1,7 @@
 ;;; early-init.el
 
 ;;; adjust gc threshold for speeding up
-(setq gc-cons-threshold (* 256 1024 1024))
+(setq gc-cons-threshold (* 512 1024 1024))
 
 ;; initial frame size
 (add-to-list 'default-frame-alist '(width . 90))
