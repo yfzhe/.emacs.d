@@ -20,7 +20,10 @@
   (setq lsp-ui-doc-max-width 50)
   ;; move signature info from eldoc to lsp-ui-doc
   (setq lsp-ui-doc-include-signature t)
-  (setq lsp-eldoc-enable-hover nil))
+  (setq lsp-eldoc-enable-hover nil)
+
+  (setq lsp-ui-sideline-show-code-actions nil)
+  (setq lsp-ui-sideline-show-diagnostics t))
 
 (use-package company-lsp
   :commands company-lsp)
