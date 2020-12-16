@@ -5,19 +5,23 @@
 ;; - https://www.emacswiki.org/emacs/InteractiveSpell
 ;; - https://joelkuiper.eu/spellcheck_emacs
 ;; - https://github.com/redguardtoo/emacs.d/blob/master/lisp/init-spelling.el
+;; - https://github.com/condy0919/.emacs.d/blob/master/lisp/init-spell.el
 
-(use-package flyspell
+(use-package ispell
+  :ensure nil
   :if (executable-find "hunspell")
-  :hook ((git-commit-setup . flyspell-mode)
-         ;; (text-mode . flyspell-mode)
-         ;; (prog-mode . flyspell-prog-mode)
-         )
   :init
   (setq ispell-program-name "hunspell")
-  (setq ispell-local-dictionary "en_US")
+  (setq ispell-dictionary "en_US")
   (setq ispell-local-dictionary-alist
         '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US") nil utf-8)))
   (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist))
+
+(use-package flyspell
+  :after ispell
+  :hook (;; (text-mode . flyspell-mode)
+         ;; (prog-mode . flyspell-prog-mode)
+         (git-commit-setup . flyspell-mode)))
 
 (use-package flyspell-correct-ivy
   :after flyspell
