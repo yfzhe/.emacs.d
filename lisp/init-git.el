@@ -3,7 +3,7 @@
 (use-package magit
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch)
-         ("C-c M-g" . magit-file-popup)))
+         ("C-c M-g" . magit-file-dispatch)))
 
 (use-package magit-todos
   :hook (emacs-startup . magit-todos-mode))
