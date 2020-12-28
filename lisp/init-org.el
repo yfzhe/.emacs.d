@@ -48,6 +48,9 @@
   (setq org-refile-use-outline-path 'file)
   (setq org-outline-path-complete-in-steps nil)
 
+  ;; don't automatically set bookmarks
+  (setq org-bookmark-names-plist nil)
+
   ;; org-agenda
   (setq org-agenda-span 7)
 
