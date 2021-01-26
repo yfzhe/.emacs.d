@@ -64,8 +64,11 @@
             (todo "DOING")))
           ("i" "Inbox"
            ((tags "inbox")))
-          ("w" "Weekly agenda"
-           ((agenda "" ((org-agenda-span 7))))))))
+          ("w" "Weekly Review"
+           ((todo "DOING")
+            (tags "SCHEDULED<\"<+1w>\"/TODO|NEXT")
+            (tags "CLOSED>\"<-1w>\"")
+            (tags "inbox"))))))
 
 (use-package ox-pandoc
   :if (executable-find "pandoc"))
