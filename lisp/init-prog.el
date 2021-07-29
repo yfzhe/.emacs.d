@@ -35,6 +35,9 @@
 ;; (use-package omnisharp
 ;;   :hook ((csharp-mode . omnisharp-mode)))
 
+(use-package dockerfile-mode
+  :mode "Dockerfile\\'")
+
 (use-package yaml-mode
   :mode "\\.\\(yaml\\|yml\\)\\'")
 
