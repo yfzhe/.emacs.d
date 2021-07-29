@@ -7,7 +7,7 @@
 (delete-selection-mode t)
 (show-paren-mode t)
 
-;; Default encoing use utf-8, and goodbey to CRLF
+;;; Encoding, and NO CRLF
 (prefer-coding-system 'utf-8-unix)
 
 ;;; line & column numbers

@@ -33,9 +33,9 @@ a \"// eslint-disable-next-line\" into the above line."
           (indent-region (region-beginning) (region-end))
           (flycheck-buffer))))))
 
-;;; quickly grep filename as component
 (defun grep-filename-as-component ()
-  "`projectile-grep' occurence of current filename as a component"
+  "Quickly grep filename as a component name,
+`projectile-grep' occurence of current filename as a component"
   (interactive)
   (let ((filename (file-name-base (buffer-file-name))))
     (projectile-grep
