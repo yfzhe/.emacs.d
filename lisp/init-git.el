@@ -32,7 +32,9 @@
   (setq git-messenger:show-detail t))
 
 (use-package git-link
-  :bind ("C-c g l" . git-link))
+  :bind ("C-c g l" . git-link)
+  :config
+  (setq git-link-use-commit t))
 
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)
