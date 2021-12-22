@@ -14,7 +14,7 @@
             ('darwin *box-width-base*)))))
 
 ;;; --------------------------------------------------
-;;; mode config
+;;; languages
 (use-package elm-mode
   :hook ((elm-mode . lsp-deferred))
   :mode "\\.elm\\'"
@@ -34,6 +34,11 @@
 ;; if not using lsp, use `omnisharp-emacs' instead
 ;; (use-package omnisharp
 ;;   :hook ((csharp-mode . omnisharp-mode)))
+
+(use-package lsp-pyright
+  :hook (python-mode . (lambda ()
+                         (require 'lsp-pyright)
+                         (lsp-deferred))))
 
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")

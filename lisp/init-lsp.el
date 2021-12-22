@@ -29,14 +29,5 @@
 (use-package company-lsp
   :commands company-lsp)
 
-;;; set lsp-python here temporaryly
-(use-package lsp-python-ms
-  :hook (python-mode . (lambda ()
-                         (require 'lsp-python-ms)
-                         (lsp-deferred)))
-  :init
-  (setq lsp-python-ms-auto-install-server t)
-  (when (executable-find "python3")
-       (setq lsp-python-ms-python-executable-cmd "python3")))
 
 (provide 'init-lsp)
