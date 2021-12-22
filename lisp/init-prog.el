@@ -46,7 +46,10 @@
 (use-package json-mode
   :mode "\\.json'")
 
-;;; restclient: a "repl" for http requests
+;; a portal for tramp
+(use-package counsel-tramp)
+
+;;; restclient: a playground for HTTP requests
 (use-package restclient
   :mode ("request\\'" . restclient-mode))
 

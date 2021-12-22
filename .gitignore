@@ -14,10 +14,11 @@
 /persp-confs
 /server
 /racket-mode
+/recentf
+/tramp
 /transient
 /url
 
 /.lsp-session*
 /forge-database.sqlite
 /projectile-bookmarks.eld
-/recentf
