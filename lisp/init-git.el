@@ -36,8 +36,6 @@
   :config
   (setq git-link-use-commit t))
 
-(use-package gitattributes-mode)
-(use-package gitconfig-mode)
-(use-package gitignore-mode)
+(use-package git-modes)
 
 (provide 'init-git)

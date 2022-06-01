@@ -26,8 +26,4 @@
   (setq lsp-ui-sideline-show-code-actions nil)
   (setq lsp-ui-sideline-show-diagnostics t))
 
-(use-package company-lsp
-  :commands company-lsp)
-
-
 (provide 'init-lsp)
