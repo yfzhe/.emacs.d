@@ -53,9 +53,12 @@
 
 (require 'init-dashboard)
 (require 'init-eshell)
-(require 'init-org)
 (require 'init-treemacs)
 ;; (require 'init-yasnippet)
+
+(require 'init-doc)
+(require 'init-org)
+(require 'init-tex)
 
 (require 'init-prog)
 (require 'init-lsp)
@@ -65,6 +68,5 @@
 (require 'init-apl-j)
 (require 'init-haskell)
 
-(require 'init-doc)
 (require 'init-spell)
 (require 'init-misc)
