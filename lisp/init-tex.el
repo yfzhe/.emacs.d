@@ -18,9 +18,13 @@
       (message "Warning: SumatraPDF is not found.")))
 
   (setq TeX-source-correlate-method 'synctex)
-  (setq TeX-source-correlate-start-server t))
+  (setq TeX-source-correlate-start-server t)
+
+  (setq TeX-electric-math (cons "$" "$")))
 
 (use-package cdlatex
-  :hook (LaTeX-mode . turn-on-cdlatex))
+  :hook (LaTeX-mode . turn-on-cdlatex)
+  :config
+  (setq cdlatex-paired-parens ""))
 
 (provide 'init-tex)
