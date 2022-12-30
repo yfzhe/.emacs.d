@@ -3,7 +3,7 @@
 ;;; Basic settings
 (blink-cursor-mode -1)
 (setq visible-bell 0)
-(defalias 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 (delete-selection-mode t)
 (show-paren-mode t)
 
