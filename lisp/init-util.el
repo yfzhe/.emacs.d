@@ -17,7 +17,7 @@ and an optional `:default' clause."
        ,@(and windows `(('windows-nt ,(cadr windows))))
        ,@(and macos `(('darwin ,(cadr macos))))
        ,@(and linux `(('gnu/linux ,(cadr linux))))
-       ,@(and default `((t ,(cadr default)))))))
+       ,@(and default `((_ ,(cadr default)))))))
 
 (defmacro defvar/os (id &rest rhs)
   "Define variable based on `system-type', see `value/os'."

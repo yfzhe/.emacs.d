@@ -1,5 +1,11 @@
-;;; init-eshell.el
+;;; init-shell.el
 
+;;; vterm
+(use-package vterm
+  :unless (eq system-type 'windows-nt)
+  :init (setq vterm-always-compile-module t))
+
+;;; eshell
 (use-package esh-autosuggest
   :defines (ivy-display-functions-alist)
   :hook ((eshell-mode . esh-autosuggest-mode)
@@ -20,4 +26,4 @@
   (setq eshell-highlight-prompt nil)
   (setq eshell-prompt-function 'epe-theme-lambda))
 
-(provide 'init-eshell)
+(provide 'init-shell)

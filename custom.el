@@ -14,7 +14,7 @@
  '(compilation-message-face 'default)
  '(custom-enabled-themes '(doom-dracula))
  '(custom-safe-themes
-   '("234dbb732ef054b109a9e5ee5b499632c63cc24f7c2383a849815dacc1727cb6" "a4395e069de3314001de4e139d6a3b1a83dcf9c3fdc68ee7b13eef6c2cba4ae3" "6a0d7f41968908e25b2f56fa7b4d188e3fc9a158c39ef680b349dccffc42d1c8" "e6ff132edb1bfa0645e2ba032c44ce94a3bd3c15e3929cdf6c049802cf059a2a"))
+   '("eca44f32ae038d7a50ce9c00693b8986f4ab625d5f2b4485e20f22c47f2634ae" "e8567ee21a39c68dbf20e40d29a0f6c1c05681935a41e206f142ab83126153ca" "234dbb732ef054b109a9e5ee5b499632c63cc24f7c2383a849815dacc1727cb6" "a4395e069de3314001de4e139d6a3b1a83dcf9c3fdc68ee7b13eef6c2cba4ae3" "6a0d7f41968908e25b2f56fa7b4d188e3fc9a158c39ef680b349dccffc42d1c8" "e6ff132edb1bfa0645e2ba032c44ce94a3bd3c15e3929cdf6c049802cf059a2a"))
  '(highlight-changes-colors '("#FD5FF0" "#AE81FF"))
  '(highlight-indent-guides-auto-enabled nil)
  '(highlight-symbol-colors
@@ -32,7 +32,7 @@
    '("#183691" "#888a88" "#539100" "#888a88" "#0086b3" "#183691" "#539100" "#888a88"))
  '(objed-cursor-color "#ff665c")
  '(package-selected-packages
-   '(cdlatex auctex lorem-ipsum countdown youdao-dictionary flyspell-correct-ivy dante haskell-mode j-mode cargo flycheck-rust rust-mode yarn-mode prettier-js add-node-modules-path tide web-mode rjsx-mode js2-mode typescript-mode counsel-css pollen-mode scribble-mode racket-mode lsp-ui company-restclient restclient counsel-tramp json-mode yaml-mode dockerfile-mode lsp-pyright csproj-mode csharp-mode idris-mode elm-mode eldoc-box treemacs-projectile treemacs-magit treemacs eshell-prompt-extras esh-autosuggest eyebrowse dashboard deft markdown-mode org-present ox-gfm ox-pandoc ibuffer-projectile projectile git-modes git-link git-messenger git-timemachine diff-hl magit-todos magit flycheck company dired-git-info dired-subtree diredfl dired-filter dired-single all-the-icons-ivy-rich ivy-rich ivy-hydra flx counsel ivy kaolin-themes doom-themes doom-modeline goto-line-preview hl-todo dr-racket-like-unicode undo-tree rainbow-delimiters paredit smartparens editorconfig paradox link-hint which-key all-the-icons-ibuffer exec-path-from-shell use-package))
+   '(vterm cdlatex auctex lorem-ipsum countdown youdao-dictionary flyspell-correct-ivy dante haskell-mode j-mode cargo flycheck-rust rust-mode yarn-mode prettier-js add-node-modules-path tide web-mode rjsx-mode js2-mode typescript-mode counsel-css pollen-mode scribble-mode racket-mode lsp-ui company-restclient restclient counsel-tramp json-mode yaml-mode dockerfile-mode lsp-pyright csproj-mode csharp-mode idris-mode elm-mode eldoc-box treemacs-projectile treemacs-magit treemacs eshell-prompt-extras esh-autosuggest eyebrowse dashboard deft markdown-mode org-present ox-gfm ox-pandoc ibuffer-projectile projectile git-modes git-link git-messenger git-timemachine diff-hl magit-todos magit flycheck company dired-git-info dired-subtree diredfl dired-filter dired-single all-the-icons-ivy-rich ivy-rich ivy-hydra flx counsel ivy kaolin-themes doom-themes doom-modeline goto-line-preview hl-todo dr-racket-like-unicode undo-tree rainbow-delimiters paredit smartparens editorconfig paradox link-hint which-key all-the-icons-ibuffer exec-path-from-shell use-package))
  '(pos-tip-background-color "#3a933a933a93")
  '(pos-tip-foreground-color "#9E9E9E")
  '(red "#ffffff")

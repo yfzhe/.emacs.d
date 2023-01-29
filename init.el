@@ -41,18 +41,18 @@
 (require 'init-editing)
 (require 'init-ui)
 
+(require 'init-git)
+(require 'init-shell)
+
 (require 'init-ivy)
 (require 'init-desktop)
 ;; (require 'init-persp)
 
 (require 'init-company)
 (require 'init-dired)
-(require 'init-git)
 (require 'init-flycheck)
 (require 'init-projectile)
-
 (require 'init-dashboard)
-(require 'init-eshell)
 (require 'init-treemacs)
 ;; (require 'init-yasnippet)
 
