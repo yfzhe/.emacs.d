@@ -66,6 +66,10 @@
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 (add-hook 'text-mode-hook #'display-fill-column-indicator-mode)
 
+;; visual line
+(setq word-wrap t)
+(setq word-wrap-by-category t)
+
 ;; even as lispers, we have to meet the camelCase words!
 (global-set-key (kbd "C-c u s") 'subword-mode)
 
