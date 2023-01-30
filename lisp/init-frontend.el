@@ -55,7 +55,9 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; JS / JSX / TS
 (use-package js-mode
   :ensure nil
-  :mode "\\.\\(js\\|jsx\\|tsx\\)\\'")
+  :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
+  :init
+  (setq js-indent-level 2))
 
 (use-package typescript-mode
   :mode "\\.ts\\'"
@@ -63,14 +65,6 @@ a \"// eslint-disable-next-line\" into the above line."
   (setq-default typescript-indent-level 2))
 
 ;; some "backup" modes:
-(use-package js2-mode
-  :config
-  (setq-default js-indent-level 2)
-  (setq-default js2-mode-show-parse-errors nil)
-  (setq-default js2-mode-show-strict-warnings nil))
-
-(use-package rjsx-mode)
-
 (use-package web-mode
   :config
   (setq web-mode-markup-indent-offset 2)
@@ -80,10 +74,10 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; --------------------------------------------------
 ;;; TS Language Server
 (use-package tide
-  :defines (restclient-same-buffer-response-name)
   :init
   (defun my-tide-setup ()
-    (unless (equal (buffer-name) restclient-same-buffer-response-name)
+    (unless (and (boundp 'restclient-same-buffer-response-name)
+                 (equal (buffer-name) restclient-same-buffer-response-name))
       (tide-setup)
       (tide-hl-identifier-mode 1)
       ;; use `eldoc-box' to get "modern-editor"-like experience
@@ -107,7 +101,6 @@ a \"// eslint-disable-next-line\" into the above line."
 
   ;; use both typescript typechecker and eslint as flycheck-checker
   (flycheck-add-mode 'tsx-tide 'js-mode)
-  (flycheck-add-mode 'tsx-tide 'rjsx-mode)
   (flycheck-add-next-checker 'typescript-tide 'javascript-eslint 'append)
   (flycheck-add-next-checker 'tsx-tide 'javascript-eslint 'append)
   (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append))
@@ -116,7 +109,7 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; Utility for front-end development
 ;; add node_modules into PATH, necessary for using eslint, etc.
 (use-package add-node-modules-path
-  :hook (js-mode js2-mode typescript-mode rjsx-mode web-mode))
+  :hook (js-mode typescript-mode web-mode))
 
 ;; prettier
 (use-package prettier-js

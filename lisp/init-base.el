@@ -35,7 +35,7 @@
 
 ;;; exec-path-from-shell initialize
 (use-package exec-path-from-shell
-  :if (memq system-type '(darwin))
+  :when (memq system-type '(darwin))
   :init (exec-path-from-shell-initialize))
 
 ;;; ibuffer
@@ -58,11 +58,10 @@
 
 ;;; better package-list
 (use-package paradox
+  :hook (after-init . paradox-enable)
   :init
   (setq paradox-execute-asynchronously t)
-  (setq paradox-display-star-count nil)
-  :config
-  (paradox-enable))
+  (setq paradox-display-star-count nil))
 
 ;;; profile startup
 (use-package esup

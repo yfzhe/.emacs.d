@@ -52,13 +52,16 @@
   :mode "\\.json'")
 
 ;; a portal for tramp
-(use-package counsel-tramp)
+(use-package counsel-tramp
+  :after counsel)
 
+;;; --------------------------------------------------
 ;;; restclient: a playground for HTTP requests
 (use-package restclient
-  :mode ("request\\'" . restclient-mode))
+  :hook (restclient-mode . display-line-numbers-mode))
 
 (use-package company-restclient
+  :after restclient
   :config
   (add-to-list 'company-backends 'company-restclient))
 

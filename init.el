@@ -38,21 +38,22 @@
 (load custom-file)
 
 (require 'init-base)
-(require 'init-editing)
 (require 'init-ui)
+
+(require 'init-editing)
+(require 'init-company)
+(require 'init-ivy)
 
 (require 'init-git)
 (require 'init-shell)
 
-(require 'init-ivy)
+(require 'init-dired)
+(require 'init-flycheck)
+(require 'init-dashboard)
 (require 'init-desktop)
 ;; (require 'init-persp)
 
-(require 'init-company)
-(require 'init-dired)
-(require 'init-flycheck)
 (require 'init-projectile)
-(require 'init-dashboard)
 (require 'init-treemacs)
 ;; (require 'init-yasnippet)
 
