@@ -5,6 +5,8 @@
   :ensure nil
   :bind ("C-x C-j" . dired-jump)
   :config
+  (setq dired-kill-when-opening-new-dired-buffer t)
+
   (setq dired-recursive-deletes 'always)
   (setq dired-recursive-copies 'top)
 
@@ -24,20 +26,9 @@
           :ensure nil
           :config
           (setq ls-lisp-use-insert-directory-program nil)
-          (setq ls-lisp-dirs-first t)))))
+          (setq ls-lisp-dirs-first t))))))
 
-  ;; another way to reuse dired-mode buffer
-  ;; (put 'dired-find-alternate-file 'disabled nil)
-  ;; (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
-  )
-
-;; reuse the only one buffer for dired mode
-(use-package dired-single
-  :after dired
-  :bind (:map dired-mode-map
-         ([remap dired-find-file] . dired-single-buffer)
-         ([remap dired-mouse-find-file] . dired-single-buffer-mouse)
-         ([remap dired-up-directory] . dired-single-up-directory)))
+;; use `wdired' to edit filenames directly in `dired'
 
 (use-package dired-filter
   :after dired
@@ -48,18 +39,11 @@
 (use-package diredfl
   :hook ((dired-mode . diredfl-mode)))
 
-(use-package wdired
-  :after dired)
-
 (use-package dired-subtree
   :after dired
   :bind (:map dired-mode-map
          ("<tab>" . dired-subtree-toggle)
          ("<backtab>" . dired-subtree-cycle)))
-
-;; nest single files
-;; (use-package dired-collapse
-;;   :hook (dired-mode . dired-collapse-mode))
 
 (use-package dired-git-info
   :after dired
