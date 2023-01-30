@@ -64,4 +64,9 @@
   :config
   (paradox-enable))
 
+;;; profile startup
+(use-package esup
+  ;; see https://github.com/jschaf/esup/issues/85
+  :config (setq esup-depth 0))
+
 (provide 'init-base)
