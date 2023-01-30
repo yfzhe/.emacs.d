@@ -11,7 +11,8 @@
 (prefer-coding-system 'utf-8-unix)
 
 ;;; line & column numbers
-(global-display-line-numbers-mode t)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
 (column-number-mode t)
 
 ;;; better `default-directory' after starting
