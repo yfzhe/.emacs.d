@@ -109,7 +109,7 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; Utility for front-end development
 ;; add node_modules into PATH, necessary for using eslint, etc.
 (use-package add-node-modules-path
-  :hook (js-mode typescript-mode web-mode))
+  :hook (((js-mode typescript-mode web-mode) . add-node-modules-path)))
 
 ;; prettier
 (use-package prettier-js
