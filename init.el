@@ -53,8 +53,9 @@
 (require 'init-desktop)
 ;; (require 'init-persp)
 
+(require 'init-project)
 (require 'init-projectile)
-(require 'init-treemacs)
+;; (require 'init-treemacs)
 ;; (require 'init-yasnippet)
 
 (require 'init-doc)
