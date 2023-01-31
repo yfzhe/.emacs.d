@@ -76,6 +76,7 @@
 ;;; lots of highlight
 ;; highlight current line
 (use-package hl-line
+  :ensure nil
   :hook ((prog-mode text-mode) . hl-line-mode))
 
 ;; highlight indentation

@@ -23,6 +23,7 @@
 
 ;;; recentf
 (use-package recentf
+  :ensure nil
   :hook (after-init . recentf-mode)
   :init
   (setq recentf-max-saved-items 1000)
@@ -40,6 +41,7 @@
 
 ;;; ibuffer
 (use-package ibuffer
+  :ensure nil
   :bind ("C-x C-b" . ibuffer)
   :config
   (setq ibuffer-show-empty-filter-groups nil))

@@ -44,6 +44,7 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; --------------------------------------------------
 ;;; CSS
 (use-package css-mode
+  :ensure nil
   :hook (css-mode . lsp-deferred)
   :init (setq css-indent-offset 2))
 

@@ -18,6 +18,7 @@
   (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist))
 
 (use-package flyspell
+  :ensure nil
   :after ispell
   :hook (;; (text-mode . flyspell-mode)
          ;; (prog-mode . flyspell-prog-mode)

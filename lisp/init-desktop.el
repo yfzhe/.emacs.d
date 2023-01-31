@@ -6,6 +6,7 @@
 ;;; - https://www.emacswiki.org/emacs/desktop
 
 (use-package desktop
+  :ensure nil
   :hook (after-init . desktop-save-mode)
   :config
   (setq desktop-restore-frames nil) ; disable restoring frames when initing
