@@ -26,7 +26,8 @@
   :hook (after-init . doom-modeline-mode)
   :config
   (setq doom-modeline-buffer-file-name-style 'file-name)
-  (setq doom-modeline-checker-simple-format nil))
+  (setq doom-modeline-checker-simple-format nil)
+  (setq doom-modeline-time-icon nil))
 
 ;;; frame settings
 ;; frame title
