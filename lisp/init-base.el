@@ -63,9 +63,4 @@
   (setq paradox-execute-asynchronously t)
   (setq paradox-display-star-count nil))
 
-;;; profile startup
-(use-package esup
-  ;; see https://github.com/jschaf/esup/issues/85
-  :config (setq esup-depth 0))
-
 (provide 'init-base)
