@@ -4,10 +4,11 @@
 (use-package flycheck
   :hook (prog-mode . flycheck-mode)
   :config
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
-
   (setq flycheck-check-syntax-automatically '(save mode-enabled idle-change))
   (setq flycheck-idle-change-delay 3)
+
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
+  (setq flycheck-emacs-lisp-load-path 'inherit)
 
   (setq flycheck-indication-mode 'left-fringe)
   (when (fboundp 'define-fringe-bitmap)
