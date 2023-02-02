@@ -74,11 +74,11 @@
             (tags "inbox"))))))
 
 (use-package ox-pandoc
-  :after org-mode
+  :after org
   :when (executable-find "pandoc"))
 
 ;; `ox-md''s export is not "modern"
 (use-package ox-gfm
-  :after org-mode)
+  :after org)
 
 (provide 'init-org)
