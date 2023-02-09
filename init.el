@@ -58,9 +58,10 @@
 ;; (require 'init-treemacs)
 ;; (require 'init-yasnippet)
 
-(require 'init-doc)
 (require 'init-org)
 (require 'init-tex)
+(require 'init-note)
+(require 'init-doc)
 
 (require 'init-prog)
 (require 'init-lsp)
