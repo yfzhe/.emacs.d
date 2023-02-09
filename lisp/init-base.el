@@ -10,6 +10,10 @@
 ;;; Encoding, and NO CRLF
 (prefer-coding-system 'utf-8-unix)
 
+;; Let org-mode timestamps be in English
+;; see: https://emacs-china.org/t/topic/1551/16
+(setq system-time-locale "C")
+
 ;;; line & column numbers
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'text-mode-hook #'display-line-numbers-mode)
