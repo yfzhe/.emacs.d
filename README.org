@@ -1,19 +1,16 @@
-#+TITLE: My .emacs.d
+#+TITLE: My Emacs Configuration
 
 Yes, it's a poor man's Emacs configuration.
 
 - usable front-end develop experience (react, typescript; eslint, prettier)
-- dired-mode works well
-- great git experience (thanks, magit, the best git interface in the world!)
-- flyspell for spell checking
+- great git experience (thanks for magit, the best git interface in the world!)
+- org-mode for todo-list, denote for notes
+- TeX editing
 - +elfeed as RSS reader+
 
 * Requirements
 
-  - ~coreutils~ for better dired experience
+  - ~coreutils~ for dired (on macOS)
+  - ~cmake~ for vterm
   - ~hunspell~ for flyspell
-  - LSPs
-    + ~tsserver~ (from TypeScript, used in Tide)
-    + ~vscode-css-languageserver-bin~ (for CSS)
-    + ~[[https://github.com/rust-lang/rls][rls]]~ (for Rust)
-    + ~[[https://github.com/elm-tooling/elm-language-server][elm-language-server]]~, and ~elm-format~
+  - ~tsserver~ (from TypeScript, used in Tide)
