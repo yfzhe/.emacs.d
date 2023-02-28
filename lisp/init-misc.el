@@ -21,7 +21,14 @@
   (interactive)
   (find-file "~/.emacs.d/"))
 
-;; need dictionary to save my poor english
+;;; dictionaries
+(use-package fanyi
+  :bind (("C-c u w" . fanyi-dwim))
+  :custom
+  (fanyi-providers '(fanyi-longman-provider
+                     fanyi-haici-provider
+                     fanyi-etymon-provider)))
+
 (use-package youdao-dictionary
   :bind (("C-c u y" . youdao-dictionary-search-at-point)))
 
