@@ -14,6 +14,10 @@
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
 
+(use-package whitespace
+  :ensure nil
+  :hook ((before-save . whitespace-cleanup)))
+
 ;; formating is always an important thing
 (use-package editorconfig
   :hook (after-init . editorconfig-mode))
@@ -51,12 +55,6 @@
 ;; DrRacket-like unicode input
 (use-package dr-racket-like-unicode
   :bind ("C-M-\\" . dr-racket-like-unicode-char))
-
-;; show "whitespace"
-(global-set-key (kbd "C-c u w") 'whitespace-mode)
-
-;; clean whitespace before saving files
-(add-hook 'before-save-hook #'whitespace-cleanup)
 
 ;; auto fill-column
 (setq-default fill-column 80)
