@@ -37,6 +37,9 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
+;;; some third-party packages
+(use-package dash)
+
 (require 'init-base)
 (require 'init-ui)
 
