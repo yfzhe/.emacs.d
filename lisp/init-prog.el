@@ -51,10 +51,6 @@
 (use-package json-mode
   :mode "\\.json'")
 
-;; a portal for tramp
-(use-package counsel-tramp
-  :after counsel)
-
 ;;; --------------------------------------------------
 ;;; restclient: a playground for HTTP requests
 (use-package restclient

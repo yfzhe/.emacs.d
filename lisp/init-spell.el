@@ -24,10 +24,4 @@
          ;; (prog-mode . flyspell-prog-mode)
          (git-commit-setup . flyspell-mode)))
 
-(use-package flyspell-correct-ivy
-  :after flyspell
-  :bind ("C-c s" .  flyspell-correct-at-point)
-  :init
-  (setq flyspell-correct-interface #'flyspell-correct-ivy))
-
 (provide 'init-spell)

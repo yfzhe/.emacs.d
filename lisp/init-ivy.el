@@ -36,8 +36,6 @@
 ;; fuzzy matching
 (use-package flx)
 
-(use-package ivy-hydra)
-
 ;;; better interface for ivy
 (use-package ivy-rich
   :hook ((ivy-mode . ivy-rich-mode)))
@@ -45,5 +43,9 @@
 ;;; prettier ivy-rich
 (use-package all-the-icons-ivy-rich
   :init (all-the-icons-ivy-rich-mode 1))
+
+;;; a portal for tramp
+(use-package counsel-tramp
+  :after counsel)
 
 (provide 'init-ivy)
