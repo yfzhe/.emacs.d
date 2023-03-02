@@ -65,13 +65,6 @@ a \"// eslint-disable-next-line\" into the above line."
   :config
   (setq-default typescript-indent-level 2))
 
-;; some "backup" modes:
-(use-package web-mode
-  :config
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
-
 ;;; --------------------------------------------------
 ;;; TS Language Server
 (use-package tide
