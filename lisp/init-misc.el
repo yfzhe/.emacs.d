@@ -23,7 +23,7 @@
 
 ;;; dictionaries
 (use-package fanyi
-  :bind (("C-c u w" . fanyi-dwim))
+  :bind (("C-c u w" . fanyi-dwim2))
   :custom
   (fanyi-providers '(fanyi-longman-provider
                      fanyi-haici-provider
