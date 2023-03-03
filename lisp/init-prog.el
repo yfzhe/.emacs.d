@@ -51,6 +51,9 @@
 (use-package json-mode
   :mode "\\.json'")
 
+(use-package dotenv-mode
+  :mode "\\.env\\b")
+
 ;;; --------------------------------------------------
 ;;; restclient: a playground for HTTP requests
 (use-package restclient
