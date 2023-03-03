@@ -57,17 +57,22 @@ a \"// eslint-disable-next-line\" into the above line."
 (use-package js-mode
   :ensure nil
   :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
+  :hook ((js-mode . (lambda ()
+                      (unbind-key "M-." js-mode-map)
+                      (lsp-deferred))))
   :init
   (setq js-indent-level 2))
 
 (use-package typescript-mode
   :mode "\\.ts\\'"
+  :hook ((typescript-mode . lsp-deferred))
   :config
   (setq-default typescript-indent-level 2))
 
 ;;; --------------------------------------------------
 ;;; TS Language Server
 (use-package tide
+  :disabled
   :init
   (defun my-tide-setup ()
     (unless (and (boundp 'restclient-same-buffer-response-name)
