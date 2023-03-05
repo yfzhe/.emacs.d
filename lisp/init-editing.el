@@ -5,6 +5,9 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; and no lock files
+(setq create-lockfiles nil)
+
 ;; use space instead of tab for indentation
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
