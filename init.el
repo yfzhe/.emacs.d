@@ -58,7 +58,6 @@
 
 (require 'init-project)
 (require 'init-projectile)
-;; (require 'init-treemacs)
 ;; (require 'init-yasnippet)
 
 (require 'init-org)
