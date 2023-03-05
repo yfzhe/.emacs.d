@@ -12,7 +12,8 @@
 ;; (it conflicts with flycheck, maybe should use `diff-hl-margin-mode')
 (use-package diff-hl
   :hook ((after-init . global-diff-hl-mode)
-         (dired-mode . diff-hl-dired-mode)
+         (dired-mode . diff-hl-dired-mode-unless-remote)
+         (magit-pre-refresh . diff-hl-magit-pre-refresh)
          (magit-post-refresh . diff-hl-magit-post-refresh))
   :config
   (diff-hl-flydiff-mode t))
