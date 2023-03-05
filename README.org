@@ -11,6 +11,7 @@ Yes, it's a poor man's Emacs configuration.
 * Requirements
 
   - ~coreutils~ for dired (on macOS)
+  - ~ripgrep~
   - ~cmake~ for vterm
   - ~hunspell~ for flyspell
   - ~tsserver~ (from TypeScript, used in Tide)

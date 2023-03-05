@@ -15,6 +15,10 @@
   :bind (:map project-prefix-map
          ("t" . project-vterm))
   :config
-  (unbind-key "s" project-prefix-map))
+  (unbind-key "s" project-prefix-map)
+
+  (if (executable-find "rg")
+      (setq xref-search-program 'ripgrep)
+    (message "can't find executable `ripgrep'")))
 
 (provide 'init-project)
