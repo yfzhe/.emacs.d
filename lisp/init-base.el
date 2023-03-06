@@ -43,6 +43,10 @@
   :when (memq system-type '(darwin))
   :init (exec-path-from-shell-initialize))
 
+(use-package saveplace
+  :ensure nil
+  :hook (after-init . save-place-mode))
+
 ;;; ibuffer
 (use-package ibuffer
   :ensure nil
