@@ -52,12 +52,13 @@
 
 (require 'init-dired)
 (require 'init-flycheck)
+(require 'init-project)
+
 (require 'init-dashboard)
 (require 'init-desktop)
 ;; (require 'init-persp)
 
-(require 'init-project)
-(require 'init-projectile)
+;; (require 'init-projectile)
 ;; (require 'init-yasnippet)
 
 (require 'init-org)
