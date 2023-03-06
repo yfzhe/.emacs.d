@@ -1,11 +1,10 @@
 ;;; init-editing.el
 ;;; It is for editing to use Emacs, isn't it?
 
-;; disable auto-save and backup
+;; disable auto-save, backup and lock files
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-;; and no lock files
 (setq create-lockfiles nil)
 
 ;; use space instead of tab for indentation
@@ -13,6 +12,9 @@
 (setq-default tab-width 4)
 
 (setq-default tab-always-indent 'complete)
+
+(delete-selection-mode t)
+(show-paren-mode t)
 
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)

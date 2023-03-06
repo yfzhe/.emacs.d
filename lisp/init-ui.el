@@ -2,6 +2,18 @@
 
 (require 'init-font)
 
+(setq use-file-dialog nil)
+(setq use-dialog-box nil)
+(setq inhibit-splash-screen t)
+
+(blink-cursor-mode -1)
+(setq visible-bell 0)
+
+(setq frame-title-format "%b - Emacs")
+
+;; when frames are maximized, please spilt windows horizontally
+(setq split-width-threshold 100)
+
 ;;; Fonts
 (when (display-graphic-p)
   ;; set default font
@@ -28,17 +40,6 @@
   (setq doom-modeline-buffer-file-name-style 'file-name)
   (setq doom-modeline-checker-simple-format nil)
   (setq doom-modeline-time-icon nil))
-
-;;; frame settings
-;; frame title
-(setq frame-title-format "%b - Emacs")
-
-(setq use-file-dialog nil)
-(setq use-dialog-box nil)
-;; (setq inhibit-splash-screen 1)
-
-;; when frames are maximized, please spilt windows horizontally
-(setq split-width-threshold 100)
 
 ;;; theme
 ;; NOTE: some (not bad) themes
