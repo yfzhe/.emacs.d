@@ -53,14 +53,13 @@
 (use-package all-the-icons-ibuffer
   :init (all-the-icons-ibuffer-mode 1))
 
+(use-package browse-url
+  :ensure nil
+  :bind (("C-c u l" . browse-url-at-point)))
+
 ;;; which-key: hints key bindings
 (use-package which-key
   :hook (after-init . which-key-mode))
-
-;;; link-hint
-(use-package link-hint
-  :bind (("C-c u l" . link-hint-open-link)))
-         ;("C-c u c" . link-hint-copy-link)))
 
 ;;; better package-list
 (use-package paradox
