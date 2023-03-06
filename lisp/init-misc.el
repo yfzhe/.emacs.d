@@ -26,8 +26,7 @@
   :bind (("C-c u w" . fanyi-dwim2))
   :custom
   (fanyi-providers '(fanyi-longman-provider
-                     fanyi-haici-provider
-                     fanyi-etymon-provider)))
+                     fanyi-haici-provider)))
 
 (use-package youdao-dictionary
   :bind (("C-c u y" . youdao-dictionary-search-at-point)))
