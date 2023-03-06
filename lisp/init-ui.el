@@ -25,9 +25,11 @@
     (set-fontset-font t charset font-cjk-family))
   (use-cjk-char-width-table 'zh_CN)
 
+  ;; symbol font (other unicode characters)
+  (set-fontset-font t 'symbol font-symbol-family nil 'prepend)
+
   ;; display emojis
-  (when font-emoji-family
-    (set-fontset-font t 'emoji font-emoji-family nil 'prepend)))
+  (set-fontset-font t 'emoji font-emoji-family nil 'prepend))
 
 ;;; Modeline
 (setq display-time-24hr-format t)

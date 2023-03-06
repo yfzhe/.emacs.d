@@ -1,5 +1,4 @@
 ;;; init-font.el  -*- lexical-binding: t -*-
-;;; Font
 
 (require 'init-util)
 
@@ -7,9 +6,9 @@
   :windows 11
   :macos 15)
 
-;; other great monospace fonts:
-;; SF Mono, IBM Plex Mono, Input Mono
-;; Iosevka, Operator Mono, Computer Modern Textwriter
+;; Some good monospace fonts:
+;;   SF Mono, IBM Plex Mono, Input Mono
+;;   Iosevka, Operator Mono, Computer Modern Textwriter
 (defconst font-family "SF Mono")
 
 (defconst/os font-sans-family
@@ -19,7 +18,12 @@
 
 (defconst/os font-cjk-family
   :windows "思源黑体" ; what's the hell!
+  :macos "PingFang SC"
   :default "Source Han Sans SC")
+
+(defconst/os font-symbol-family
+  :windows "Segoe UI Symbol"
+  :macos "Symbol")
 
 (defconst/os font-emoji-family
   :windows "Segoe UI Emoji"
