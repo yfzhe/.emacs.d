@@ -35,10 +35,10 @@ a \"// eslint-disable-next-line\" into the above line."
 
 (defun grep-filename-as-component ()
   "Quickly grep filename as a component name,
-`projectile-grep' occurence of current filename as a component"
+`project-find-regexp' occurence of current filename as a component"
   (interactive)
   (let ((filename (file-name-base (buffer-file-name))))
-    (projectile-grep
+    (project-find-regexp
      (concat "<" filename "\\b"))))
 
 ;;; --------------------------------------------------
@@ -108,7 +108,7 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; Utility for front-end development
 ;; add node_modules into PATH, necessary for using eslint, etc.
 (use-package add-node-modules-path
-  :hook (((js-mode typescript-mode web-mode) . add-node-modules-path)))
+  :hook (((js-mode typescript-mode) . add-node-modules-path)))
 
 ;; prettier
 (use-package prettier-js
