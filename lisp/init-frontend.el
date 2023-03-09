@@ -48,10 +48,6 @@ a \"// eslint-disable-next-line\" into the above line."
   :hook (css-mode . lsp-deferred)
   :init (setq css-indent-offset 2))
 
-(use-package counsel-css
-  :bind (:map css-mode-map
-         ("C-c C-s" . counsel-css)))
-
 ;;; --------------------------------------------------
 ;;; JS / JSX / TS
 (use-package js-mode
