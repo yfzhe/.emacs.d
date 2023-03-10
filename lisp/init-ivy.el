@@ -24,9 +24,7 @@
          ("C-c u g" . counsel-git-grep)))
 
 (use-package swiper
-  :bind (("C-s" . swiper-isearch)
-         ("C-r" . swiper-isearch-backward)
-         ("s-f" . swiper)
+  :bind (("s-f" . swiper)
          :map swiper-map
          ("M-s" . swiper-isearch-toggle)
          ("M-%" . swiper-query-replace)

@@ -41,7 +41,8 @@
 
 ;; jump to any character
 (use-package avy
-  :bind ("M-g a" . avy-goto-char-2))
+  :bind (("M-g a" . avy-goto-char-2)
+         ("M-g s" . avy-isearch)))
 
 ;; undo-tree: better undo and redo
 (use-package undo-tree
