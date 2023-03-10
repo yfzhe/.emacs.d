@@ -20,8 +20,8 @@
 
 (use-package counsel
   :hook (after-init . counsel-mode)
-  :bind (("C-x C-r" . counsel-recentf)
-         ("C-c u g" . counsel-git-grep)))
+  :bind (([remap recentf-open-files] . counsel-recentf)
+         ([remap insert-char] . counsel-unicode-char)))
 
 (use-package swiper
   :bind (("s-f" . swiper)
@@ -40,7 +40,7 @@
 
 ;;; prettier ivy-rich
 (use-package all-the-icons-ivy-rich
-  :init (all-the-icons-ivy-rich-mode 1))
+  :hook (ivy-mode . all-the-icons-ivy-rich-mode))
 
 ;;; a portal for tramp
 (use-package counsel-tramp

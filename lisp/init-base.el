@@ -25,6 +25,7 @@
 (use-package recentf
   :ensure nil
   :hook (after-init . recentf-mode)
+  :bind (("C-x C-r" . recentf-open-files))
   :init
   (setq recentf-max-saved-items 1000)
   (setq recentf-exclude '((expand-file-name package-user-dir)
