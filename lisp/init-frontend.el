@@ -57,13 +57,17 @@ a \"// eslint-disable-next-line\" into the above line."
                       (unbind-key "M-." js-mode-map)
                       (lsp-deferred))))
   :init
-  (setq js-indent-level 2))
+  (setq js-indent-level 2)
+  :config
+  (flycheck-add-next-checker 'lsp 'javascript-eslint 'append))
 
 (use-package typescript-mode
   :mode "\\.ts\\'"
   :hook ((typescript-mode . lsp-deferred))
+  :init
+  (setq typescript-indent-level 2)
   :config
-  (setq-default typescript-indent-level 2))
+  (flycheck-add-next-checker 'lsp 'javascript-eslint 'append))
 
 ;;; --------------------------------------------------
 ;;; TS Language Server
