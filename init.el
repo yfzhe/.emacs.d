@@ -13,14 +13,17 @@
 ;;; package initialize
 (require 'package)
 (setq package-archives
-      '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+      '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
         ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
-        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+        ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (package-initialize)
 
-(eval-when-compile
-  (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-  (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory)))
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
+
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 ;;; setup use-package
 (unless (package-installed-p 'use-package)
@@ -32,10 +35,6 @@
 
 (eval-when-compile
   (require 'use-package))
-
-;;; custom.el
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
 
 ;;; some third-party packages
 (use-package dash)
