@@ -17,19 +17,20 @@
 ;;; Fonts
 (when (display-graphic-p)
   ;; set default font
-  (let ((font-string (concat font-family " " (number-to-string font-size))))
-    (set-face-attribute 'default nil :font font-string :weight 'semi-light))
+  (set-face-attribute 'default nil
+                      :family font-family
+                      :height (* 10 font-size)
+                      :weight 'semi-light)
 
   ;; CJK font
   (dolist (charset '(kana han cjk-misc bopomofo))
-    (set-fontset-font t charset font-cjk-family))
-  (use-cjk-char-width-table 'zh_CN)
+    (set-fontset-font t charset (font-spec :family font-cjk-family)))
 
   ;; symbol font (other unicode characters)
-  (set-fontset-font t 'symbol font-symbol-family nil 'prepend)
+  (set-fontset-font t 'symbol (font-spec :family font-symbol-family) nil 'prepend)
 
   ;; display emojis
-  (set-fontset-font t 'emoji font-emoji-family nil 'prepend))
+  (set-fontset-font t 'emoji (font-spec :family font-emoji-family) nil 'prepend))
 
 ;;; Modeline
 (setq display-time-24hr-format t)

@@ -1,33 +1,36 @@
 ;;; init-font.el  -*- lexical-binding: t -*-
 
+(require 'dash)
 (require 'init-util)
+
+(defun font-installed-p (font-name)
+  (find-font (font-spec :name font-name)))
+
+(defun from-fonts (&rest font-names)
+  (-first #'font-installed-p font-names))
 
 (defconst/os font-size
   :windows 11
   :macos 15)
 
 ;; Some good monospace fonts:
-;;   SF Mono, IBM Plex Mono, Input Mono
+;;   SF Mono, IBM Plex Mono, Input Mono,
 ;;   Iosevka, Operator Mono, Computer Modern Textwriter
-(defconst font-family "SF Mono")
+(defconst font-family
+  (from-fonts "SF Mono" "IBM Plex Mono"))
 
-(defconst/os font-sans-family
-  :windows "Arial"
-  :macos "Helvetica Neue")
-;; NOTE: macOS's default sans font is "PingFang SC", actually
+(defconst font-sans-family
+  (from-fonts "Helvetica Neue" "Arial"))
 
-(defconst/os font-cjk-family
-  :windows "思源黑体" ; what's the hell!
-  :macos "PingFang SC"
-  :default "Source Han Sans SC")
+(defconst font-cjk-family
+  (from-fonts "PingFang SC"
+              "思源黑体" ; what's the hell!
+              "Source Han Sans SC"))
 
-(defconst/os font-symbol-family
-  :windows "Segoe UI Symbol"
-  :macos "Symbol")
+(defconst font-symbol-family
+  (from-fonts "Segoe UI Symbol" "Symbol" "Symbola"))
 
-(defconst/os font-emoji-family
-  :windows "Segoe UI Emoji"
-  :macos "Apple Color Emoji"
-  :default nil)
+(defconst font-emoji-family
+  (from-fonts "Segoe UI Emoji" "Apple Color Emoji"))
 
 (provide 'init-font)
