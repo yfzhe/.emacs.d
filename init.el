@@ -45,7 +45,8 @@
 
 (require 'init-editing)
 (require 'init-company)
-(require 'init-ivy)
+;; (require 'init-ivy)
+(require 'init-vertico)
 
 (require 'init-git)
 (require 'init-shell)

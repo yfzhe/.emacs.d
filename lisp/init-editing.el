@@ -96,9 +96,6 @@
 (use-package hl-todo
   :hook (after-init . global-hl-todo-mode))
 
-(use-package goto-line-preview
-  :bind ([remap goto-line] . goto-line-preview))
-
 ;; indent
 (defun indent-buffer ()
   (interactive)
