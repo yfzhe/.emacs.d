@@ -39,6 +39,11 @@
   :ensure nil
   :hook (after-init . save-place-mode))
 
+;;; minibuffer history
+(use-package savehist
+  :ensure nil
+  :hook (after-init . savehist-mode))
+
 ;;; ibuffer
 (use-package ibuffer
   :ensure nil
