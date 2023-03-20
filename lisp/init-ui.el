@@ -48,13 +48,20 @@
 ;; NOTE: some (not bad) themes
 ;; - doom-dracula (from `doom-themes')
 ;; - kaolin-ocean and kaolin-dark (from `kaolin-themes', support terminal)
+;; - leuven (builtin)
 ;; - panda-theme
 ;; - twillight-bright-theme & twillight-anti-bright-theme
-(use-package doom-themes)
-(use-package kaolin-themes) ;; better in terminal
 
-(unless (display-graphic-p)
-  (load-theme 'kaolin-ocean))
+(cond
+ ((display-graphic-p)
+  (use-package doom-themes
+    :config
+    (load-theme 'doom-dracula t)
+    (doom-themes-org-config)))
+ (t ;; in terminal
+  (use-package kaolin-themes
+    :config
+    (load-theme 'kaolin-ocean t))))
 
 ;;; highlight cursor (disabled)
 (use-package beacon
