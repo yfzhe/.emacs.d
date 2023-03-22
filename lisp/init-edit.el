@@ -1,4 +1,4 @@
-;;; init-editing.el
+;;; init-edit.el
 ;;; It is for editing to use Emacs, isn't it?
 
 ;; disable auto-save, backup and lock files
@@ -14,7 +14,6 @@
 (setq-default tab-always-indent 'complete)
 
 (delete-selection-mode t)
-(show-paren-mode t)
 
 ;; automatically reload files was modified elsewhere
 (global-auto-revert-mode t)
@@ -27,17 +26,18 @@
 (use-package editorconfig
   :hook (after-init . editorconfig-mode))
 
-;; paren, bracket, brace, I can't leave them
-;; even when not writing LISP
+;; parenthesises, brackets, and braces
+;; I can't leave them, even when I'm not writing LISP
+(show-paren-mode t)
+
+(use-package rainbow-delimiters)
+
 (use-package smartparens
-  :config (require 'smartparens-config)
-  :hook (prog-mode . smartparens-mode))
+  :hook ((prog-mode . smartparens-mode))
+  :config (require 'smartparens-config))
 
 (use-package paredit
   :hook (emacs-lisp-mode . paredit-mode))
-
-;; rainbow delimiters
-(use-package rainbow-delimiters)
 
 ;; jump to any character
 (use-package avy
@@ -74,7 +74,7 @@
 (setq word-wrap t)
 (setq word-wrap-by-category t)
 
-;; even as lispers, we have to meet the camelCase words!
+;; even as LISPers, we have to confront camelCase identifiers!
 (global-set-key (kbd "C-c u s") 'subword-mode)
 
 ;;; lots of highlight
@@ -125,4 +125,4 @@
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region-or-line)
 ;; if you are still missing `comment-line', using "C-x C-;"
 
-(provide 'init-editing)
+(provide 'init-edit)

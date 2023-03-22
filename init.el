@@ -42,7 +42,7 @@
 (require 'init-base)
 (require 'init-ui)
 
-(require 'init-editing)
+(require 'init-edit)
 (require 'init-company)
 ;; (require 'init-ivy)
 (require 'init-vertico)
