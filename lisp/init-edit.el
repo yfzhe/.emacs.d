@@ -115,14 +115,18 @@
 (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
 
 ;; better comment-or-uncomment
-;; see: https://stackoverflow.com/questions/9688748/emacs-comment-uncomment-current-line
-(defun comment-or-uncomment-region-or-line ()
+;; copy from https://github.com/condy0919/.emacs.d/blob/3b1b79467cbe62de512e447c9496535778b60d8c/lisp/init-base.el#L334
+(defun comment-or-uncomment ()
+  "Comment or uncomment the current line or region."
   (interactive)
   (if (region-active-p)
       (comment-or-uncomment-region (region-beginning) (region-end))
-    (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
+    (if (save-excursion
+          (beginning-of-line)
+          (looking-at "\\s-*$"))
+        (comment-dwim nil)
+      (comment-or-uncomment-region (line-beginning-position) (line-end-position)))))
 
-(global-set-key (kbd "C-;") 'comment-or-uncomment-region-or-line)
-;; if you are still missing `comment-line', using "C-x C-;"
+(global-set-key (kbd "C-;") 'comment-or-uncomment)
 
 (provide 'init-edit)
