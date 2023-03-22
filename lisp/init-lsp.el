@@ -6,6 +6,7 @@
   :hook ((lsp-mode . lsp-enable-which-key-integration))
   :bind (:map lsp-mode-map
          ("C-c C-d" . lsp-describe-thing-at-point)
+         ("C-c C-r" . lsp-rename)
          ([remap xref-find-definitions] . lsp-find-definition)
          ([remap xref-find-references] . lsp-find-references))
   :init
