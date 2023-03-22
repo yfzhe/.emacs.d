@@ -59,7 +59,7 @@ a \"// eslint-disable-next-line\" into the above line."
   :init
   (setq js-indent-level 2)
   :config
-  (flycheck-add-next-checker 'lsp 'javascript-eslint 'append))
+  (flycheck-add-next-checker 'lsp 'javascript-eslint))
 
 (use-package typescript-mode
   :mode "\\.ts\\'"
@@ -67,7 +67,7 @@ a \"// eslint-disable-next-line\" into the above line."
   :init
   (setq typescript-indent-level 2)
   :config
-  (flycheck-add-next-checker 'lsp 'javascript-eslint 'append))
+  (flycheck-add-next-checker 'lsp 'javascript-eslint))
 
 ;;; --------------------------------------------------
 ;;; TS Language Server
@@ -86,8 +86,7 @@ a \"// eslint-disable-next-line\" into the above line."
          ("C-c C-d" . tide-documentation-at-point)
          ("C-c C-f" . tide-fix)
          ("C-c C-l" . tide-references)
-         ("C-c C-r" . tide-rename-symbol)
-         ("C-c d" . eslint-disable-error/flycheck))
+         ("C-c C-r" . tide-rename-symbol))
   :config
   ;; make tide ignore case when completing
   (setq tide-completion-ignore-case t)
