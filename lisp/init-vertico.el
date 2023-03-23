@@ -5,17 +5,18 @@
          (vertico-mode . vertico-multiform-mode))
   :config
   (setq vertico-cycle t)
-  (setq vertico-sort-function nil)
 
   (setq vertico-multiform-categories
         '((consult-grep buffer)
           (consult-xref buffer)))
-
   (setq vertico-multiform-commands '()))
 
 (use-package orderless
   :init
-  (setq completion-styles '(orderless basic)))
+  (setq completion-styles '(orderless basic))
+  (setq orderless-matching-styles '(orderless-regexp
+                                    orderless-literal
+                                    orderless-prefixes)))
 
 (use-package consult
   :bind (([remap recentf-open-files] . consult-recent-file)
