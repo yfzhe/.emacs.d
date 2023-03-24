@@ -47,7 +47,8 @@
 ;;; ibuffer
 (use-package ibuffer
   :ensure nil
-  :bind ("C-x C-b" . ibuffer))
+  :hook ((ibuffer-mode . ibuffer-auto-mode))
+  :bind ([remap list-buffers] . ibuffer-list-buffers))
 
 (use-package all-the-icons-ibuffer
   :hook (ibuffer-mode . all-the-icons-ibuffer-mode))
