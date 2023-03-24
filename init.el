@@ -59,7 +59,6 @@
 ;; (require 'init-persp)
 
 ;; (require 'init-projectile)
-;; (require 'init-yasnippet)
 
 (require 'init-org)
 (require 'init-tex)
