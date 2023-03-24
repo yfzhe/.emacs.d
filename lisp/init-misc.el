@@ -31,6 +31,10 @@
 (use-package youdao-dictionary
   :bind (("C-c u y" . youdao-dictionary-search-at-point)))
 
+;;; DrRacket-like unicode input
+(use-package dr-racket-like-unicode
+  :bind ("C-M-\\" . dr-racket-like-unicode-char))
+
 ;;; better package-list
 (use-package paradox
   :hook (after-init . paradox-enable)

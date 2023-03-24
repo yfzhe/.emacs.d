@@ -58,10 +58,6 @@
   (dolist (dir undo-tree-history-directory-alist)
     (push (expand-file-name (cdr dir)) recentf-exclude)))
 
-;; DrRacket-like unicode input
-(use-package dr-racket-like-unicode
-  :bind ("C-M-\\" . dr-racket-like-unicode-char))
-
 ;; auto fill-column
 (setq-default fill-column 80)
 (global-set-key (kbd "C-c u q") 'auto-fill-mode)
@@ -97,10 +93,6 @@
   :hook (after-init . global-hl-todo-mode))
 
 ;; indent
-(defun indent-buffer ()
-  (interactive)
-  (indent-region (point-min) (point-max)))
-
 (defun indent-region-or-buffer ()
   (interactive)
   (save-excursion
@@ -109,7 +101,7 @@
           (indent-region (region-beginning) (region-end))
           (message "Indent selected region."))
       (progn
-        (indent-buffer)
+        (indent-region (point-min) (point-max))
         (message "Indent buffer.")))))
 
 (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
