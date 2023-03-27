@@ -9,6 +9,7 @@
 
 (use-package denote
   :hook ((dired-mode . denote-dired-mode-in-directories))
+  :bind (("C-c d" . denote-open-or-create))
   :config
   (setq denote-directory my-note-directory)
 
@@ -16,8 +17,11 @@
   (setq denote-infer-keywords t)
   (setq denote-file-type 'org)
 
-  ;; set an "archive" subdirectory
-  (setq denote-excluded-directories-regexp "^archive$"))
+  ;; note "archives"
+  (setq denote-excluded-directories-regexp "^archive$")
+
+  (add-to-list 'vertico-multiform-commands
+               '(denote-open-or-create buffer)))
 
 (use-package deft
   :config
