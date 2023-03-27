@@ -11,8 +11,8 @@
   :hook ((dired-mode . denote-dired-mode-in-directories))
   :config
   (setq denote-directory my-note-directory)
-  (setq denote-dired-directories (list denote-directory))
 
+  (setq denote-prompts '(subdirectory title keywords))
   (setq denote-infer-keywords t)
   (setq denote-file-type 'org)
 
