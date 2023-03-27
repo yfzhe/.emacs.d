@@ -1,28 +1,27 @@
 ;;; init-edit.el
 ;;; It is for editing to use Emacs, isn't it?
 
-;; disable auto-save, backup and lock files
+;; disable auto-save and backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; also disable lock files
 (setq create-lockfiles nil)
 
-;; use space instead of tab for indentation
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-
-(setq-default tab-always-indent 'complete)
+(global-auto-revert-mode t)
 
 (delete-selection-mode t)
 
-;; automatically reload files was modified elsewhere
-(global-auto-revert-mode t)
+(setq tab-always-indent 'complete)
+
+;; code format
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 (use-package whitespace
   :ensure nil
   :hook ((before-save . whitespace-cleanup)))
 
-;; formating is always an important thing
 (use-package editorconfig
   :hook (after-init . editorconfig-mode))
 
@@ -58,11 +57,10 @@
   (dolist (dir undo-tree-history-directory-alist)
     (push (expand-file-name (cdr dir)) recentf-exclude)))
 
-;; auto fill-column
+;; fill-column and auto-fill
 (setq-default fill-column 80)
 (global-set-key (kbd "C-c u q") 'auto-fill-mode)
 
-;; highlight fill-column
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 (add-hook 'text-mode-hook #'display-fill-column-indicator-mode)
 
@@ -73,24 +71,13 @@
 ;; even as LISPers, we have to confront camelCase identifiers!
 (global-set-key (kbd "C-c u s") 'subword-mode)
 
-;;; lots of highlight
-;; highlight current line
+;; lots of highlight
 (use-package hl-line
   :ensure nil
   :hook ((prog-mode text-mode) . hl-line-mode))
 
-;; highlight indentation
-;; (use-package highlight-indent-guides
-;;   :hook (prog-mode . highlight-indent-guides-mode)
-;;   :init
-;;   (setq highlight-indent-guides-method 'character)
-;;   (setq highlight-indent-guides-auto-enabled nil)
-;;   :config
-;;   (set-face-foreground 'highlight-indent-guides-character-face "dimgray"))
-
-;; highlight todo
 (use-package hl-todo
-  :hook (after-init . global-hl-todo-mode))
+  :hook (prog-mode . hl-todo-mode))
 
 ;; indent
 (defun indent-region-or-buffer ()
