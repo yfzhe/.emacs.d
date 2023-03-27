@@ -7,13 +7,12 @@
 
 (use-package desktop
   :ensure nil
-  :hook (after-init . desktop-save-mode)
   :config
   (setq desktop-restore-frames nil) ; disable restoring frames when initing
   (let ((dir (expand-file-name "desktop" user-emacs-directory)))
     (setq desktop-dirname dir)
     (setq desktop-path (list dir)))
-  (setq desktop-buffers-not-to-save "\\(magit\\|tide\\)"))
+  (setq desktop-buffers-not-to-save "\\(magit\\)"))
 
 ;;; use `eyebrowse' to control windows
 (use-package eyebrowse
