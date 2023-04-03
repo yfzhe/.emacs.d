@@ -9,7 +9,7 @@
 
 (use-package denote
   :hook ((dired-mode . denote-dired-mode-in-directories))
-  :bind (("C-c d" . denote-open-or-create))
+  :bind (("C-c d c" . denote))
   :config
   (setq denote-directory my-note-directory)
 
@@ -18,10 +18,12 @@
   (setq denote-file-type 'org)
 
   ;; note "archives"
-  (setq denote-excluded-directories-regexp "^archive$")
+  (setq denote-excluded-directories-regexp "^archive$"))
 
-  (add-to-list 'vertico-multiform-commands
-               '(denote-open-or-create buffer)))
+(use-package consult-notes
+  :hook ((after-init . consult-notes-denote-mode))
+  :bind (("C-c d f" . consult-notes)
+         ("C-c d s" . consult-notes-search-in-all-notes)))
 
 (use-package deft
   :config
