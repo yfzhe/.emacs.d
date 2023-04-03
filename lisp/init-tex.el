@@ -9,13 +9,12 @@
   (setq TeX-parse-self t)
   (setq-default TeX-master nil)
 
-  (setq TeX-engine 'xetex)
+  (setq-default TeX-engine 'xetex)
   (setq TeX-save-query nil)
 
-  (when (eq system-type 'windows-nt)
-    (if (executable-find "SumatraPDF")
-        (add-to-list 'TeX-view-program-selection '(output-pdf "SumatraPDF"))
-      (message "Warning: SumatraPDF is not found.")))
+  (if (executable-find "SumatraPDF")
+      (add-to-list 'TeX-view-program-selection '(output-pdf "SumatraPDF"))
+    (message "Warning: SumatraPDF is not found."))
 
   (setq TeX-source-correlate-method 'synctex)
   (setq TeX-source-correlate-start-server t)
