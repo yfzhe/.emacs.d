@@ -1,5 +1,7 @@
 ;;; init-vertico.el
 
+(setq completion-styles '(basic partial-completion substring))
+
 (use-package vertico
   :hook ((after-init . vertico-mode)
          (vertico-mode . vertico-multiform-mode))
@@ -10,13 +12,6 @@
         '((consult-grep buffer)
           (consult-xref buffer)))
   (setq vertico-multiform-commands '()))
-
-(use-package orderless
-  :init
-  (setq completion-styles '(orderless basic))
-  (setq orderless-matching-styles '(orderless-regexp
-                                    orderless-literal
-                                    orderless-prefixes)))
 
 (use-package consult
   :bind (([remap switch-to-buffer] . consult-buffer)
