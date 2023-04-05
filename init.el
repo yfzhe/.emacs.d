@@ -62,6 +62,7 @@
 
 (require 'init-org)
 (require 'init-tex)
+(require 'init-bib)
 (require 'init-note)
 (require 'init-doc)
 

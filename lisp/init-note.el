@@ -20,6 +20,12 @@
   ;; note "archives"
   (setq denote-excluded-directories-regexp "^archive$"))
 
+(use-package citar-denote
+  :hook ((after-init . citar-denote-mode))
+  :init
+  (setq citar-notes-paths (list my-note-directory))
+  (setq citar-denote-title-format 'author-year))
+
 (use-package consult-notes
   :hook ((after-init . consult-notes-denote-mode))
   :bind (("C-c d f" . consult-notes)
