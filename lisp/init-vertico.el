@@ -1,6 +1,9 @@
 ;;; init-vertico.el
 
 (setq completion-styles '(basic partial-completion substring))
+(setq completion-ignore-case t)
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
 
 (use-package vertico
   :hook ((after-init . vertico-mode)
