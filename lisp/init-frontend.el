@@ -78,9 +78,7 @@ a \"// eslint-disable-next-line\" into the above line."
     (unless (and (boundp 'restclient-same-buffer-response-name)
                  (equal (buffer-name) restclient-same-buffer-response-name))
       (tide-setup)
-      (tide-hl-identifier-mode 1)
-      ;; use `eldoc-box' to get "modern-editor"-like experience
-      (eldoc-box-hover-mode 1)))
+      (tide-hl-identifier-mode 1)))
   :hook (((js-mode typescript-mode) . my-tide-setup))
   :bind (:map tide-mode-map
          ("C-c C-d" . tide-documentation-at-point)
