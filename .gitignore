@@ -21,6 +21,7 @@
 /recentf
 /tramp
 /transient
+/tree-sitter
 /url
 
 /.lsp-session*
