@@ -35,6 +35,7 @@
   :mode "\\.idr\\'")
 
 (use-package csharp-mode
+  :ensure nil
   :mode "\\.cs\\'"
   :hook ((csharp-mode . lsp-deferred))
   :config
