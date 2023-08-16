@@ -69,38 +69,6 @@ a \"// eslint-disable-next-line\" into the above line."
             (flycheck-add-next-checker 'lsp 'javascript-eslint)))
 
 ;;; --------------------------------------------------
-;;; TS Language Server
-(use-package tide
-  :disabled
-  :init
-  (defun my-tide-setup ()
-    (unless (and (boundp 'restclient-same-buffer-response-name)
-                 (equal (buffer-name) restclient-same-buffer-response-name))
-      (tide-setup)
-      (tide-hl-identifier-mode 1)))
-  :hook (((js-mode typescript-mode) . my-tide-setup))
-  :bind (:map tide-mode-map
-         ("C-c C-d" . tide-documentation-at-point)
-         ("C-c C-f" . tide-fix)
-         ("C-c C-l" . tide-references)
-         ("C-c C-r" . tide-rename-symbol))
-  :config
-  ;; make tide ignore case when completing
-  (setq tide-completion-ignore-case t)
-  ;; TS format settings
-  (setq tide-format-options
-        (list :indentSize 2
-              :tabSize 2
-              :insertSpaceAfterFunctionKeywordForAnonymousFunctions t
-              :placeOpenBraceOnNewLineForFunctions nil))
-
-  ;; use both typescript typechecker and eslint as flycheck-checker
-  (flycheck-add-mode 'tsx-tide 'js-mode)
-  (flycheck-add-next-checker 'typescript-tide 'javascript-eslint 'append)
-  (flycheck-add-next-checker 'tsx-tide 'javascript-eslint 'append)
-  (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append))
-
-;;; --------------------------------------------------
 ;;; Utility for front-end development
 ;; add node_modules into PATH, necessary for using eslint, etc.
 (use-package add-node-modules-path
