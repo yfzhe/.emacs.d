@@ -50,24 +50,23 @@ a \"// eslint-disable-next-line\" into the above line."
 
 ;;; --------------------------------------------------
 ;;; JS / JSX / TS
-(use-package js-mode
+
+(use-package typescript-ts-mode
+  :ensure nil
+  :mode "\\.ts\\'"
+  :hook ((typescript-ts-mode . lsp-deferred))
+  :init
+  (setq typescript-ts-mode-indent-offset 2))
+
+(use-package tsx-ts-mode
   :ensure nil
   :mode "\\.\\(js\\|jsx\\|tsx\\)\\'"
-  :hook ((js-mode . (lambda ()
-                      (unbind-key "M-." js-mode-map)
-                      (lsp-deferred))))
-  :init
-  (setq js-indent-level 2)
-  :config
-  (flycheck-add-next-checker 'lsp 'javascript-eslint))
+  :hook ((tsx-ts-mode . lsp-deferred)))
 
-(use-package typescript-mode
-  :mode "\\.ts\\'"
-  :hook ((typescript-mode . lsp-deferred))
-  :init
-  (setq typescript-indent-level 2)
-  :config
-  (flycheck-add-next-checker 'lsp 'javascript-eslint))
+;; FIXME: only add eslint checker for JS/TS modes
+(add-hook 'lsp-managed-mode-hook
+          (lambda ()
+            (flycheck-add-next-checker 'lsp 'javascript-eslint)))
 
 ;;; --------------------------------------------------
 ;;; TS Language Server
@@ -105,14 +104,13 @@ a \"// eslint-disable-next-line\" into the above line."
 ;;; Utility for front-end development
 ;; add node_modules into PATH, necessary for using eslint, etc.
 (use-package add-node-modules-path
-  :hook (((js-mode typescript-mode) . add-node-modules-path)))
+  :hook (((typescript-ts-mode tsx-ts-mode) . add-node-modules-path)))
 
-;; prettier
 (use-package prettier-js
-  :after (:any js-mode typescript-mode)
-  :bind (:map js-mode-map
+  :after (:any typescript-ts-mode tsx-ts-mode)
+  :bind (:map typescript-ts-mode-map
          ("C-c C-p" . prettier-js)
-         :map typescript-mode-map
+         :map tsx-ts-mode-map
          ("C-c C-p" . prettier-js)))
 
 ;; yarn.lock
