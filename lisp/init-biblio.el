@@ -1,7 +1,7 @@
-;;; init-bib.el
+;;; init-biblio.el
 ;;; Bibliography
 
-(require 'dash)
+(require 'org)
 (require 'init-util)
 
 (defvar/os my-library-directory
@@ -10,8 +10,7 @@
 (defvar my-biblio
   (if (not my-library-directory)
       nil
-    (-filter (lambda (file) (equal (file-name-extension file) "bib"))
-             (directory-files my-library-directory))))
+    (directory-files-recursively my-library-directory "\\.bib\\'")))
 
 (use-package oc ; org-cite
   :ensure nil
@@ -26,9 +25,13 @@
 
   (setq org-cite-insert-processor 'citar)
   (setq org-cite-follow-processor 'citar)
-  (setq org-cite-activate-processor 'citar))
+  (setq org-cite-activate-processor 'citar)
+  :config
+  ;; before using pdf-tools, open pdf files in system default application
+  (add-to-list 'citar-file-open-functions
+               '("pdf" . org-open-file)))
 
 (use-package citar-embark
   :hook ((after-init . citar-embark-mode)))
 
-(provide 'init-bib)
+(provide 'init-biblio)

@@ -26,10 +26,6 @@
   (load custom-file))
 
 ;;; setup use-package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-
 (eval-and-compile
   (setq use-package-always-ensure t))
 
@@ -62,7 +58,7 @@
 
 (require 'init-org)
 (require 'init-tex)
-(require 'init-bib)
+(require 'init-biblio)
 (require 'init-note)
 (require 'init-doc)
 
