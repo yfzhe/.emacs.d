@@ -14,6 +14,13 @@
 ;; when frames are maximized, please spilt windows horizontally
 (setq split-width-threshold 100)
 
+(use-package time
+  :ensure nil
+  :hook (after-init . display-time-mode)
+  :init
+  (setq display-time-24hr-format t)
+  (setq display-time-default-load-average nil))
+
 ;;; Fonts
 (when (display-graphic-p)
   ;; set default font
@@ -33,10 +40,6 @@
   (set-fontset-font t 'emoji (font-spec :family font-emoji-family) nil 'prepend))
 
 ;;; Modeline
-(setq display-time-24hr-format t)
-(setq display-time-default-load-average nil)
-(display-time-mode 1)
-
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)
   :config
@@ -62,11 +65,5 @@
   (use-package kaolin-themes
     :config
     (load-theme 'kaolin-ocean t))))
-
-;;; highlight cursor (disabled)
-(use-package beacon
-  :disabled t
-  :init (setq beacon-color "#99d4e8")
-  :hook (after-init . beacon-mode))
 
 (provide 'init-ui)
