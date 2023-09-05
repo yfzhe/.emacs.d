@@ -1,7 +1,6 @@
 ;;; init-biblio.el
 ;;; Bibliography
 
-(require 'org)
 (require 'init-util)
 
 (defvar/os my-library-directory
@@ -29,7 +28,7 @@
   :config
   ;; before using pdf-tools, open pdf files in system default application
   (add-to-list 'citar-file-open-functions
-               '("pdf" . org-open-file)))
+               '("pdf" . citar-file-open-external)))
 
 (use-package citar-embark
   :hook ((after-init . citar-embark-mode)))
