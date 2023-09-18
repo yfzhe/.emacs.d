@@ -11,6 +11,13 @@
       nil
     (directory-files-recursively my-library-directory "\\.bib\\'")))
 
+(use-package bibtex
+  :ensure nil
+  :hook ((before-save . bibtex-reformat))
+  :config
+  (setq bibtex-text-indentation 14)
+  (setq bibtex-align-at-equal-sign t))
+
 (use-package oc ; org-cite
   :ensure nil
   :config
