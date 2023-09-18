@@ -54,8 +54,6 @@
 (require 'init-desktop)
 ;; (require 'init-persp)
 
-;; (require 'init-projectile)
-
 (require 'init-org)
 (require 'init-tex)
 (require 'init-biblio)
