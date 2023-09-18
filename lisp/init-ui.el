@@ -39,6 +39,9 @@
   ;; display emojis
   (set-fontset-font t 'emoji (font-spec :family font-emoji-family) nil 'prepend))
 
+;;; Icons
+(use-package nerd-icons)
+
 ;;; Modeline
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)

@@ -50,9 +50,6 @@
   :hook ((ibuffer-mode . ibuffer-auto-mode))
   :bind ([remap list-buffers] . ibuffer-list-buffers))
 
-(use-package all-the-icons-ibuffer
-  :hook (ibuffer-mode . all-the-icons-ibuffer-mode))
-
 (use-package browse-url
   :ensure nil
   :bind (("C-c u l" . browse-url-at-point)))
