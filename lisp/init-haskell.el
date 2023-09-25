@@ -6,9 +6,10 @@
   :config
   (setq haskell-process-type 'stack-ghci))
 
-;; dante: completion for haskell
-(use-package dante
-  :after haskell-mode
-  :hook (haskell-mode . dante-mode))
+(use-package lsp-haskell
+  :hook ((haskell-mode . lsp)
+         (haskell-literate-mode . lsp))
+  :config
+  (setq lsp-haskell-server-path "haskell-language-server-wrapper"))
 
 (provide 'init-haskell)
