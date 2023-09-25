@@ -1,0 +1,3 @@
+[submodule "vendor/ob-racket"]
+	path = vendor/ob-racket
+	url = https://github.com/hasu/emacs-ob-racket

@@ -73,6 +73,13 @@
             (tags "CLOSED>\"<-1w>\"")
             (tags "inbox"))))))
 
+(use-package ob-racket
+  :load-path "vendor/ob-racket"
+  :config
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((racket . t))))
+
 (use-package ox-pandoc
   :after org
   :when (executable-find "pandoc"))
