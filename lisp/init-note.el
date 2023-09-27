@@ -24,7 +24,8 @@
   :hook ((after-init . citar-denote-mode))
   :init
   (setq citar-notes-paths (list my-note-directory))
-  (setq citar-denote-title-format 'author-year))
+  (setq citar-denote-title-format 'author-year)
+  (setq citar-denote-subdir t))
 
 (use-package consult-notes
   :hook ((after-init . consult-notes-denote-mode))
