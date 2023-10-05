@@ -13,7 +13,10 @@
 
 (use-package bibtex
   :ensure nil
-  :hook ((before-save . bibtex-reformat))
+  :hook ((bibtex-mode . bibtex-reformat-before-save))
+  :init
+  (defun bibtex-reformat-before-save ()
+    (add-hook 'before-save-hook #'bibtex-reformat nil 'local))
   :config
   (setq bibtex-text-indentation 14)
   (setq bibtex-align-at-equal-sign t))
