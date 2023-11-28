@@ -23,13 +23,11 @@
 
 ;;; dictionaries
 (use-package fanyi
-  :bind (("C-c u w" . fanyi-dwim2))
+  :bind (("C-c u y" . fanyi-dwim2))
   :custom
   (fanyi-providers '(fanyi-longman-provider
-                     fanyi-haici-provider)))
-
-(use-package youdao-dictionary
-  :bind (("C-c u y" . youdao-dictionary-search-at-point)))
+                     fanyi-haici-provider
+                     fanyi-etymon-provider)))
 
 ;;; DrRacket-like unicode input
 (use-package dr-racket-like-unicode
