@@ -36,7 +36,10 @@
   :config (require 'smartparens-config))
 
 (use-package paredit
-  :hook (emacs-lisp-mode . paredit-mode))
+  :hook (emacs-lisp-mode . paredit-mode)
+  :bind (:map paredit-mode-map
+         ("M-[" . paredit-wrap-square)
+         ("M-{" . paredit-wrap-curly)))
 
 ;; jump to any character
 (use-package avy
