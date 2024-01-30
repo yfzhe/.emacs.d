@@ -61,7 +61,9 @@
 ;; although json is not a programming language,
 ;; we trivally need tools to read these terrible words
 (use-package json-mode
-  :mode "\\.json'")
+  :mode "\\.json'"
+  :config
+  (setq js-indent-level 2))
 
 (use-package dotenv-mode
   :mode "\\.env\\b")
