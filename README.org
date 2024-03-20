@@ -8,11 +8,20 @@ Yes, it's a poor man's Emacs configuration.
 - TeX editing
 - +elfeed as RSS reader+
 
+
 * Requirements
 
   - ~coreutils~ for dired (on macOS)
+  - ~tree-sitter~ for syntax highlighting
   - ~ripgrep~
   - ~cmake~ for vterm
   - ~hunspell~ for flyspell
   - ~tsserver~ (from TypeScript, used in Tide)
   - ~mpv~ for fanyi.el to play sounds
+
+
+* Tree-sitter
+
+Use ~treesit-install-language-grammar~ to install tree-sitter language grammars.
+On Windows, you can install the pre-compiled ones from
+<https://corwin.bru.st/emacs-tree-sitter/>.
