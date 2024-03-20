@@ -13,6 +13,7 @@ Yes, it's a poor man's Emacs configuration.
 
   - ~coreutils~ for dired (on macOS)
   - ~tree-sitter~ for syntax highlighting
+  - ~gcc~ for install tree-sitter grammars
   - ~ripgrep~
   - ~cmake~ for vterm
   - ~hunspell~ for flyspell
@@ -20,8 +21,7 @@ Yes, it's a poor man's Emacs configuration.
   - ~mpv~ for fanyi.el to play sounds
 
 
-* Tree-sitter
+* About tree-sitter grammars
 
-Use ~treesit-install-language-grammar~ to install tree-sitter language grammars.
-On Windows, you can install the pre-compiled ones from
-<https://corwin.bru.st/emacs-tree-sitter/>.
+Need to install tree-sitter grammars manually, with ~treesit-install-language-grammar~.
+See ~treesit-language-source-alist~ also.
