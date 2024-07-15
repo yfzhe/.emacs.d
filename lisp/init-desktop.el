@@ -14,10 +14,4 @@
     (setq desktop-path (list dir)))
   (setq desktop-buffers-not-to-save "\\(magit\\)"))
 
-;;; use `eyebrowse' to control windows
-(use-package eyebrowse
-  :hook (after-init . eyebrowse-mode)
-  :init
-  (setq eyebrowse-keymap-prefix (kbd "C-c w")))
-
 (provide 'init-desktop)

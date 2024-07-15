@@ -52,7 +52,7 @@
 
 (require 'init-dashboard)
 (require 'init-desktop)
-;; (require 'init-persp)
+(require 'init-workspace)
 
 (require 'init-org)
 (require 'init-tex)
