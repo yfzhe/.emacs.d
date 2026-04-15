@@ -1,12 +1,11 @@
 #+TITLE: My Emacs Configuration
 
-Yes, it's a poor man's Emacs configuration.
+It's a boring Emacs configuration.
 
 - usable front-end develop experience (react, typescript; eslint, prettier)
 - great git experience (thanks for magit, the best git interface in the world!)
 - org-mode for todo-list, denote for notes
 - TeX editing
-- +elfeed as RSS reader+
 
 
 * Requirements
@@ -15,10 +14,9 @@ Yes, it's a poor man's Emacs configuration.
   - ~tree-sitter~ for syntax highlighting
   - ~gcc~ for install tree-sitter grammars
   - ~ripgrep~
-  - ~cmake~ for vterm
   - ~hunspell~ for flyspell
-  - ~tsserver~ (from TypeScript, used in Tide)
   - ~mpv~ for fanyi.el to play sounds
+  - ~nerd-icons~ for icons, use =nerd-icons-install-fonts= to install fonts
 
 
 * About tree-sitter grammars
